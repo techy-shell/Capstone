@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class FinalProjectApplication {
 
+	// TESST
+
 	public static void main(String[] args) {
 		SpringApplication.run(FinalProjectApplication.class, args);
 	}
@@ -14,4 +16,3 @@ public class FinalProjectApplication {
 
 }
 //hello 123
-//testing from Rachelle
