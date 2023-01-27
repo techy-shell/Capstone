@@ -1,5 +1,5 @@
 body {
-background-color: black;
+background-color: rgb(78,85,87);
 }
 
 * {
@@ -20,6 +20,7 @@ max-width: 30%;
     width: 33.33%;
     padding: 10px;
     text-align: center;
+    color: rgb(78,85,87);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: rgb(245, 128, 128,0.8);
   }
