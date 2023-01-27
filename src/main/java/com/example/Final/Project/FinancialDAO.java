@@ -1,5 +1,6 @@
 package com.example.Final.Project;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -10,7 +11,7 @@ public class FinancialDAO {
     private JdbcTemplate jdbcTemplate;
 
     public List<FinancialDB> getFinancials(){
-        String sql = "SELECT * from Financials";
+        String sql = "SELECT * from finances";
 
         List <FinancialDB> financials = jdbcTemplate.query(
                 sql,
@@ -18,5 +19,11 @@ public class FinancialDAO {
         return  financials;
 
 
+    }
+
+
+    @Autowired
+    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
 }

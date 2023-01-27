@@ -15,7 +15,7 @@ public class DBConfig {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         //update information before uses
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/Financial");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/Cost_of_living");
         dataSource.setUsername("root");
         dataSource.setPassword("password");
 
