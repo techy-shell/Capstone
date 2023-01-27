@@ -11,7 +11,7 @@ public class FinancialDAO {
     private JdbcTemplate jdbcTemplate;
 
     public List<FinancialDB> getFinancials(){
-        String sql = "SELECT * from Financial";
+        String sql = "SELECT * from finances";
 
         List <FinancialDB> financials = jdbcTemplate.query(
                 sql,
