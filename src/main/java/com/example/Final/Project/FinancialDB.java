@@ -10,7 +10,6 @@ public class FinancialDB {
 
     private int mortgage;
 
-    private int bills;
 
 
     public int getUserName() {
@@ -37,11 +36,4 @@ public class FinancialDB {
         this.mortgage = mortgage;
     }
 
-    public int getBills() {
-        return bills;
-    }
-
-    public void setBills(int bills) {
-        this.bills = bills;
-    }
 }

@@ -13,7 +13,6 @@ public class FinancialRowMapper implements RowMapper<FinancialDB> {
         financialDB.setSalary(rs.getInt("MonthlyNetPay"));
         financialDB.setUserName(rs.getInt("UserID"));
         financialDB.setMortgage(rs.getInt("MortgageOrRent"));
-        financialDB.setBills(rs.getInt("Bills"));
         return financialDB;
 
     }
