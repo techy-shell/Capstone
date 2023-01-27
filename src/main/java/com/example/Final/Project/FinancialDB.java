@@ -7,10 +7,7 @@ public class FinancialDB {
     // name could change depending on the database.
     private int userName;
     private int salary;
-
     private int mortgage;
-
-
 
     public int getUserName() {
         return userName;
