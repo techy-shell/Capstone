@@ -1,6 +1,9 @@
 body {
 background-color: rgb(124, 120, 120);
+}
 
+* {
+   box-sizing: border-box;
 }
 
 .header {
