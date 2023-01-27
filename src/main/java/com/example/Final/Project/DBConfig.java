@@ -15,7 +15,7 @@ public class DBConfig {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         //update information before uses
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/Pirate_Schema");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/Financial");
         dataSource.setUsername("root");
         dataSource.setPassword("password");
 
