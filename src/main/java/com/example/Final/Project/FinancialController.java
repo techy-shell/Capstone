@@ -12,7 +12,7 @@ public class FinancialController {
 
     private FinancialDAO financialDAO;
 
-@RequestMapping ("/test")
+@RequestMapping ("/testFinancial")
     public List<FinancialDB> test() {
     return financialDAO.getFinancials();
 }
