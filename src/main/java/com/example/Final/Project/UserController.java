@@ -1,6 +1,8 @@
 package com.example.Final.Project;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,11 +20,16 @@ public class UserController {
 
 
     //Add request mapping for specific contact info for one user ie /User/'username' for callback form (if still doing)
-    @RequestMapping("/User/{UserID}")
-    public List<UserDB> retrieveUserInfo(@PathVariable int UserID) {
-        return userDAO.getUserInfo(UserID);
-    }
 
+    @RequestMapping("/User/{UserID}")
+    public ResponseEntity<List> retrieveUserInfo(@PathVariable int UserID) {
+        List<UserDB> user = userDAO.getUserInfo(UserID);
+        if (user.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        else return new ResponseEntity<>(user, HttpStatus.OK);
+
+    }
     @Autowired
     public void setUserDAO(UserDAO userDAO) {
         this.userDAO = userDAO;
