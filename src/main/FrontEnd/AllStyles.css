@@ -24,20 +24,20 @@ ul {
   text-align: center;
   padding: 0;
   overflow: hidden;
-  background-color: rgb(247, 123, 115);
+  background-color: #f77b73;
 }
 
-li{
+.nav{
 float: left;
 width: 33.33%;
 }
 
-li, .links {
+.nav, .links {
   font-family: 'Sofia Sans Condensed', sans-serif;
   display:block;
   text-align: center;
   padding: 8px 60px;
-  color: rgb(35,45,44);
+  color: #2a363b;
   text-decoration: none;
   font-size: 20px;
 }
@@ -51,6 +51,31 @@ li, .links {
   li {
     margin-left: 25%;
   }
+}
+
+#toptipsbox {
+margin: left;
+border: 5px solid #faa8a3;
+border-style: double;
+padding: 0px;
+margin: 20px;
+margin-left: 40px;
+height: 500px;
+width: 30%;
+}
+
+#trendingtitle {
+text-align: center;
+font-family: 'Sofia Sans Condensed', sans-serif;
+font-size: 20px;
+color: #f77b73;
+border-bottom: 1px dashed #f77b73;
+}
+
+.thetips {
+color: #faa8a3;
+padding: 20%;
+font-family: 'Sofia Sans Condensed', sans-serif;
 }
 
 
