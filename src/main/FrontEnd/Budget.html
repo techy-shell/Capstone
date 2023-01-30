@@ -5,8 +5,8 @@
     <meta name ="viewport" content="width=device-width, inital-scale=1.0">
     <title>Shadow Bank Cost of Living support</title>
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/6JGPJGs/Shadow-Bank-Logo.png">
-    <link rel="stylesheet" type="text/css" href="AllStyles.css">
-    <!-- <script src="ApiJS.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="Budget.css">
+    <script src="Budget.js"></script>
 </head>
 <body>
 
@@ -17,41 +17,78 @@
 <div class="row">
     <div class="column">
         <a class="pages" href="Homepage.html"><h2>Home</h2></a>
-        <p>Some text..</p>
     </div>
     <div class="column">
-        <h2>Help</h2>
-        <p>Some text..</p>
+        <h2>Latest News</h2>
     </div>
     <div class="column">
-        <h2>Help near you</h2>
-        <p>Some text..</p>
+        <h2>Help Nearby</h2>
     </div>
 </div>
 
+<fieldset class="budgetDivide">
+    <div class="headingBudget">
+        <h2 class="budgetInfo">Budget calculator</h2>
+        <h4>Plan your money for the month ahead</h4>
+    </div>
+</fieldset>
+
+<fieldset class="budgetDivide2">
 <div class="row3">
     <div class="column3">
-        <form action="/action_page.php">
-            <h2>Income</h2>
-            <label for='monthlyIncome'>Please insert your monthly income below</label><br>
-            <input type="number" id="monthlyIncome" name="monthlyIncome" value="monthlyIncome">
+        <h2 class="guide">Income</h2>
+        <form style="text-align: left;" action="action_page.php" method="post">
+            <fieldset>
+                <legend>Insert your username below</legend>
+                <label for="userName">User Name:</label><br>
+                <input type="text" id="userName" name="userName"><br>
 
-
+            </fieldset>
+            <fieldset>
+                <legend>Please submit the form by clicking the button below</legend>
+                <input type="submit" value="Submit">
+            </fieldset>
+            <fieldset>
+                <div class="finances"></div>
+                <div class="salary">Your monthly pay is</div>
+                <ul id="salary"></ul>
+                <div class="mortgage">Your mortgage payment each month is</div>
+                <ul class="mortgage"></ul>
+            </fieldset>
         </form>
+
     </div>
-    <div class="column3">
-        <form action="/action_page.php">
+    <div class="column4">
+        <h2 class="guide">Expenditure</h2>
 
-
-
-        </form>
     </div>
 </div>
-<form>
-    <h2>Expenditure</h2>
+</fieldset>
 
+<!--
+<fieldset>
+<input type="text" id="userChoice"/>
+<p id="userName"></p>
+</fieldset>
+<fieldset>
+<button onclick="getInfo()">Log in</button>
+</fieldset>
+<fieldset>
+    <p id="details">
+    <div id="salary"></div>
+<div id="mortgage"></div>
+</p>
+</fieldset> -->
 
-</form>
+<!--
+<input type="text" id="userChoice"/>
+<p id="userName">
+    <button onclick="getInfo()">Loot Check</button>
+</p>
+<div id="salary"></div>
+<div id="mortgage"></div>
+</p>
+-->
 
 </body>
 </html>
