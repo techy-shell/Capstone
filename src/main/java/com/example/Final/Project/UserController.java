@@ -12,7 +12,7 @@ public class UserController {
 
     private UserDAO userDAO;
 
-    @RequestMapping("/testUser")
+    @RequestMapping("/User")
     public List<UserDB> test() {
         return userDAO.getUsers();
     }
@@ -23,3 +23,5 @@ public class UserController {
         this.userDAO = userDAO;
     }
 }
+
+//URL for all data for Users https://localhost:8080/User

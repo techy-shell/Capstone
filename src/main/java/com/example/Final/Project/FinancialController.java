@@ -12,12 +12,10 @@ public class FinancialController {
 
     private FinancialDAO financialDAO;
 
-@RequestMapping ("/testFinancial")
+@RequestMapping ("/Financial")
     public List<FinancialDB> test() {
     return financialDAO.getFinancials();
 }
-
-
 
     
 @Autowired
@@ -25,3 +23,5 @@ public void setFinancialDAO(FinancialDAO financialDAO) {
         this.financialDAO = financialDAO;
     }
 }
+
+//URL for all data for Financials help https://localhost:8080/Financial
