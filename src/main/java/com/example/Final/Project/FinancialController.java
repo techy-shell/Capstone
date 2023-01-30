@@ -17,11 +17,11 @@ public class FinancialController {
     return financialDAO.getFinancials();
 }
 
-
-
     
 @Autowired
 public void setFinancialDAO(FinancialDAO financialDAO) {
         this.financialDAO = financialDAO;
     }
 }
+
+//URL for all data for Financials help https://localhost:8080/Financial

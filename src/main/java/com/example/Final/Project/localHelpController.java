@@ -21,3 +21,5 @@ public class localHelpController {
         this.localHelpDAO = localHelpDAO;
     }
 }
+
+//URL for all data for Local help https://localhost:8080/localhelp

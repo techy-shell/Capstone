@@ -23,3 +23,5 @@ public class UserController {
         this.userDAO = userDAO;
     }
 }
+
+//URL for all data for Users https://localhost:8080/User
