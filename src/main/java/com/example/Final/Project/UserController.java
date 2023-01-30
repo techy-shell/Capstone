@@ -12,11 +12,15 @@ public class UserController {
 
     private UserDAO userDAO;
 
+    @RequestMapping("/Hello")
+    public int check() {
+        return 10;
+    }
+
     @RequestMapping("/User")
     public List<UserDB> test() {
         return userDAO.getUsers();
     }
-
 
     @Autowired
     public void setUserDAO(UserDAO userDAO) {

@@ -8,7 +8,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
 @Configuration
-@ComponentScan(basePackages = "Final-Project")
+@ComponentScan(basePackages = "costoflivingproject")
 public class DBConfig {
     @Bean
     public DataSource getDataSource() {
@@ -17,7 +17,7 @@ public class DBConfig {
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/Cost_of_living");
         dataSource.setUsername("root");
-        dataSource.setPassword("FallingLeaves1!");
+        dataSource.setPassword("Tryth1s77!");
 
         return dataSource;
     }
