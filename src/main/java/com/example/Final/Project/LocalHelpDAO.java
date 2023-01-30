@@ -18,10 +18,16 @@ public class LocalHelpDAO {
                 sql,
                 new LocalHelpRowMapper());
         return  localHelp;
-
-
     }
 
+    public List<LocalHelpDB> getLocalInfo(String CityID) {
+        String sql = "SELECT * FROM LocalHelp WHERE CityID = " + "'" + CityID + "'";
+
+        List<LocalHelpDB> localInfo = jdbcTemplate.query(
+                sql,
+                new LocalHelpRowMapper());
+        return localInfo;
+    }
 
     @Autowired
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {

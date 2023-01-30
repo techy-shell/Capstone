@@ -1,6 +1,7 @@
 package com.example.Final.Project;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,12 +14,15 @@ public class FinancialController {
     private FinancialDAO financialDAO;
 
 @RequestMapping ("/Financial")
-    public List<FinancialDB> test() {
+    public List<FinancialDB> retreieveFinancials() {
     return financialDAO.getFinancials();
 }
 
 //Add request mapping for specific financial info for one user ie /Financial/'username' (to fill in forms - budget & benefits)
-
+@RequestMapping ("/Financial/{UserID}")
+public List<FinancialDB> retreieveUserFinancials(@PathVariable int UserID) {
+    return financialDAO.getUserFinancials(UserID);
+}
 //Add put mapping to add financial data into databse for one user (other income etc)
     
 @Autowired
