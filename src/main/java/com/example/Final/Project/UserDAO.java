@@ -18,10 +18,16 @@ public class UserDAO {
                 sql,
                 new UserRowMapper());
         return users;
-
-
     }
 
+    public List<UserDB> getUserInfo(int userID) {
+        String sql = "SELECT * FROM Users WHERE UserID = " + "'" + userID + "'";
+
+        List<UserDB> userInfo = jdbcTemplate.query(
+                sql,
+                new UserRowMapper());
+        return userInfo;
+    }
 
     @Autowired
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
