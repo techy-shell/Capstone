@@ -12,7 +12,7 @@ public class UserController {
 
     private UserDAO userDAO;
 
-    @RequestMapping("/testUser")
+    @RequestMapping("/User")
     public List<UserDB> test() {
         return userDAO.getUsers();
     }

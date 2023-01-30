@@ -11,7 +11,7 @@ public class localHelpController {
 
     private LocalHelpDAO localHelpDAO;
 
-    @RequestMapping("/localhelptest")
+    @RequestMapping("/localhelp")
     public List<LocalHelpDB> test (){
         return localHelpDAO.getLocalHelp();
     }
