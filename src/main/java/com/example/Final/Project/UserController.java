@@ -17,6 +17,8 @@ public class UserController {
         return userDAO.getUsers();
     }
 
+    //Add request mapping for specific contact info for one user ie /User/'username' for callback form (if still doing)
+
 
     @Autowired
     public void setUserDAO(UserDAO userDAO) {
