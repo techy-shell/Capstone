@@ -9,9 +9,9 @@ public class LocalHelpRowMapper implements RowMapper<LocalHelpDB> {
 
     public LocalHelpDB mapRow (ResultSet rs, int rowNum) throws SQLException {
        LocalHelpDB localHelpDB = new LocalHelpDB();
-       localHelpDB.setDescription("Info");
-       localHelpDB.setPostCode("Postcode");
-       localHelpDB.setSupportName("SupportName");
+       localHelpDB.setDescription(rs.getString("Info"));
+       localHelpDB.setCityID(rs.getString("CityID"));
+       localHelpDB.setSupportName(rs.getString("SupportName"));
         return localHelpDB;
     }
 }
