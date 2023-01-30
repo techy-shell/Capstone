@@ -12,15 +12,13 @@ public class UserController {
 
     private UserDAO userDAO;
 
-    @RequestMapping("/Hello")
-    public int check() {
-        return 10;
-    }
-
     @RequestMapping("/User")
     public List<UserDB> test() {
         return userDAO.getUsers();
     }
+
+    //Add request mapping for specific contact info for one user ie /User/'username' for callback form (if still doing)
+
 
     @Autowired
     public void setUserDAO(UserDAO userDAO) {

@@ -16,6 +16,8 @@ public class localHelpController {
         return localHelpDAO.getLocalHelp();
     }
 
+    //Add request mapping to pull local help info from datatbase using city at reference ie /localhelp/'cityname'
+
     @Autowired
     public void setLocalHelpDAO(LocalHelpDAO localHelpDAO) {
         this.localHelpDAO = localHelpDAO;

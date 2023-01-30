@@ -17,6 +17,9 @@ public class FinancialController {
     return financialDAO.getFinancials();
 }
 
+//Add request mapping for specific financial info for one user ie /Financial/'username' (to fill in forms - budget & benefits)
+
+//Add put mapping to add financial data into databse for one user (other income etc)
     
 @Autowired
 public void setFinancialDAO(FinancialDAO financialDAO) {
