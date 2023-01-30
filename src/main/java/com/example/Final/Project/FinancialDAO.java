@@ -3,6 +3,7 @@ package com.example.Final.Project;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -17,11 +18,16 @@ public class FinancialDAO {
                 sql,
                 new FinancialRowMapper());
         return  financials;
-
-
     }
 
+    public List<FinancialDB> getUserFinancials(int userID){
+        String sql = "SELECT * from finances WHERE UserID = " + "'" + userID + "'";
 
+        List <FinancialDB> userFinancials = jdbcTemplate.query(
+                sql,
+                new FinancialRowMapper());
+        return  userFinancials;
+    }
     @Autowired
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
