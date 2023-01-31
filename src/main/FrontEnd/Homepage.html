@@ -51,7 +51,10 @@
             "https://tgtg-mkt-cms-prod.s3.eu-west-1.amazonaws.com/13516/TGTG_Vertical_Logo_White_2000x566px_RGB.png"
                                                                    alt="TGTG"></a>
 </div>
-    <div class="boxes">
+    <div class="boxes" id="callback">
+        <label for="userID">To request a callback, please enter your userID:</label><br>
+        <input type="text" id="userID" name="userID">
+        <button onclick="getUserInfo()">Request callback</button>
         <p>testing</p>
     </div>
 </fieldset>
