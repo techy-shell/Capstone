@@ -39,6 +39,6 @@ public class FinancialCheck {
     @Then("Chrome should open with uses details")
         public void checkDetails (){
         String text = webDriver.findElement(By.tagName("Body")).getText();
-        assertEquals("xxx",text);
+        assertEquals("[{\"userName\":992211,\"salary\":9000,\"benefit\":100}]",text);
     }
 }
