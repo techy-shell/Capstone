@@ -7,7 +7,8 @@ public class FinancialDB {
     // name could change depending on the database.
     private int userName;
     private int salary;
-    private int mortgage;
+
+    private int benefit;
 
     public int getUserName() {
         return userName;
@@ -25,12 +26,12 @@ public class FinancialDB {
         this.salary = salary;
     }
 
-    public int getMortgage() {
-        return mortgage;
+    public int getBenefit() {
+        return benefit;
     }
 
-    public void setMortgage(int mortgage) {
-        this.mortgage = mortgage;
+    public void setBenefit(int mortgage) {
+        this.benefit = mortgage;
     }
 
 }
