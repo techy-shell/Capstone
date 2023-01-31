@@ -1,3 +1,5 @@
+
+
 p1{
 color:#f77b73;
 text-align: center;
@@ -27,7 +29,8 @@ bottom: -10px;
 font-family: sans-serif;
 font-size: 15px;
 color:#f77b73;
-text-align: center
+text-align: center;
+padding-bottom:50px
 }
 
 label{
