@@ -32,9 +32,7 @@ public class FinancialDAO {
     //method to update database
     public void updateSalary (int x, int customerID) {
         String sql = "UPDATE Finances set MonthlyNetPay = " + x + " Where UserID = " + customerID;
-        jdbcTemplate.update( sql,
-                new FinancialRowMapper());
-
+        jdbcTemplate.update(sql);
     }
     @Autowired
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {

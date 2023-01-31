@@ -27,11 +27,11 @@ public List<FinancialDB> retreieveUserFinancials(@PathVariable int UserID) {
 //Add put mapping to add financial data into databse for one user (other income etc)
 
     @RequestMapping ("/update")
-    public ResponseEntity<Integer> updateFinancial (@RequestBody FinancialDB requestFinancial) {
+    public void updateFinancial (@RequestBody FinancialDB requestFinancial) {
+//        System.out.println(requestFinancial.getSalary());
+//        System.out.println(requestFinancial.getUserName());
     financialDAO.updateSalary(requestFinancial.getSalary(), requestFinancial.getUserName());
-    return new ResponseEntity<Integer>(HttpStatus.OK);
-
-    }
+}
     
 @Autowired
 public void setFinancialDAO(FinancialDAO financialDAO) {

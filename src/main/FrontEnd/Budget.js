@@ -32,7 +32,7 @@ document.getElementById('mor').textContent = mortgage.toFixed(2);
 
 function saveDetails() {
 var update = {
-'Salary':document.getElementById("salary").value,
+'salary':document.getElementById("salary").value,
 'userName':document.getElementById("userName").value
 };
 
