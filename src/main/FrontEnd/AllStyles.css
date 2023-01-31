@@ -82,12 +82,21 @@ font-family: 'Sofia Sans Condensed', sans-serif;
 }
 
 .upvotes {
-padding-left:10%;
-display: block;
+padding-left: 2%;
+display: inline;
 color: #f77b73;
 margin:0;
 font-family: 'Sofia Sans Condensed', sans-serif;
 font-size: 14px;
+}
+
+#images {
+text-align:center;
+color:red;
+}
+
+#yes {
+color: red
 }
 
 
