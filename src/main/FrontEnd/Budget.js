@@ -9,7 +9,10 @@ fetch('http://localhost:8080/User/100001')
   .then((data) => {
   console.log(data);
   document.getElementById('test').innerHTML = JSON.stringify(data);
-  })};
+    alert("Hello " + data[0].firstName + " " + data[0].surname)
+     })
+     .catch(err => console.log(err));
+     };
 
 /*shows as undefined on webpage*/
 /*
