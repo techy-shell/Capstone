@@ -43,6 +43,7 @@ color:#f77b73}
 font-size:20px}
 
 #supportName{
+padding-top:10px;
 position:absolute;
 left: 100px;
 right 100px;
@@ -51,6 +52,7 @@ bottom: 200px
 }
 
 #supportInfo{
+padding-top:10px;
 position:absolute;
 left: 100px;
 right 100px;
