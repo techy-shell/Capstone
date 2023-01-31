@@ -30,7 +30,7 @@ public List<FinancialDB> retreieveUserFinancials(@PathVariable int UserID) {
     public void updateFinancial (@RequestBody FinancialDB requestFinancial) {
 //        System.out.println(requestFinancial.getSalary());
 //        System.out.println(requestFinancial.getUserName());
-    financialDAO.updateSalary(requestFinancial.getSalary(), requestFinancial.getUserName());
+    financialDAO.updateSalary(requestFinancial.getSalary(), requestFinancial.getUserName(),requestFinancial.getBenefit());
 }
     
 @Autowired

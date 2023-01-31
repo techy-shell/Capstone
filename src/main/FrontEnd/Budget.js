@@ -58,7 +58,8 @@ document.getElementById('mor').textContent = mortgage.toFixed(2);
 function saveDetails() {
 var update = {
 'salary':document.getElementById("salary").value,
-'userName':document.getElementById("userName").value
+'userName':document.getElementById("userName").value,
+'benefit':document.getElementById("benefits").value
 };
 
 fetch ('http://localhost:8080/update', {
