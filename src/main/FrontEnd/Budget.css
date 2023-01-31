@@ -2,8 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@500&display=swap');
 
+/* aligning format with 2 other pages */
 body {
 background-color: #2a363b;
+font-family: 'Sofia Sans Condensed', sans-serif;
+color: #2a363b;
 }
 
 * {
@@ -53,23 +56,7 @@ width: 33.33%;
     margin-left: 25%;
   }
 }
-/* aligning format with 2 other pages */
-
-.column2 {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    background-color: lightgray;
-    height: 300px;
-  }
-
-
-  .row2:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
+/*  header for the budget section of the page */
 
 .budgetHeading {
 background-color: #faa8a3;
@@ -86,13 +73,37 @@ text-align: center;
 color: rgb(35,45,44);
 }
 
-.incomeColumn {
+/* creating frame for the 2 tables */
 
+.incomeColumn {
 border: none;
 }
 
+/* rows for the 2 tables to  create 2 horizontal tables*/
 
+.budgetRow {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+budgetRow::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
+/* income table */
+.incomeInput {
+   float: left;
+   width: 40%;
+   padding: 5px;
+   background-color: lightgray;
+ }
+
+.incField {
+border-style: dashed;
+border-color: darkgray;
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
 
 .calculatorHeading {
 text-align: center;
@@ -106,54 +117,6 @@ justify-content: center;
 font-family: 'Sofia Sans Condensed', sans-serif;
 color: rgb(35,45,44);
 text-align: left;
-}
-
-.budgetRow {
-  margin-left:-5px;
-  margin-right:-5px;
-}
-
-budgetRow::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.incomeInput {
-  float: left;
-  width: 40%;
-  padding: 5px;
-  background-color: lightgray;
-
-}
-
-.expenditure {
- float: right;
- width:40%;
- padding: 5px;
- background-color: lightpink;
- height:75%;
-}
-
-. expSubmit {
-background-color: #f77b73;
-display: grid;
-justify-content: center;
-}
-
-div {
-text-align:center;
-}
-
-.incField (
-border-style: dashed;
-color: darkgray;
-font-family: 'Sofia Sans Condensed', sans-serif;
-}
-
-.expField {
-border-style: dashed;
-color: lightgray;
 }
 
 .benefitLink {
@@ -170,3 +133,37 @@ font-family: 'Sofia Sans Condensed', sans-serif;
 text-decoration: underline;
   font-style: italic;
 }
+
+.benefitInfo {
+text-align:left;
+}
+
+/* expenditure table */
+
+.expenditure {
+ float: right;
+ width:40%;
+ padding: 5px;
+ background-color: lightpink;
+ height:75%;
+}
+
+.expField {
+border-style: dashed;
+border-color: lightgray;
+}
+
+.expSubmit {
+background-color: #f77b73;
+display: grid;
+justify-content: center;
+}
+
+div {
+text-align:center;
+}
+
+
+
+
+

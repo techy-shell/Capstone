@@ -31,10 +31,4 @@ document.getElementById('mor').textContent = mortgage.toFixed(2);
 */
 
 
-getText("localhost:8080/Financial");
 
-async function getText(url) {
-  let myObject = await fetch(url);
-  let myText = await myObject.text();
-  document.getElementById("demo").innerHTML = myText;
-}
