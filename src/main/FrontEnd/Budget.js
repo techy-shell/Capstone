@@ -30,5 +30,20 @@ document.getElementById('mor').textContent = mortgage.toFixed(2);
 }
 */
 
+function saveDetails () {
+var update = {
+'Salary':document.getElementById("salary").value,
+'userName':document.getElementById("userName").value
+};
 
+fetch ("http://localhost:8080/update", {
+method: 'POST',
+headers: {
+'Content-Type':'application/json',
+},
+body: JSON.stringify(update)
+})
+.then(response => response.json())
+.then(response => console.log(JSON.stringify(response)));
+}
 
