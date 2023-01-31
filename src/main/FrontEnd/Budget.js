@@ -1,11 +1,36 @@
 /*
-function getInfo() {
+Below lines of code work to print User data to console
+*/
+
+/*shows as Object object x10 on webpage*/
+ async function getUsers() {
+fetch('http://localhost:8080/User/100001')
+  .then((response) => response.json())
+  .then((data) => {
+  console.log(data);
+  document.getElementById('test').innerHTML = JSON.stringify(data);
+    alert("Hello " + data[0].firstName + " " + data[0].surname)
+     })
+     .catch(err => console.log(err));
+     };
+
+/*shows as undefined on webpage*/
+/*
+    async function getUsers2() {
+      let res = await fetch('http://localhost:8080/User);
+      res = await res.json();
+      users = res.users;
+      document.getElementById("test").innerHTML = users;
+      console.log(users);
+
+    }
+*/
+
+  /*
   var userName = document.getElementById("userChoice").value;
   fetch('localhost:8080/Financial/' + userName)
     .then(response => response.json())
     .then(response => populatePageCustomer(response));
-
-
 }
 
 function populatePageCustomer(response) {

@@ -10,7 +10,7 @@ right:50px
 }
 
 h1{
-font-family: sand-serif;
+font-family: sans-serif;
 font-size:35px;
 border-bottom: 1px dashed #f77b73;
 padding-bottom: 5px
@@ -22,10 +22,21 @@ border-style: double;
 position:absolute;
 left:50px;
 top:350px;
-right:650px;
+right:750px;
 bottom: -10px;
 font-family: sans-serif;
 font-size: 15px;
 color:#f77b73;
 text-align: center
 }
+
+label{
+font-size:18px
+}
+
+.sub{
+font-size:20px;
+color:#f77b73}
+
+.cities{
+font-size:20px}
