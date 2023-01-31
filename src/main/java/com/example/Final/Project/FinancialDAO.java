@@ -28,6 +28,14 @@ public class FinancialDAO {
                 new FinancialRowMapper());
         return  userFinancials;
     }
+
+    //method to update database
+    public void updateSalary (int x, int customerID) {
+        String sql = "UPDATE Finances set MonthlyNetPay = " + x + " Where UserID = " + customerID;
+        jdbcTemplate.update( sql,
+                new FinancialRowMapper());
+
+    }
     @Autowired
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
