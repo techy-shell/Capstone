@@ -4,21 +4,24 @@ Below lines of code work to print User data to console
 
 /*shows as Object object x10 on webpage*/
  async function getUsers() {
-fetch('http://localhost:8080/User')
+fetch('http://localhost:8080/User/100001')
   .then((response) => response.json())
   .then((data) => {
-  document.getElementById('test').innerHTML = data;
   console.log(data);
+  document.getElementById('test').innerHTML = JSON.stringify(data);
   })};
 
 /*shows as undefined on webpage*/
+/*
     async function getUsers2() {
       let res = await fetch('http://localhost:8080/User);
       res = await res.json();
       users = res.users;
       document.getElementById("test").innerHTML = users;
       console.log(users);
+
     }
+*/
 
   /*
   var userName = document.getElementById("userChoice").value;
