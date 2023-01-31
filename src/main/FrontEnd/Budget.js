@@ -1,30 +1,14 @@
-/*
-Below lines of code work to print User data to console
-*/
-
-/*shows as Object object x10 on webpage*/
  async function getUsers() {
-fetch('http://localhost:8080/User/100001')
+ var userID = document.getElementById('userName').value;
+fetch('http://localhost:8080/Financial/' + userID)
   .then((response) => response.json())
   .then((data) => {
   console.log(data);
-  document.getElementById('test').innerHTML = JSON.stringify(data);
-    alert("Hello " + data[0].firstName + " " + data[0].surname)
+    document.getElementById('salaryInfo').innerHTML = "Your current monthly salary is £" + data[0].salary;
+    document.getElementById('benefitsInfo').innerHTML = "Your current monthly benefits are £" +data[0].benefit;
      })
      .catch(err => console.log(err));
      };
-
-/*shows as undefined on webpage*/
-/*
-    async function getUsers2() {
-      let res = await fetch('http://localhost:8080/User);
-      res = await res.json();
-      users = res.users;
-      document.getElementById("test").innerHTML = users;
-      console.log(users);
-
-    }
-*/
 
   /*
   var userName = document.getElementById("userChoice").value;
