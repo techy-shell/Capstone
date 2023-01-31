@@ -59,7 +59,7 @@ width: 33.33%;
 /*  header for the budget section of the page */
 
 .budgetHeading {
-background-color: #faa8a3;
+background-color: #2a363b;
 border: none;
 }
 
@@ -70,7 +70,7 @@ text-align: center;
 }
 
 .budgetInfo{
-color: rgb(35,45,44);
+ color:#f77b73;
 }
 
 /* creating frame for the 2 tables */
@@ -96,19 +96,21 @@ budgetRow::after {
    float: left;
    width: 40%;
    padding: 5px;
-   background-color: lightgray;
+   background-color: #f77b73;
+  color: #2a363b;
  }
 
 .incField {
 border-style: dashed;
-border-color: darkgray;
+border-color: #2a363b;
 font-family: 'Sofia Sans Condensed', sans-serif;
+color: #2a363b;
 }
 
 .calculatorHeading {
 text-align: center;
 font-family: 'Sofia Sans Condensed', sans-serif;
-color: rgb(35,45,44);
+color: #2a363b;
 display: grid;
 justify-content: center;
 }
@@ -117,6 +119,11 @@ justify-content: center;
 font-family: 'Sofia Sans Condensed', sans-serif;
 color: rgb(35,45,44);
 text-align: left;
+}
+
+.incSubmit{
+background-color: darkgray;
+font-family: 'Sofia Sans Condensed', sans-serif;
 }
 
 .benefitLink {
@@ -144,19 +151,18 @@ text-align:left;
  float: right;
  width:40%;
  padding: 5px;
- background-color: lightpink;
+ background-color: #f77b73;
  height:75%;
 }
 
 .expField {
 border-style: dashed;
-border-color: lightgray;
+border-color: #2a363b;
 }
 
 .expSubmit {
-background-color: #f77b73;
-display: grid;
-justify-content: center;
+background-color: darkgray;
+font-family: 'Sofia Sans Condensed', sans-serif;
 }
 
 div {
