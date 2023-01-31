@@ -8,3 +8,24 @@ left:50px;
 top:200px;
 right:50px
 }
+
+h1{
+font-family: sand-serif;
+font-size:35px;
+border-bottom: 1px dashed #f77b73;
+padding-bottom: 5px
+}
+
+div {
+border: 5px solid #faa8a3;
+border-style: double;
+position:absolute;
+left:50px;
+top:350px;
+right:650px;
+bottom: -10px;
+font-family: sans-serif;
+font-size: 15px;
+color:#f77b73;
+text-align: center
+}
