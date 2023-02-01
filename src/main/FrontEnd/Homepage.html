@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name ="viewport" content="width=device-width, inital-scale=1.0">
     <title>Shadow Bank Cost of Living support</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handlee">
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/6JGPJGs/Shadow-Bank-Logo.png">
-    <link rel="stylesheet" type="text/css" href="AllStyles.css">
+    <link rel="stylesheet" href="AllStyles.css" />
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <script src="ApiJS.js"></script>
+    <script src="ApiJS.js" defer></script>
 </head>
 <header>
     <img class="logo" src="https://i.ibb.co/6JGPJGs/Shadow-Bank-Logo.png" alt="shadow bank logo">
@@ -20,40 +20,41 @@
     <li class = "nav"><a href="LocalHelp.html" target="_blank" class="links">Help Nearby</a></li>
 </ul>
 <fieldset id="mainsection">
-<div class="boxes">
-<h3 class="trendingtitle"><i class='fas fa-fire' style='font-size:20px;color:red'></i>  Trending Top Tips</h3>
-    <ol>
-        <li class = "thetips">Use your washing machine at 30 degrees to save energy. Thanks to modern washing
-            tablets, a 30 degree wash will still give the same great clean as 40 degrees!</li>
-        <li class="upvotes"><button class='vote'><i class='fas fa-arrow-alt-circle-up' style='font-size:15px;color:#3ca668'></i></button></li>
-        <li class="upvotes" id="like1">988</li>&emsp;<li class="upvotes"> <i class='far fa-clock' style='font-size:15px;color:white'>&emsp;</i>2h ago</li>
-        <li class = "thetips">Turning your thermostat down by just one degree has a much bigger impact than most
-            people think. British Gas says dropping the temperature by one degree could save £115 a year on
-            average for a typical home.</li>
-        <li class="upvotes"><button class='vote' id="LikeButton"><i class='fas fa-arrow-alt-circle-up' style='font-size:15px;color:#3ca668'></i></button></li>
-        <li class="upvotes" id="like2">753</li>&emsp;<li class="upvotes"><i class='far fa-clock' style='font-size:15px;color:white'>&emsp;</i>18h ago</li>
-        <li class = "thetips">Turn down radiators in rooms you’re not using. You can simply go round the house
-            and turn down the radiators in the rooms you don't want to heat. The Government says you could save
-            around £70 a year turning radiator valves down to between 2.5 and 3 in rooms you don’t use.</li>
-        <li class="upvotes"><button class='vote'><i class='fas fa-arrow-alt-circle-up' style='font-size:15px;color:#3ca668'></i></button></li>
-        <li class="upvotes" id="like3">674</li>&emsp;<li class="upvotes"><i class='far fa-clock' style='font-size:15px;color:white'>&emsp;</i>1d ago</li>
-    </ol>
-</div>
-<div class="boxes">
-    <h3 class="trendingtitle">Support for you</h3>
-    <a href="https://toogoodtogo.co.uk/en-gb" target="_blank"><img class="imglinks" src=
-            "https://tgtg-mkt-cms-prod.s3.eu-west-1.amazonaws.com/13516/TGTG_Vertical_Logo_White_2000x566px_RGB.png"
-                                                                   alt="TGTG"></a>
-    <a href="https://toogoodtogo.co.uk/en-gb" target="_blank"><img class="imglinks" src=
-            "https://tgtg-mkt-cms-prod.s3.eu-west-1.amazonaws.com/13516/TGTG_Vertical_Logo_White_2000x566px_RGB.png"
-                                                                   alt="TGTG"></a>
-    <a href="https://toogoodtogo.co.uk/en-gb" target="_blank"><img class="imglinks" src=
-            "https://tgtg-mkt-cms-prod.s3.eu-west-1.amazonaws.com/13516/TGTG_Vertical_Logo_White_2000x566px_RGB.png"
-                                                                   alt="TGTG"></a>
-</div>
+    <div class="boxes">
+        <h3 class="trendingtitle"><i class='fas fa-fire' style='font-size:20px;color:red'></i>  Trending Top Tips</h3>
+        <ol>
+            <li class = "thetips">Use your washing machine at 30 degrees to save energy. Thanks to modern washing
+                tablets, a 30 degree wash will still give the same great clean as 40 degrees!</li>
+            <li class="upvotes" id="increment-count"><button class='vote' id="LikeButton1"><i class='fas fa-arrow-alt-circle-up' style='font-size:15px;color:#3ca668'></i></button></li>
+            <li class="upvotes" id="like1">988</li>&emsp;<li class="upvotes"> <i class='far fa-clock' style='font-size:15px;color:white'>&emsp;</i>2h ago</li>
+            <li class = "thetips">Turning your thermostat down by just one degree has a much bigger impact than most
+                people think. British Gas says dropping the temperature by one degree could save £115 a year on
+                average for a typical home.</li>
+            <li class="upvotes"><button class='vote' id="LikeButton2"><i class='fas fa-arrow-alt-circle-up' style='font-size:15px;color:#3ca668'></i></button></li>
+            <p class="upvotes" id="like2">752</p>&emsp;<li class="upvotes"><i class='far fa-clock' style='font-size:15px;color:white'>&emsp;</i>18h ago</li>
+            <li class = "thetips">Turn down radiators in rooms you’re not using. You can simply go round the house
+                and turn down the radiators in the rooms you don't want to heat. The Government says you could save
+                around £70 a year turning radiator valves down to between 2.5 and 3 in rooms you don’t use.</li>
+            <li class="upvotes"><button class='vote' id="LikeButton3"><i class='fas fa-arrow-alt-circle-up' style='font-size:15px;color:#3ca668'></i></button></li>
+            <li class="upvotes" id="like3">674</li>&emsp;<li class="upvotes"><i class='far fa-clock' style='font-size:15px;color:white'>&emsp;</i>1d ago</li>
+        </ol>
+    </div>
+    <div class="boxes">
+        <h3 class="trendingtitle">Support for you</h3>
+        <a href="https://toogoodtogo.co.uk/en-gb" target="_blank"><img class="imglinks" src=
+                "https://tgtg-mkt-cms-prod.s3.eu-west-1.amazonaws.com/13516/TGTG_Vertical_Logo_White_2000x566px_RGB.png"
+                                                                       alt="TGTG"></a>
+        <a href="https://toogoodtogo.co.uk/en-gb" target="_blank"><img class="imglinks" src=
+                "https://tgtg-mkt-cms-prod.s3.eu-west-1.amazonaws.com/13516/TGTG_Vertical_Logo_White_2000x566px_RGB.png"
+                                                                       alt="TGTG"></a>
+        <a href="https://toogoodtogo.co.uk/en-gb" target="_blank"><img class="imglinks" src=
+                "https://tgtg-mkt-cms-prod.s3.eu-west-1.amazonaws.com/13516/TGTG_Vertical_Logo_White_2000x566px_RGB.png"
+                                                                       alt="TGTG"></a>
+    </div>
     <div class="boxes" id="callback">
+        <h3 class="trendingtitle">Something to discuss?</h3>
         <label for="userID">To request a callback, please enter your userID:</label><br>
-        <input type="text" id="userID" name="userID">
+        <input type="text" id="userID" name="userID"> <br>
         <button onclick="getUserInfo()">Request callback</button>
         <p>testing</p>
     </div>
