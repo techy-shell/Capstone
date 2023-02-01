@@ -26,17 +26,17 @@
             <li class = "thetips">Use your washing machine at 30 degrees to save energy. Thanks to modern washing
                 tablets, a 30 degree wash will still give the same great clean as 40 degrees!</li>
             <li class="upvotes" id="increment-count"><button class='vote' id="LikeButton1"><i class='fas fa-arrow-alt-circle-up' style='font-size:15px;color:#3ca668'></i></button></li>
-            <li class="upvotes" id="like1">988</li>&emsp;<li class="upvotes"> <i class='far fa-clock' style='font-size:15px;color:white'>&emsp;</i>2h ago</li>
+            <li class="upvotes" id="like1"></li>&emsp;<li class="upvotes"> <i class='far fa-clock' style='font-size:15px;color:white'>&emsp;</i>2h ago</li>
             <li class = "thetips">Turning your thermostat down by just one degree has a much bigger impact than most
                 people think. British Gas says dropping the temperature by one degree could save £115 a year on
                 average for a typical home.</li>
             <li class="upvotes"><button class='vote' id="LikeButton2"><i class='fas fa-arrow-alt-circle-up' style='font-size:15px;color:#3ca668'></i></button></li>
-            <p class="upvotes" id="like2">752</p>&emsp;<li class="upvotes"><i class='far fa-clock' style='font-size:15px;color:white'>&emsp;</i>18h ago</li>
+            <li class="upvotes" id="like2"></li>&emsp;<li class="upvotes"><i class='far fa-clock' style='font-size:15px;color:white'>&emsp;</i>18h ago</li>
             <li class = "thetips">Turn down radiators in rooms you’re not using. You can simply go round the house
                 and turn down the radiators in the rooms you don't want to heat. The Government says you could save
                 around £70 a year turning radiator valves down to between 2.5 and 3 in rooms you don’t use.</li>
             <li class="upvotes"><button class='vote' id="LikeButton3"><i class='fas fa-arrow-alt-circle-up' style='font-size:15px;color:#3ca668'></i></button></li>
-            <li class="upvotes" id="like3">674</li>&emsp;<li class="upvotes"><i class='far fa-clock' style='font-size:15px;color:white'>&emsp;</i>1d ago</li>
+            <li class="upvotes" id="like3"></li>&emsp;<li class="upvotes"><i class='far fa-clock' style='font-size:15px;color:white'>&emsp;</i>1d ago</li>
         </ol>
     </div>
     <div class="boxes">
@@ -44,19 +44,20 @@
         <a href="https://toogoodtogo.co.uk/en-gb" target="_blank"><img class="imglinks" src=
                 "https://tgtg-mkt-cms-prod.s3.eu-west-1.amazonaws.com/13516/TGTG_Vertical_Logo_White_2000x566px_RGB.png"
                                                                        alt="TGTG"></a>
-        <a href="https://toogoodtogo.co.uk/en-gb" target="_blank"><img class="imglinks" src=
-                "https://tgtg-mkt-cms-prod.s3.eu-west-1.amazonaws.com/13516/TGTG_Vertical_Logo_White_2000x566px_RGB.png"
-                                                                       alt="TGTG"></a>
-        <a href="https://toogoodtogo.co.uk/en-gb" target="_blank"><img class="imglinks" src=
-                "https://tgtg-mkt-cms-prod.s3.eu-west-1.amazonaws.com/13516/TGTG_Vertical_Logo_White_2000x566px_RGB.png"
-                                                                       alt="TGTG"></a>
+        <a href="https://ecoenergygrants.co.uk/" target="_blank"><img class="imglinks" src=
+                "https://ecoenergygrants.co.uk/wp-content/uploads/2020/02/ECO-ENERGY-GRANTS-01-copy.png"
+                                                                       alt="Energy Grants"></a>
+        <a href="https://www.childcarechoices.gov.uk/" target="_blank"><img class="imglinks" src=
+                "https://www.learningvillage.org.uk/wp-content/uploads/2017/03/Childcare-Choices-logo_CMYK_300dpi.jpg"
+                                                                       alt="Childcare choices"></a>
     </div>
-    <div class="boxes" id="callback">
+    <div class="boxes">
         <h3 class="trendingtitle">Something to discuss?</h3>
+        <section id="callback">
         <label for="userID">To request a callback, please enter your userID:</label><br>
         <input type="text" id="userID" name="userID"> <br>
-        <button onclick="getUserInfo()">Request callback</button>
-        <p>testing</p>
+        <button id="requestcall" onclick="getUserInfo()" onmousedown="mouseDown()" onmouseup="mouseUp()">Request Callback</button>
+        </section>
     </div>
 </fieldset>
 </body>

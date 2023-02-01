@@ -56,8 +56,15 @@ incrementCount3.addEventListener("click", handleIncrement3);
 fetch('http://localhost:8080/User/' + userID)
   .then((response) => response.json())
   .then((data) => {
-  console.log(data);
     document.getElementById('callback').innerHTML = data[0].firstName + " " + data[0].surname + ", you will receive a callback within the next two working days on 0" + data[0].tel + ". You will receive an email confirmation for your callback at " + data[0].email + ".";
      })
      .catch(err => console.log(err));
      };
+
+     function mouseDown() {
+       document.getElementById("requestcall").style.border = "3px outset white";
+     }
+
+     function mouseUp() {
+       document.getElementById("requestcall").style.border = "none";
+     }
