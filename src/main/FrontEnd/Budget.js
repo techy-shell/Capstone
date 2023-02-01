@@ -1,3 +1,7 @@
+/*
+ below function is to pull through financial information from DB using API
+*/
+
  async function getUsers() {
  var userID = document.getElementById('userName').value;
 fetch('http://localhost:8080/Financial/' + userID)
@@ -10,33 +14,56 @@ fetch('http://localhost:8080/Financial/' + userID)
      .catch(err => console.log(err));
      };
 
-  /*
-  var userName = document.getElementById("userChoice").value;
-  fetch('localhost:8080/Financial/' + userName)
-    .then(response => response.json())
-    .then(response => populatePageCustomer(response));
-}
-
-function populatePageCustomer(response) {
-
-    document.getElementById("userName").innerHTML = response.userName;
-    document.getElementById("salary").innerHTML = response.salary;
-    document.getElementById("mortgage").innerHTML = response.mortgage;
-
-}
+/*
+Below function is for expenditure calculation & pulls through API income data
 */
 
-/*
-const url = 'http://localhost8080/Financial';
+function calcBudget() {
 
-async function getInfo() {
-const response = await fetch(url);
-const data = await response.json();
-const {salary, mortgage} = data;
+var mtg = document.getElementById("mortgage").value;
+var ctax = document.getElementById("councilTax").value;
+var gas = document.getElementById("gasElectricity").value;
+var water = document.getElementById("water").value;
+var food = document.getElementById("food").value;
+var travel = document.getElementById("travel").value;
 
-document.getElementById('sal').textContent = salary.toFixed(2);
-document.getElementById('mor').textContent = mortgage.toFixed(2);
+var mtg1 = parseInt(mtg);
+var ctax1 = parseInt(ctax);
+var gas1 = parseInt(gas);
+var water1 = parseInt(water);
+var food1 = parseInt(food);
+var travel1 = parseInt(travel);
+
+var total = getCalc(mtg1,ctax1,gas1,water1,food1,travel1);
+
+function getCalc(m,c,g,w,f,t){
+return (m+c+g+w+f+t)
 }
+
+document.getElementById("result").innerHTML = "Mortgage - £" + mtg + ", Council Tax - £" + ctax +
+", Gas and Electricity - £" + gas + ", Water - £" + water + ", Food - £" + food + " and Travel - £" + travel;
+document.getElementById("totalExp").innerHTML = "This totals - £" + total;
+}
+
+
+/*
+This is a more complex way for using the values
+
+var m = localStorage.setItem( "mortgage", mtg);
+var c = localStorage.setItem("councilTax", ctax);
+var g = localStorage.setItem( "gasElectricity", gas);
+var w = localStorage.setItem( "water", water);
+var f = localStorage.setItem("food", food);
+var t = localStorage.setItem( "travel", travel);
+
+document.getElementById("result").innerHTML = localStorage.getItem( "mortgage", mtg)
++ localStorage.getItem( "councilTax", ctax) + localStorage.getItem( "gasElectricity", gas)
++ localStorage.getItem( "water", water)+ localStorage.getItem( "food", food)
++ localStorage.getItem( "travel", travel);
+}*/
+
+/*
+Below data is to push new income data to DB using API
 */
 
 function saveDetails() {

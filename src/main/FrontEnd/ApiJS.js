@@ -60,11 +60,3 @@ fetch('http://localhost:8080/User/' + userID)
      })
      .catch(err => console.log(err));
      };
-
-     function mouseDown() {
-       document.getElementById("requestcall").style.border = "3px outset white";
-     }
-
-     function mouseUp() {
-       document.getElementById("requestcall").style.border = "none";
-     }
