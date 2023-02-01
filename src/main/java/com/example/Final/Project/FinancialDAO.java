@@ -21,7 +21,7 @@ public class FinancialDAO {
     }
 
     public List<FinancialDB> getUserFinancials(int userID){
-        String sql = "SELECT * from finances WHERE UserID = " + "'" + userID;
+        String sql = "SELECT * from finances WHERE UserID = " + userID;
 
         List <FinancialDB> userFinancials = jdbcTemplate.query(
                 sql,
