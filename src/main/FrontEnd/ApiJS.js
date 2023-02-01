@@ -1,9 +1,10 @@
 const incrementCount1 = document.getElementById("LikeButton1");
-const decrementCount1 = document.getElementById("decrement-count1");
 const incrementCount2 = document.getElementById("LikeButton2");
-const decrementCount2 = document.getElementById("decrement-count2");
 const incrementCount3 = document.getElementById("LikeButton3");
-const decrementCount3 = document.getElementById("decrement-count3");
+
+var isliked1 = false;
+var isliked2 = false;
+var isliked3 = false;
 
 const totalCount1 = document.getElementById("like1");
 const totalCount2 = document.getElementById("like2");
@@ -18,36 +19,51 @@ totalCount2.innerHTML = count2;
 totalCount3.innerHTML = count3;
 
 const handleIncrement1 = () => {
+	if(!isliked1) {
   count1++;
   totalCount1.innerHTML = count1;
+  isliked1 =true;
+   document.getElementById("arrow1").style.color = "#3ca668";
+	}
+else {
+	count1--;
+  totalCount1.innerHTML = count1;
+  isliked1 = false;
+  document.getElementById("arrow1").style.color = "grey";
+}
 };
 
-const handleDecrement1 = () => {
-  count1--;
-  totalCount1.innerHTML = count1;
-};
 const handleIncrement2 = () => {
-	count2++;
-	totalCount2.innerHTML = count2;
+	if(!isliked2) {
+      count2++;
+      totalCount2.innerHTML = count2;
+      isliked2 =true;
+      document.getElementById("arrow2").style.color = "#3ca668";
+    	}
+    else {
+    	count2--;
+      totalCount2.innerHTML = count2;
+      isliked2 = false;
+      document.getElementById("arrow2").style.color = "grey";
+    }
   };
-  const handleDecrement2 = () => {
-	count2--;
-	totalCount2.innerHTML = count2;
-  };
+
   const handleIncrement3 = () => {
-	count3++;
-	totalCount3.innerHTML = count3;
+	if(!isliked3) {
+      count3++;
+      totalCount3.innerHTML = count3;
+      isliked3 =true;
+      document.getElementById("arrow3").style.color = "#3ca668";
+    	}
+    else {
+    	count3--;
+      totalCount3.innerHTML = count3;
+      isliked3 = false;
+      document.getElementById("arrow3").style.color = "grey";
+    }
   };
-  const handleDecrement3 = () => {
-	count3--;
-	totalCount3.innerHTML = count3;
-  };
-incrementCount1.addEventListener("click", handleIncrement1);
-// decrementCount1.addEventListener("click", handleDecrement1);
-incrementCount2.addEventListener("click", handleIncrement2);
-// decrementCount2.addEventListener("click", handleDecrement2);
-incrementCount3.addEventListener("click", handleIncrement3);
-// decrementCount3.addEventListener("click", handleDecrement3);
+
+
 //end
 
 
