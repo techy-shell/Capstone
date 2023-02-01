@@ -15,7 +15,7 @@
 </header>
 <body>
 <ul>
-    <li class = "nav"><a href="Budget.html" target="_blank" class="links">Budget Calculator</a></li>
+    <li class = "nav"><a href="Homepage.html" target="_blank" class="links">Homepage</a></li>
     <li class = "nav"><a href="https://www.bbc.co.uk/news" target="_blank" class="links">Latest News</a></li>
     <li class = "nav"><a href="LocalHelp.html" target="_blank" class="links">Help Nearby</a></li>
 </ul>
@@ -30,16 +30,16 @@
     <div class="budgetRow">
         <div class="incomeInput">
             <fieldset class="incField">
-            <h2 class="calculatorHeading">Income</h2>
-                </fieldset>
+                <h2 class="calculatorHeading">Income</h2>
+            </fieldset>
             <fieldset class="incField">
-                <label for="userName">Please enter your user name:</label><br>
+                <label for="userName">Please enter your username:</label><br>
                 <input type="text" id="userName" name="userName">
-                <button onclick="getUsers()">See current financials</button>
+                <button class="userBtn" onclick="getUsers()">See current financials</button>
                 <div id="salaryInfo"></div>
                 <div id="benefitsInfo"></div>
             </fieldset>
-                <fieldset class="incField">
+            <fieldset class="incField">
                 <label for="salary">Your monthly pay after tax:</label><br>
                 <input type="text" id="salary" name="salary"><br>
 
@@ -51,60 +51,66 @@
 
             </fieldset>
             <fieldset class="incField">
-            <button class="incSubmit"onclick="saveDetails()">Update</button>
+                <button class="incSubmit"onclick="saveDetails()">Update</button>
             </fieldset>
             <fieldset class="incField">
                 <p class="benefitInfo">*This includes child benefit, universal credit, child tax credits / working tax credits,
-                personal independence payments, carers allowance, disability living allowance, pension credits
-                and employment support allowance</p>
+                    personal independence payments, carers allowance, disability living allowance, pension credits
+                    and employment support allowance</p>
                 <a class="benefitLink" href="https://www.gov.uk/browse/benefits">click here for further information about your benefits</a>
             </fieldset>
-                <fieldset class="incField">
+            <fieldset class="incField">
                 <div class="finances"></div>
             </fieldset>
         </div>
 
         <div class="expenditure">
             <fieldset class="expField">
-            <h2 class="calculatorHeading">Expenditure</h2>
+                <h2 class="calculatorHeading">Expenditure</h2>
             </fieldset>
             <fieldset class="expField">
                 <div>
-            <label class="inputInfo" for="mortgage">Your monthly mortgage / rent amount:</label><br>
-            <input class="inputInfo" type="text" id="mortgage" name="mortgage"><br>
-        </div>
+                    <label class="inputInfo" for="mortgage">Your monthly mortgage / rent amount:</label><br>
+                    <input class="inputInfo" type="text" id="mortgage" name="mortgage"><br>
+                </div>
             </fieldset>
             <fieldset class="expField">
                 <div>
-            <label class="inputInfo" for="councilTax">Your council tax per month:</label><br>
-            <input class="inputInfo"type="text" id="councilTax" name="councilTax"><br>
-        </div>
+                    <label class="inputInfo" for="councilTax">Your council tax per month:</label><br>
+                    <input class="inputInfo"type="text" id="councilTax" name="councilTax"><br>
+                </div>
             </fieldset>
-                <fieldset class="expField">
-            <label class="inputInfo"for="gasElectricity">Your gas/electricity payment per month:</label><br>
-            <input class="inputInfo"type="text" id="gasElectricity" name="gasElecticity"><br>
-                </fieldset>
-                    <fieldset class="expField">
-            <label class="inputInfo"for="water">Your water payment per month:</label><br>
-            <input class="inputInfo"type="text" id="water" name="water"><br>
-                    </fieldset>
-                        <fieldset  class="expField">
-            <label class="inputInfo"for="food">How much do you pay for food per month:</label><br>
-            <input class="inputInfo"type="text" id="food" name="food"><br>
-                        </fieldset>
-                            <fieldset class="expField">
-            <label class="inputInfo"for="travel">How much do you pay for travel per month:</label><br>
-            <input class="inputInfo"type="text" id="travel" name="travel"><br>
-                            </fieldset>
             <fieldset class="expField">
-            <button class="expSubmit" onclick="calcBudget();getUsers();">Submit</button>
-                                </fieldset>
+                <label class="inputInfo"for="gasElectricity">Your gas/electricity payment per month:</label><br>
+                <input class="inputInfo"type="text" id="gasElectricity" name="gasElecticity"><br>
+            </fieldset>
+            <fieldset class="expField">
+                <label class="inputInfo"for="water">Your water payment per month:</label><br>
+                <input class="inputInfo"type="text" id="water" name="water"><br>
+            </fieldset>
+            <fieldset  class="expField">
+                <label class="inputInfo"for="food">How much do you pay for food per month:</label><br>
+                <input class="inputInfo"type="text" id="food" name="food"><br>
+            </fieldset>
+            <fieldset class="expField">
+                <label class="inputInfo"for="travel">How much do you pay for travel per month:</label><br>
+                <input class="inputInfo"type="text" id="travel" name="travel"><br>
+            </fieldset>
+            <fieldset class="expField">
+                <label for="userName2">Enter your username to include your current income in the calculation:</label><br>
+                <input type="text" id="userName2" name="userName2">
+                <button class="userBtn">Enter</button>
+            </fieldset>
+            <fieldset class="expField">
+                <button class="expSubmit"onclick="calcBudget();">Calculate</button>
+            </fieldset>
+            <fieldset class="expField">
             <p id="result"></p>
             <p id="totalExp"></p>
-            <p id="totalIncome"></p>
+            </fieldset>
         </div>
 
-        </div>
+    </div>
     </div>
 </fieldset>
 

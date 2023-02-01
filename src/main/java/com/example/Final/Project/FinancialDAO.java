@@ -30,7 +30,7 @@ public class FinancialDAO {
     }
 
     public List<FinancialDB> getTotalFinancials(int userID){
-        String sql = "SELECT SUM(UserID) + SUM(Benefits) from finances WHERE UserID = " + userID;
+        String sql = "SELECT SUM(MonthlyPay) + SUM(Benefits) from finances WHERE UserID = " + userID;
 
         List <FinancialDB> totalFinancials = jdbcTemplate.query(
                 sql,
