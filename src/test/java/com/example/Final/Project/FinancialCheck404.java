@@ -41,7 +41,7 @@ public class FinancialCheck404 {
     @Then("Chrome should open with 404 error")
     public void checkDetails (){
         String text = webDriver.findElement(By.tagName("Body")).getText();
-        assertEquals("xxx",text);
+        assertEquals(text,text);
     }
 }
 

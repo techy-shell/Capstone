@@ -25,7 +25,8 @@ public ResponseEntity<List> retreieveUserFinancials(@PathVariable int UserID) {
     List<FinancialDB> finance = financialDAO.getUserFinancials(UserID);
     if (finance.isEmpty()){
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-    } else return new ResponseEntity<>(finance,HttpStatus.OK);
+    }
+    else return new ResponseEntity<>(finance,HttpStatus.OK);
 
 }
 //Add put mapping to add financial data into databse for one user (other income etc)
