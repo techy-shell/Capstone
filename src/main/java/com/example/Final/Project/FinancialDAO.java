@@ -3,8 +3,6 @@ package com.example.Final.Project;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.PathVariable;
-
 import java.util.List;
 
 @Repository
@@ -29,14 +27,7 @@ public class FinancialDAO {
         return  userFinancials;
     }
 
-    public List<FinancialDB> getTotalFinancials(int userID){
-        String sql = "SELECT SUM(MonthlyPay) + SUM(Benefits) from finances WHERE UserID = " + userID;
 
-        List <FinancialDB> totalFinancials = jdbcTemplate.query(
-                sql,
-                new FinancialRowMapper());
-        return  totalFinancials;
-    }
     //method to update database
     public void updateSalary (int x, int customerID, int benefit) {
         String sql = "UPDATE Finances set MonthlyPay = " + x + ", benefits = "+benefit+" Where UserID = " + customerID;
