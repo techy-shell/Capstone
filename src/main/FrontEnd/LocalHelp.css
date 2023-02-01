@@ -25,7 +25,7 @@ border-bottom: 1px dashed #f77b73;
 padding-bottom: 5px
 }
 
-div {
+.main {
 border: 5px solid #faa8a3;
 border-style: double;
 position:relative;
@@ -48,7 +48,8 @@ color: #2a363b;
 
 .sub{
 font-size:20px;
-color:#f77b73}
+color:#f77b73
+}
 
 .cities{
 font-size:20px}
@@ -70,6 +71,16 @@ bottom: 200px
 }
 
 #nationalSupport{
+border: 5px solid #faa8a3;
+border-style: double;
+position:relative;
+left:0px;
+top:160px;
+font-family: sans-serif;
+font-size: 15px;
+color:#f77b73;
+text-align: center;
+}
 position:relative;
 left: 0px;
 top: 200px;
@@ -116,3 +127,64 @@ color: pink;
 background-color: transparent;
 text-decoration: none;
 }
+
+.dropdown {
+display:none;
+}
+
+@media (max-width: 815px) {
+  .links {
+    display:none;
+  }
+
+  .dropdown {
+    overflow: hidden;
+    display: inline-block;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    font-size:20px;
+  }
+
+ .dropdown:hover .dropbtn {
+    background-color: #2a363b;;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: relative;
+    width: 100%
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 10px 8px 16px 2px rgba(0,0,0,0.9);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size:20px;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
