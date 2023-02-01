@@ -21,8 +21,12 @@ public class FinancialController {
 
 //Add request mapping for specific financial info for one user ie /Financial/'username' (to fill in forms - budget & benefits)
 @RequestMapping ("/Financial/{UserID}")
-public List<FinancialDB> retreieveUserFinancials(@PathVariable int UserID) {
-    return financialDAO.getUserFinancials(UserID);
+public ResponseEntity<List> retreieveUserFinancials(@PathVariable int UserID) {
+    List<FinancialDB> finance = financialDAO.getUserFinancials(UserID);
+    if (finance.isEmpty()){
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    } else return new ResponseEntity<>(finance,HttpStatus.OK);
+
 }
 //Add put mapping to add financial data into databse for one user (other income etc)
 
