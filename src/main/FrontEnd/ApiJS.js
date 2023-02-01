@@ -1,32 +1,54 @@
-//var likes = document.getElementById("like2").value;
-//var liked = false;
-//button = document.getElementById("LikeButton");
-//
-//function show() {
-//    button.innerHTML = likes + "like2";
-//}
-//
-//button.onclick = function() {
-//    if (liked == false) {
-//        liked = true;
-//        likes++;
-//        show();
-//    } else {
-//        liked = false;
-//        likes--;
-//        show();
-//    }
-//};
+const incrementCount1 = document.getElementById("LikeButton1");
+const decrementCount1 = document.getElementById("decrement-count1");
+const incrementCount2 = document.getElementById("LikeButton2");
+const decrementCount2 = document.getElementById("decrement-count2");
+const incrementCount3 = document.getElementById("LikeButton3");
+const decrementCount3 = document.getElementById("decrement-count3");
 
-var button = document.getElementById("LikeButton"),
-var hello = document.getElementById("like2")
-  count = 0;
-button.onclick = function() {
-  count += 1;
-  hello.innerHTML = count;
+const totalCount1 = document.getElementById("like1");
+const totalCount2 = document.getElementById("like2");
+const totalCount3 = document.getElementById("like3");
+
+var count1 = 986;
+var count2 = 555;
+var count3 = 343;
+
+totalCount1.innerHTML = count1;
+totalCount2.innerHTML = count2;
+totalCount3.innerHTML = count3;
+
+const handleIncrement1 = () => {
+  count1++;
+  totalCount1.innerHTML = count1;
 };
 
-
+const handleDecrement1 = () => {
+  count1--;
+  totalCount1.innerHTML = count1;
+};
+const handleIncrement2 = () => {
+	count2++;
+	totalCount2.innerHTML = count2;
+  };
+  const handleDecrement2 = () => {
+	count2--;
+	totalCount2.innerHTML = count2;
+  };
+  const handleIncrement3 = () => {
+	count3++;
+	totalCount3.innerHTML = count3;
+  };
+  const handleDecrement3 = () => {
+	count3--;
+	totalCount3.innerHTML = count3;
+  };
+incrementCount1.addEventListener("click", handleIncrement1);
+// decrementCount1.addEventListener("click", handleDecrement1);
+incrementCount2.addEventListener("click", handleIncrement2);
+// decrementCount2.addEventListener("click", handleDecrement2);
+incrementCount3.addEventListener("click", handleIncrement3);
+// decrementCount3.addEventListener("click", handleDecrement3);
+//end
 
 
  async function getUserInfo() {

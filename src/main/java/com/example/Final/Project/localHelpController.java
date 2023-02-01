@@ -1,6 +1,8 @@
 package com.example.Final.Project;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,8 +23,11 @@ public class localHelpController {
 
     //Add request mapping to pull local help info from datatbase using city at reference ie /localhelp/'cityname'
     @RequestMapping("/localhelp/{CityID}")
-    public List<LocalHelpDB> retrieveLocalInfo(@PathVariable String CityID) {
-        return localHelpDAO.getLocalInfo(CityID);
+    public ResponseEntity<List> retrieveLocalInfo(@PathVariable String CityID) {
+        List<LocalHelpDB> localHelpDBList = localHelpDAO.getLocalInfo(CityID);
+        if (localHelpDBList.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } else return new ResponseEntity<>(localHelpDBList,HttpStatus.OK);
     }
     @Autowired
     public void setLocalHelpDAO(LocalHelpDAO localHelpDAO) {
