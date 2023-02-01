@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -27,18 +25,7 @@ public ResponseEntity<List> retrieveUserFinancials(@PathVariable int UserID) {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
     else return new ResponseEntity<>(finance,HttpStatus.OK);
-
 }
-
-    @RequestMapping ("/FinancialsTotal/{user}")
-    public ResponseEntity<List> retrieveTotalFinancials(@PathVariable int user) {
-        List<FinancialDB> finance = financialDAO.getTotalFinancials(user);
-        if (finance.isEmpty()){
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-        else return new ResponseEntity<>(finance,HttpStatus.OK);
-    }
-
 //Add put mapping to add financial data into database for one user (other income etc)
 
     @RequestMapping ("/update")
@@ -47,7 +34,7 @@ public ResponseEntity<List> retrieveUserFinancials(@PathVariable int UserID) {
 //        System.out.println(requestFinancial.getUserName());
     financialDAO.updateSalary(requestFinancial.getSalary(), requestFinancial.getUserName(),requestFinancial.getBenefit());
 }
-    
+
 @Autowired
 public void setFinancialDAO(FinancialDAO financialDAO) {
         this.financialDAO = financialDAO;
