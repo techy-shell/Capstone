@@ -16,7 +16,7 @@ font-size:20px;
 font-family:sans-serif;
 position:absolute;
 left:50px;
-top:800px;
+top:820px;
 right:50px
 }
 
@@ -76,10 +76,50 @@ position:absolute;
 left: 50px;
 right 100px;
 top: 900px;
-bottom: 200px
+bottom: -50px;
+height: 350px;
 }
 
 #COLPaymentLink{
-font-color: #f77b73
-color:#f77b73
+color:white;
+font-family: 'Sofia Sans Condensed', sans-serif;
 }
+
+#warmHomeLink{
+color:white;
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+#NEALink{
+color:white;
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+#moneyHelperLink{
+color:white;
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+#childcareLink{
+color:white;
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+#transportLink{
+color:white;
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+
+
+a:link {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+  }
+
+  a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+    }
