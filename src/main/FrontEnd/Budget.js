@@ -39,7 +39,7 @@ var total = getCalc(mtg1,ctax1,gas1,water1,food1,travel1);
 function getCalc(m,c,g,w,f,t){
 return (m+c+g+w+f+t)
 }
-
+function getIncome()
 document.getElementById("result").innerHTML = "Mortgage - £" + mtg + ", Council Tax - £" + ctax +
 ", Gas and Electricity - £" + gas + ", Water - £" + water + ", Food - £" + food + " and Travel - £" + travel;
 document.getElementById("totalExp").innerHTML = "This totals - £" + total;

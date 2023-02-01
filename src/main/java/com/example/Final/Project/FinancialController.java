@@ -15,13 +15,13 @@ public class FinancialController {
     private FinancialDAO financialDAO;
 
 @RequestMapping ("/Financial")
-    public List<FinancialDB> retreieveFinancials() {
+    public List<FinancialDB> retrieveFinancials() {
     return financialDAO.getFinancials();
 }
 
 //Add request mapping for specific financial info for one user ie /Financial/'username' (to fill in forms - budget & benefits)
 @RequestMapping ("/Financial/{UserID}")
-public ResponseEntity<List> retreieveUserFinancials(@PathVariable int UserID) {
+public ResponseEntity<List> retrieveUserFinancials(@PathVariable int UserID) {
     List<FinancialDB> finance = financialDAO.getUserFinancials(UserID);
     if (finance.isEmpty()){
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -29,7 +29,17 @@ public ResponseEntity<List> retreieveUserFinancials(@PathVariable int UserID) {
     else return new ResponseEntity<>(finance,HttpStatus.OK);
 
 }
-//Add put mapping to add financial data into databse for one user (other income etc)
+
+    @RequestMapping ("/FinancialsTotal/{user}")
+    public ResponseEntity<List> retrieveTotalFinancials(@PathVariable int user) {
+        List<FinancialDB> finance = financialDAO.getTotalFinancials(user);
+        if (finance.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        else return new ResponseEntity<>(finance,HttpStatus.OK);
+    }
+
+//Add put mapping to add financial data into database for one user (other income etc)
 
     @RequestMapping ("/update")
     public void updateFinancial (@RequestBody FinancialDB requestFinancial) {
