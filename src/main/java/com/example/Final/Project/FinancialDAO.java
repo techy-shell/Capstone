@@ -21,7 +21,7 @@ public class FinancialDAO {
     }
 
     public List<FinancialDB> getUserFinancials(int userID){
-        String sql = "SELECT * from finances WHERE UserID = " + "'" + userID + "'";
+        String sql = "SELECT * from finances WHERE UserID = " + userID;
 
         List <FinancialDB> userFinancials = jdbcTemplate.query(
                 sql,
@@ -29,6 +29,14 @@ public class FinancialDAO {
         return  userFinancials;
     }
 
+    public List<FinancialDB> getTotalFinancials(int userID){
+        String sql = "SELECT SUM(UserID) + SUM(Benefits) from finances WHERE UserID = " + userID;
+
+        List <FinancialDB> totalFinancials = jdbcTemplate.query(
+                sql,
+                new FinancialRowMapper());
+        return  totalFinancials;
+    }
     //method to update database
     public void updateSalary (int x, int customerID, int benefit) {
         String sql = "UPDATE Finances set MonthlyPay = " + x + ", benefits = "+benefit+" Where UserID = " + customerID;
