@@ -27,6 +27,28 @@ var water = document.getElementById("water").value;
 var food = document.getElementById("food").value;
 var travel = document.getElementById("travel").value;
 
+var mtg1 = parseInt(mtg);
+var ctax1 = parseInt(ctax);
+var gas1 = parseInt(gas);
+var water1 = parseInt(water);
+var food1 = parseInt(food);
+var travel1 = parseInt(travel);
+
+var total = getCalc(mtg1,ctax1,gas1,water1,food1,travel1);
+
+function getCalc(m,c,g,w,f,t){
+return (m+c+g+w+f+t)
+}
+
+document.getElementById("result").innerHTML = "Mortgage - £" + mtg + ", Council Tax - £" + ctax +
+", Gas and Electricity - £" + gas + ", Water - £" + water + ", Food - £" + food + " and Travel - £" + travel;
+document.getElementById("totalExp").innerHTML = "This totals - £" + total;
+}
+
+
+/*
+This is a more complex way for using the values
+
 var m = localStorage.setItem( "mortgage", mtg);
 var c = localStorage.setItem("councilTax", ctax);
 var g = localStorage.setItem( "gasElectricity", gas);
@@ -38,7 +60,7 @@ document.getElementById("result").innerHTML = localStorage.getItem( "mortgage", 
 + localStorage.getItem( "councilTax", ctax) + localStorage.getItem( "gasElectricity", gas)
 + localStorage.getItem( "water", water)+ localStorage.getItem( "food", food)
 + localStorage.getItem( "travel", travel);
-}
+}*/
 
 /*
 Below data is to push new income data to DB using API
