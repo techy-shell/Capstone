@@ -25,7 +25,7 @@ border-bottom: 1px dashed #f77b73;
 padding-bottom: 5px
 }
 
-div {
+.main {
 border: 5px solid #faa8a3;
 border-style: double;
 position:relative;
@@ -48,7 +48,8 @@ color: #2a363b;
 
 .sub{
 font-size:20px;
-color:#f77b73}
+color:#f77b73
+}
 
 .cities{
 font-size:20px}
@@ -70,6 +71,16 @@ bottom: 200px
 }
 
 #nationalSupport{
+border: 5px solid #faa8a3;
+border-style: double;
+position:relative;
+left:0px;
+top:160px;
+font-family: sans-serif;
+font-size: 15px;
+color:#f77b73;
+text-align: center;
+}
 position:relative;
 left: 0px;
 top: 200px;
@@ -176,4 +187,4 @@ display:none;
   .dropdown:hover .dropdown-content {
     display: block;
   }
-}
+
