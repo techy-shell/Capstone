@@ -1,6 +1,6 @@
 p1{
 color:#f77b73;
-text-align: center;
+text-align:center;
 font-size:20px;
 font-family:sans-serif;
 position:relative;
@@ -10,7 +10,7 @@ top:50px;
 
 p2{
 color:#f77b73;
-text-align: center;
+text-align:center;
 font-size:20px;
 font-family:sans-serif;
 position:relative;
@@ -40,6 +40,10 @@ padding-bottom:50px
 
 label{
 font-size:18px
+}
+
+nav,.links{
+color: #2a363b;
 }
 
 .sub{
