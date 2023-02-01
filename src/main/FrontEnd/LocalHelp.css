@@ -3,10 +3,9 @@ color:#f77b73;
 text-align: center;
 font-size:20px;
 font-family:sans-serif;
-position:absolute;
-left:50px;
-top:200px;
-right:50px
+position:relative;
+left:0px;
+top:50px;
 }
 
 p2{
@@ -14,10 +13,9 @@ color:#f77b73;
 text-align: center;
 font-size:20px;
 font-family:sans-serif;
-position:absolute;
-left:50px;
-top:800px;
-right:50px
+position:relative;
+left:0px;
+top:140px;
 }
 
 h1{
@@ -30,11 +28,9 @@ padding-bottom: 5px
 div {
 border: 5px solid #faa8a3;
 border-style: double;
-position:absolute;
-left:50px;
-top:350px;
-right:50px;
-bottom: -90px;
+position:relative;
+left:0px;
+top:100px;
 font-family: sans-serif;
 font-size: 15px;
 color:#f77b73;
@@ -55,31 +51,64 @@ font-size:20px}
 
 #supportName{
 padding-top:10px;
-position:absolute;
-left: 100px;
-right 100px;
-top: 205px;
+position:relative;
+left: 0px;
+top: 40px;
 bottom: 200px
 }
 
 #supportInfo{
 padding-top:10px;
-position:absolute;
-left: 100px;
-right 100px;
-top: 268px;
+position:relative;
+left: 0px;
+top: 40px;
 bottom: 200px
 }
 
 #nationalSupport{
-position:absolute;
-left: 50px;
-right 100px;
-top: 900px;
-bottom: 200px
+position:relative;
+left: 0px;
+top: 200px;
 }
 
 #COLPaymentLink{
-font-color: #f77b73
-color:#f77b73
+color:white;
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+#warmHomeLink{
+color:white;
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+#NEALink{
+color:white;
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+#moneyHelperLink{
+color:white;
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+#childcareLink{
+color:white;
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+#transportLink{
+color:white;
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+a:link {
+color: pink;
+background-color: transparent;
+text-decoration: none;
+}
+
+a:visited {
+color: pink;
+background-color: transparent;
+text-decoration: none;
 }

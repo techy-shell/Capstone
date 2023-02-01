@@ -63,6 +63,8 @@ border: none;
   clear: both;
 }
 
+/* make another media for li margin left 17% from around 480px */
+
 .boxes {
 float: left;
 border: 5px double #faa8a3;
@@ -70,6 +72,11 @@ padding: 0px;
 margin: 20px;
 width: 30%;
 min-height:50%
+}
+@media screen and (max-width: 800px) {
+  .boxes {
+    width: fit-content;
+  }
 }
 
 .trendingtitle {
@@ -110,10 +117,10 @@ margin:0;
 }
 
 .imglinks {
-height:20%;
-width:85%;
-padding: 10px;
-margin:21px;
+height:105px;
+width:75%;
+padding: 9px;
+margin:19px;
 margin-left:30px;
 }
 
@@ -125,8 +132,32 @@ border: 4px double #f77b73;
 color: #faa8a3;
 font-family: 'Sofia Sans Condensed', sans-serif;
 text-align: center;
+margin:20px;
 }
 
 #userID {
 margin:10px;
+font-family: 'Sofia Sans Condensed', sans-serif;
+height:30px;
+width:50%;
+text-align:center;
+}
+
+#requestcall {
+background-color: #f77b73;
+font-family: 'Sofia Sans Condensed', sans-serif;
+width: 40%;
+height:35px;
+border-radius: 3px;
+border: none;
+box-shadow: 0 9px #999;
+}
+
+#requestcall:active {
+  box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#requestcall:hover {
+cursor:pointer;
 }

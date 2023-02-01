@@ -81,8 +81,8 @@
         </div>
             </fieldset>
                 <fieldset class="expField">
-            <label class="inputInfo"for="gasElecticity">Your gas/electricity payment per month:</label><br>
-            <input class="inputInfo"type="text" id="gasElecticity" name="gasElecticity"><br>
+            <label class="inputInfo"for="gasElectricity">Your gas/electricity payment per month:</label><br>
+            <input class="inputInfo"type="text" id="gasElectricity" name="gasElecticity"><br>
                 </fieldset>
                     <fieldset class="expField">
             <label class="inputInfo"for="water">Your water payment per month:</label><br>
@@ -97,8 +97,10 @@
             <input class="inputInfo"type="text" id="travel" name="travel"><br>
                             </fieldset>
             <fieldset class="expField">
-            <button class="expSubmit"onclick="getInfo();">Submit</button>
+            <button class="expSubmit"onclick="calcBudget();">Submit</button>
                                 </fieldset>
+            <p id="result"></p>
+            <p id="totalExp"></p>
         </div>
 
         </div>
