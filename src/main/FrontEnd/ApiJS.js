@@ -1,22 +1,33 @@
-var likes = document.getElementById("like2").value;
-var liked = false;
-button = document.getElementById("LikeButton");
+//var likes = document.getElementById("like2").value;
+//var liked = false;
+//button = document.getElementById("LikeButton");
+//
+//function show() {
+//    button.innerHTML = likes + "like2";
+//}
+//
+//button.onclick = function() {
+//    if (liked == false) {
+//        liked = true;
+//        likes++;
+//        show();
+//    } else {
+//        liked = false;
+//        likes--;
+//        show();
+//    }
+//};
 
-function show() {
-    button.innerHTML = likes + "like2";
-}
-
+var button = document.getElementById("LikeButton"),
+var hello = document.getElementById("like2")
+  count = 0;
 button.onclick = function() {
-    if (liked == false) {
-        liked = true;
-        likes++;
-        show();
-    } else {
-        liked = false;
-        likes--;
-        show();
-    }
+  count += 1;
+  hello.innerHTML = count;
 };
+
+
+
 
  async function getUserInfo() {
  var userID = document.getElementById('userID').value;

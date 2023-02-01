@@ -41,3 +41,21 @@ color:#f77b73}
 
 .cities{
 font-size:20px}
+
+#supportName{
+padding-top:10px;
+position:absolute;
+left: 100px;
+right 100px;
+top: 205px;
+bottom: 200px
+}
+
+#supportInfo{
+padding-top:10px;
+position:absolute;
+left: 100px;
+right 100px;
+top: 268px;
+bottom: 200px
+}
