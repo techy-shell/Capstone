@@ -45,7 +45,7 @@
             <fieldset class="incField">
                 <label for="userName">Please enter your username:</label><br>
                 <input type="text" id="userName" name="userName">
-                <button class="userBtn" onclick="getUsers()">See current financials</button>
+                <button class="userBtn" onclick="getUsers()">See current financials</button><br><br>
                 <div id="salaryInfo"></div>
                 <div id="benefitsInfo"></div>
             </fieldset>
@@ -111,13 +111,14 @@
                 <input type="text" id="userName2" name="userName2">
             </fieldset>
             <fieldset class="expField">
-                <button class="expSubmit"onclick="calcBudget();getIncome();">Calculate</button>
+                <button class="expSubmit"onclick="calcBudget();">Calculate</button>
             </fieldset>
             <fieldset class="expField">
 
             <p id="result"></p>
             <p id="totalExp"></p>
             <p id="includeIncome"></p>
+            <p id="remainBal"></p>
             </fieldset>
         </div>
 

@@ -40,23 +40,27 @@ function getCalc(m,c,g,w,f,t){
 return (m+c+g+w+f+t)
 }
 
-document.getElementById("result").innerHTML = "Mortgage - £" + mtg + ", Council Tax - £" + ctax +
-", Gas and Electricity - £" + gas + ", Water - £" + water + ", Food - £" + food + " and Travel - £" + travel;
-document.getElementById("totalExp").innerHTML = "Total Expenditure - £" + total;
+var userID = document.getElementById('userName2').value;
 
-}
-
-async function getIncome(){
- var userID = document.getElementById('userName2').value;
 fetch('http://localhost:8080/TotalIncome/' + userID)
   .then((response) => response.json())
   .then((data) => {
-  console.log(data);
   document.getElementById("includeIncome").innerHTML = "Total income - £" + data[0].totalIncome;
      })
-     .catch(err => console.log(err));
-     }
 
+fetch('http://localhost:8080/TotalIncome/' + userID)
+  .then(res => res.json())
+  .then(data => {
+    const remainingBalance = (data[0].totalIncome - total);
+    document.getElementById("remainBal").innerHTML = "This is what you will have remaining at the end of the month - £" + remainingBalance;
+  })
+
+  document.getElementById("result").innerHTML = "Mortgage - £" + mtg + ", Council Tax - £" + ctax +
+  ", Gas and Electricity - £" + gas + ", Water - £" + water + ", Food - £" + food + " and Travel - £" + travel;
+  document.getElementById("totalExp").innerHTML = "Total Expenditure - £" + total;
+
+
+}
 
 function saveDetails() {
 var update = {
