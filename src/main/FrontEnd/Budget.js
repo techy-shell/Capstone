@@ -76,20 +76,25 @@ fetch('http://localhost:8080/TotalIncome/' + userID)
   document.getElementById("totalExp").innerHTML = "Total Expenditure - £" + total;
 }
 
-   async function getCallback() {
-   var userID = document.getElementById('userID3').value;
-  fetch('http://localhost:8080/User/' + userID)
-    .then((response) => response.json())
-    .then((data) => {
-      document.getElementById('callback').innerHTML = data[0].firstName + " " + data[0].surname + ", you will receive a callback within the next two working days on 0" + data[0].tel + ". You will receive an email confirmation for your callback at " + data[0].email + ".";
-       })
-       .catch(err => console.log(err));
-       };
 function selectOpt() {
          selEl = document.getElementById('topic');
          op = selEl.value;
          document.getElementById('selectedTopic').innerHTML = "Your chosen topic: " + op;
          }
+
+   async function getCallback() {
+   var userID = document.getElementById('userID3').value;
+  fetch('http://localhost:8080/User/' + userID)
+    .then((response) => response.json())
+    .then((data) => {
+      document.getElementById('callback').innerHTML = data[0].firstName + " " + data[0].surname +
+      ", you will receive a callback within the next two working days on 0" + data[0].tel +
+      ". You will receive an email confirmation for your callback at " + data[0].email + ".";
+       })
+       .catch(err => console.log(err));
+       };
+
+
 function saveDetails() {
 var update = {
 'salary':document.getElementById("salary").value,
