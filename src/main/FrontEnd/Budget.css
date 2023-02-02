@@ -272,7 +272,14 @@ div {
 text-align:center;
 }
 
+p {
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
 
+
+label {
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
 
 
 
