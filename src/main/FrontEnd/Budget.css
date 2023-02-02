@@ -195,7 +195,7 @@ box-shadow: 0 9px #999;
                      }
 
 .incSubmit{
-background-color: #f77b73;
+background-color: #faa8a3;
 font-family: 'Sofia Sans Condensed', sans-serif;
 width: 40%;
 height:35px;
@@ -211,7 +211,7 @@ box-shadow: 0 9px #999;
 
             .incSubmit:hover {
                      cursor:pointer;
-                     background-color:#faa8a3;
+                     background-color:#f77b73;
                      }
 
 .benefitLink {
@@ -249,7 +249,7 @@ border-color: #2a363b;
 }
 
 .expSubmit {
-background-color: #f77b73;
+background-color: #faa8a3;
 font-family: 'Sofia Sans Condensed', sans-serif;
 width: 40%;
 height:35px;
@@ -265,14 +265,21 @@ box-shadow: 0 9px #999;
 
             .expSubmit:hover {
                      cursor:pointer;
-                     background-color:#faa8a3;
+                     background-color:#f77b73;
                      }
 
 div {
 text-align:center;
 }
 
+p {
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
 
+
+label {
+font-family: 'Sofia Sans Condensed', sans-serif;
+}
 
 
 
