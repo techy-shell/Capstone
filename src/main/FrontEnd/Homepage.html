@@ -65,7 +65,22 @@
         <h3 class="trendingtitle">Something to discuss?</h3>
         <section id="callback">
         <label for="userID">To request a callback, please enter your userID:</label><br>
-        <input type="text" id="userID" name="userID"> <br>
+        <input type="text" id="userID" name="userID" required> <br>
+            <label for="topic">Topic(s) you would like to discuss (If more than one, please choose Financial
+                Health Check):</label> <br>
+            <select id="topic" onchange="discussion">
+                <optgroup label="Savings & Investments">
+                    <option value="Short Term Savings">Short term savings</option>
+                    <option value="Investments">Investments</option>
+                </optgroup>
+                <optgroup label="Lending">
+                    <option value="Short Term Lending">Short term lending</option>
+                    <option value="Mortgages">Longer term lending</option>
+                </optgroup>
+                <optgroup label="FHC">
+                    <option value="FHC">Financial Health Check</option>
+                </optgroup>
+            </select> <br>
         <button id="requestcall" onclick="getUserInfo()">Request Callback</button>
         </section>
     </div>
