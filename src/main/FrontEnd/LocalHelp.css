@@ -56,8 +56,35 @@ border: none;
 box-shadow: 0 9px #999;
 }
 
+.sub:active {
+  box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.sub:hover {
+cursor:pointer;
+background-color:#faa8a3;
+}
 .cities{
 font-size:20px}
+
+.foodBank{width:370px;
+height:280px;
+border: 4px solid LightCoral;
+}
+
+.clothesParcel{width:370px;
+height:280px;
+border: 4px solid LightCoral;
+}
+.foodParcel{width:370px;
+height:280px;
+border: 4px solid LightCoral;
+}
+
+#photo1{
+position:relative;
+}
 
 #supportName{
 padding-top:10px;
