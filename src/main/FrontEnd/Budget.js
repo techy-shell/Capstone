@@ -42,7 +42,7 @@ return (m+c+g+w+f+t)
 
 document.getElementById("result").innerHTML = "Mortgage - £" + mtg + ", Council Tax - £" + ctax +
 ", Gas and Electricity - £" + gas + ", Water - £" + water + ", Food - £" + food + " and Travel - £" + travel;
-document.getElementById("totalExp").innerHTML = "This totals - £" + total;
+document.getElementById("totalExp").innerHTML = "Total Expenditure - £" + total;
 
 }
 
