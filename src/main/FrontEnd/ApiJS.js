@@ -64,9 +64,11 @@ const handleIncrement2 = () => {
   };
 //end
 
-
-var discussion = document.getElementById('topic').value;
-
+function selectOpt() {
+         selEl = document.getElementById('topic');
+         op = selEl.value;
+         document.getElementById('selectedTopic').innerHTML = "Your chosen topic: " + op;
+         }
 
  async function getUserInfo() {
  var userID = document.getElementById('userID').value;
@@ -74,8 +76,8 @@ fetch('http://localhost:8080/User/' + userID)
   .then((response) => response.json())
   .then((data) => {
     document.getElementById('callback').innerHTML = data[0].firstName + " " + data[0].surname +
-    ", you will receive a callback within the next two working days on 0" + data[0].tel + " to discuss " +
-    discussion + ". You will receive an email confirmation for your callback at " + data[0].email + ".";
+    ", you will receive a callback within the next two working days on 0" + data[0].tel +
+    ". You will receive an email confirmation for your callback at " + data[0].email + ".";
      })
      .catch(err => console.log(err));
      };
