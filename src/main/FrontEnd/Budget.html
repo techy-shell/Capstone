@@ -34,7 +34,7 @@
 
 <fieldset class="budgetHeading">
     <div class="headingForBudget">
-        <h2 class="budgetInfo">Budget calculator - Plan your money for the month ahead</h2>
+        <h1 class="budgetInfo">Budget calculator - Plan your money for the month ahead</h1>
     </div>
 </fieldset>
 
@@ -42,11 +42,11 @@
     <div class="budgetRow">
         <div class="incomeInput">
             <fieldset class="incField">
-                <h2 class="calculatorHeading">Income</h2>
+                <h1 class="calculatorHeading">Income</h1>
             </fieldset>
             <fieldset class="incField">
-                <label for="userName">Please enter your username:</label><br>
-                <input type="text" id="userName" name="userName">
+                <label for="userName">Please enter your user ID:</label>
+                <input type="text" id="userName" name="userName"><br><br>
                 <button class="userBtn" onclick="getUsers()">See current financials</button>
                 <br><br>
                 <div id="salaryInfo"></div>
@@ -81,34 +81,34 @@
 
         <div class="expenditure">
             <fieldset class="expField">
-                <h2 class="calculatorHeading">Expenditure</h2>
+                <h1 class="calculatorHeading">Expenditure</h1>
             </fieldset>
             <fieldset class="expField">
                 <div>
-                    <label class="inputInfo" for="mortgage">Your monthly mortgage / rent amount:</label><br>
+                    <label class="inputInfo" for="mortgage"> Mortgage / Rent amount per month:</label>
                     <input class="inputInfo" type="text" id="mortgage" name="mortgage"><br>
                 </div>
             </fieldset>
             <fieldset class="expField">
                 <div>
-                    <label class="inputInfo" for="councilTax">Your council tax per month:</label><br>
+                    <label class="inputInfo" for="councilTax">Council tax per month:</label>
                     <input class="inputInfo" type="text" id="councilTax" name="councilTax"><br>
                 </div>
             </fieldset>
             <fieldset class="expField">
-                <label class="inputInfo" for="gasElectricity">Your gas/electricity payment per month:</label><br>
+                <label class="inputInfo" for="gasElectricity">Gas / Electricity per month:</label>
                 <input class="inputInfo" type="text" id="gasElectricity" name="gasElecticity"><br>
             </fieldset>
             <fieldset class="expField">
-                <label class="inputInfo" for="water">Your water payment per month:</label><br>
+                <label class="inputInfo" for="water">Water per month:</label>
                 <input class="inputInfo" type="text" id="water" name="water"><br>
             </fieldset>
             <fieldset class="expField">
-                <label class="inputInfo" for="food">How much do you pay for food per month:</label><br>
+                <label class="inputInfo" for="food">Food per month:</label>
                 <input class="inputInfo" type="text" id="food" name="food"><br>
             </fieldset>
             <fieldset class="expField">
-                <label class="inputInfo" for="travel">How much do you pay for travel per month:</label><br>
+                <label class="inputInfo" for="travel">Travel per month:</label>
                 <input class="inputInfo" type="text" id="travel" name="travel"><br>
             </fieldset>
             <fieldset class="expField">
@@ -121,9 +121,9 @@
             </fieldset>
             <fieldset class="expField">
 
+                <p id="includeIncome"></p>
                 <p id="result"></p>
                 <p id="totalExp"></p>
-                <p id="includeIncome"></p>
                 <p id="remainBal"></p>
                 <p id="savings"></p>
                 <p id="standingOrder"></p>
@@ -134,7 +134,7 @@
                 <p id="creditCard"></p>
                 <p id="mortgageInfo"></p>
                 <p id="review"></p>
-                <label for="userID3">To request a callback, please enter your userID:</label><br>
+                <label for="userID3">To request a callback, please enter your user ID:</label><br><br>
                 <input type="text" id="userID3" name="userID3"><br><br>
                 <button id="requestcall" onclick="getCallback()">Request Callback</button><br>
                 <p id="callback"></p>
