@@ -47,8 +47,13 @@ color: #2a363b;
 }
 
 .sub{
-font-size:20px;
-color:#f77b73
+background-color: #f77b73;
+font-family: 'Sofia Sans Condensed', sans-serif;
+width: 15%;
+height:35px;
+border-radius: 3px;
+border: none;
+box-shadow: 0 9px #999;
 }
 
 .cities{
@@ -80,10 +85,6 @@ font-family: sans-serif;
 font-size: 15px;
 color:#f77b73;
 text-align: center;
-}
-position:relative;
-left: 0px;
-top: 200px;
 }
 
 #COLPaymentLink{
