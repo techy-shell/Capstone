@@ -147,7 +147,7 @@ budgetRow::after {
 /* income table */
 .incomeInput {
    float: left;
-   width: 40%;
+   width: 47%;
    padding: 5px;
    background-color: #f77b73;
   color: #2a363b;
@@ -237,7 +237,7 @@ text-align:left;
 
 .expenditure {
  float: right;
- width:40%;
+ width:47%;
  padding: 5px;
  background-color: #f77b73;
  height:75%;
@@ -282,4 +282,22 @@ font-family: 'Sofia Sans Condensed', sans-serif;
 }
 
 
+#requestcall {
+background-color: #faa8a3;
+font-family: 'Sofia Sans Condensed', sans-serif;
+width: 40%;
+height:35px;
+border-radius: 3px;
+border: none;
+box-shadow: 0 9px #999;
+}
 
+#requestcall:active {
+          box-shadow: 0 5px #666;
+            transform: translateY(4px);
+            }
+
+            #requestcall:hover {
+                     cursor:pointer;
+                     background-color:#f77b73;
+                     }
