@@ -109,14 +109,15 @@
             <fieldset class="expField">
                 <label for="userName2">Enter your username to include your current income in the calculation:</label><br>
                 <input type="text" id="userName2" name="userName2">
-                <button class="userBtn">Enter</button>
             </fieldset>
             <fieldset class="expField">
-                <button class="expSubmit"onclick="calcBudget();">Calculate</button>
+                <button class="expSubmit"onclick="calcBudget();getIncome();">Calculate</button>
             </fieldset>
             <fieldset class="expField">
+                <p id="includeIncome"></p>
             <p id="result"></p>
             <p id="totalExp"></p>
+
             </fieldset>
         </div>
 

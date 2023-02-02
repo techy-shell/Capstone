@@ -43,26 +43,20 @@ return (m+c+g+w+f+t)
 document.getElementById("result").innerHTML = "Mortgage - £" + mtg + ", Council Tax - £" + ctax +
 ", Gas and Electricity - £" + gas + ", Water - £" + water + ", Food - £" + food + " and Travel - £" + travel;
 document.getElementById("totalExp").innerHTML = "This totals - £" + total;
+
 }
 
+async function getIncome(){
+ var userID = document.getElementById('userName2').value;
+fetch('http://localhost:8080/TotalIncome/' + userID)
+  .then((response) => response.json())
+  .then((data) => {
+  console.log(data);
+  document.getElementById("includeIncome").innerHTML = "Total income - £" + data[0].totalIncome;
+     })
+     .catch(err => console.log(err));
+     }
 
-/*
-This is a more complex way for using the values
-var m = localStorage.setItem( "mortgage", mtg);
-var c = localStorage.setItem("councilTax", ctax);
-var g = localStorage.setItem( "gasElectricity", gas);
-var w = localStorage.setItem( "water", water);
-var f = localStorage.setItem("food", food);
-var t = localStorage.setItem( "travel", travel);
-document.getElementById("result").innerHTML = localStorage.getItem( "mortgage", mtg)
-+ localStorage.getItem( "councilTax", ctax) + localStorage.getItem( "gasElectricity", gas)
-+ localStorage.getItem( "water", water)+ localStorage.getItem( "food", food)
-+ localStorage.getItem( "travel", travel);
-}*/
-
-/*
-Below data is to push new income data to DB using API
-*/
 
 function saveDetails() {
 var update = {
