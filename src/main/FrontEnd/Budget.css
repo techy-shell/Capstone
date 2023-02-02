@@ -175,18 +175,44 @@ text-align: left;
 }
 
 .userBtn {
-background-color: darkgray;
+background-color: #999;
 font-family: 'Sofia Sans Condensed', sans-serif;
-font-size:15px;
-color:#2a363b;
+width: 40%;
+height:35px;
+border-radius: 3px;
+border: none;
+box-shadow: 0 9px #999;
 }
 
+.userBtn:active {
+          box-shadow: 0 5px #666;
+            transform: translateY(4px);
+            }
+
+            .userBtn:hover {
+                     cursor:pointer;
+                     background-color:#faa8a3;
+                     }
+
 .incSubmit{
-background-color: darkgray;
+background-color: #f77b73;
 font-family: 'Sofia Sans Condensed', sans-serif;
-font-size:20px;
-color:#2a363b;
+width: 40%;
+height:35px;
+border-radius: 3px;
+border: none;
+box-shadow: 0 9px #999;
 }
+
+.incSubmit:active {
+          box-shadow: 0 5px #666;
+            transform: translateY(4px);
+            }
+
+            .incSubmit:hover {
+                     cursor:pointer;
+                     background-color:#faa8a3;
+                     }
 
 .benefitLink {
 font-family: 'Sofia Sans Condensed', sans-serif;
@@ -223,11 +249,24 @@ border-color: #2a363b;
 }
 
 .expSubmit {
-background-color: darkgray;
+background-color: #f77b73;
 font-family: 'Sofia Sans Condensed', sans-serif;
-font-size:20px;
-color:#2a363b;
+width: 40%;
+height:35px;
+border-radius: 3px;
+border: none;
+box-shadow: 0 9px #999;
 }
+
+.expSubmit:active {
+          box-shadow: 0 5px #666;
+            transform: translateY(4px);
+            }
+
+            .expSubmit:hover {
+                     cursor:pointer;
+                     background-color:#faa8a3;
+                     }
 
 div {
 text-align:center;
