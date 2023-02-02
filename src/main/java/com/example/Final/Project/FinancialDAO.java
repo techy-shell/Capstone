@@ -27,7 +27,6 @@ public class FinancialDAO {
         return  userFinancials;
     }
 
-
     //method to update database
     public void updateSalary (int x, int customerID, int benefit) {
         String sql = "UPDATE Finances set MonthlyPay = " + x + ", benefits = "+benefit+" Where UserID = " + customerID;

@@ -1,5 +1,6 @@
 package com.example.Final.Project;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -22,4 +23,11 @@ public class TotalIncomeController {
         }
         else return new ResponseEntity<>(income,HttpStatus.OK);
     }
+
+    @Autowired
+    public void setTotalIncomeDAO(TotalIncomeDAO totalIncomeDAO) {
+        this.totalIncomeDAO = totalIncomeDAO;
+    }
 }
+
+

@@ -26,6 +26,7 @@ public ResponseEntity<List> retrieveUserFinancials(@PathVariable int UserID) {
     }
     else return new ResponseEntity<>(finance,HttpStatus.OK);
 }
+
 //Add put mapping to add financial data into database for one user (other income etc)
 
     @RequestMapping ("/update")
