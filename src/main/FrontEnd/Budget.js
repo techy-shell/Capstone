@@ -52,7 +52,7 @@ fetch('http://localhost:8080/TotalIncome/' + userID)
   .then(res => res.json())
   .then(data => {
     const remainingBalance = (data[0].totalIncome - total);
-    const potSavings = (remainingBalance * 12);
+    const potSavings = ((remainingBalance/2) * 12);
     if (remainingBalance >= 0){
     document.getElementById("remainBal").innerHTML = "You will have £" + remainingBalance + " remaining at the end of the month";
     document.getElementById("savings").innerHTML = "If you saved 50% of your remaining balance each month, by the end of the year you would have £" + potSavings + " in your savings account.";
@@ -85,7 +85,11 @@ fetch('http://localhost:8080/TotalIncome/' + userID)
        })
        .catch(err => console.log(err));
        };
-
+function selectOpt() {
+         selEl = document.getElementById('topic');
+         op = selEl.value;
+         document.getElementById('selectedTopic').innerHTML = "Your chosen topic: " + op;
+         }
 function saveDetails() {
 var update = {
 'salary':document.getElementById("salary").value,

@@ -136,6 +136,21 @@
                 <p id="review"></p>
                 <label for="userID3">To request a callback, please enter your user ID:</label><br><br>
                 <input type="text" id="userID3" name="userID3"><br><br>
+                <label for="topic">Topic(s) you would like to discuss (If more than one, please choose Financial
+                    Health Check):</label> <br>
+                <select id="topic">
+                    <optgroup label="Savings & Investments">
+                        <option value="Short Term Savings">Short term savings</option>
+                        <option value="Investments">Investments</option>
+                    </optgroup>
+                    <optgroup label="Lending">
+                        <option value="Short Term Lending">Short term lending</option>
+                        <option value="Mortgages">Longer term lending</option>
+                    </optgroup>
+                    <optgroup label="FHC">
+                        <option value="FHC">Financial Health Check</option>
+                    </optgroup>
+                </select> <br>
                 <button id="requestcall" onclick="getCallback()">Request Callback</button><br>
                 <p id="callback"></p>
             </fieldset>
