@@ -46,6 +46,10 @@ font-size:18px
 color: #2a363b !important;
 }
 
+#city{
+font-size:25px;
+}
+
 .sub{
 background-color: #f77b73;
 font-family: 'Sofia Sans Condensed', sans-serif;
@@ -54,6 +58,7 @@ height:35px;
 border-radius: 3px;
 border: none;
 box-shadow: 0 9px #999;
+font-size:20px;
 }
 
 .sub:active {
