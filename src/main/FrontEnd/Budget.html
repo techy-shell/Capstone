@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name ="viewport" content="width=device-width, inital-scale=1.0">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <title>Shadow Bank Cost of Living support</title>
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/6JGPJGs/Shadow-Bank-Logo.png">
     <link rel="stylesheet" type="text/css" href="Budget.css">
@@ -11,13 +11,15 @@
 <body>
 
 <header>
-    <a href="Homepage.html"><img class="logo" src="https://i.ibb.co/6JGPJGs/Shadow-Bank-Logo.png" alt="shadow bank logo"></a>
+    <a href="Homepage.html"><img class="logo" src="https://i.ibb.co/6JGPJGs/Shadow-Bank-Logo.png"
+                                 alt="shadow bank logo"></a>
 </header>
 <body>
 <ul>
-    <li class = "nav"><a href="Homepage.html" target="_blank" class="links">Homepage</a></li>
-    <li class = "nav"><a href="https://www.bbc.co.uk/news/topics/cljev4jz3pjt" target="_blank" class="links">Latest News</a></li>
-    <li class = "nav"><a href="LocalHelp.html" target="_blank" class="links">Help Nearby</a></li>
+    <li class="nav"><a href="Homepage.html" target="_blank" class="links">Homepage</a></li>
+    <li class="nav"><a href="https://www.bbc.co.uk/news/topics/cljev4jz3pjt" target="_blank" class="links">Latest
+        News</a></li>
+    <li class="nav"><a href="LocalHelp.html" target="_blank" class="links">Help Nearby</a></li>
     <div class="dropdown">
         <button class="dropbtn">
             <i class="fa fa-caret-down"></i>
@@ -45,7 +47,8 @@
             <fieldset class="incField">
                 <label for="userName">Please enter your username:</label><br>
                 <input type="text" id="userName" name="userName">
-                <button class="userBtn" onclick="getUsers()">See current financials</button><br><br>
+                <button class="userBtn" onclick="getUsers()">See current financials</button>
+                <br><br>
                 <div id="salaryInfo"></div>
                 <div id="benefitsInfo"></div>
             </fieldset>
@@ -61,13 +64,15 @@
 
             </fieldset>
             <fieldset class="incField">
-                <button class="incSubmit"onclick="saveDetails()">Update</button>
+                <button class="incSubmit" onclick="saveDetails()">Update</button>
             </fieldset>
             <fieldset class="incField">
-                <p class="benefitInfo">*This includes child benefit, universal credit, child tax credits / working tax credits,
+                <p class="benefitInfo">*This includes child benefit, universal credit, child tax credits / working tax
+                    credits,
                     personal independence payments, carers allowance, disability living allowance, pension credits
                     and employment support allowance</p>
-                <a class="benefitLink" href="https://www.gov.uk/browse/benefits">click here for further information about your benefits</a>
+                <a class="benefitLink" href="https://www.gov.uk/browse/benefits">click here for further information
+                    about your benefits</a>
             </fieldset>
             <fieldset class="incField">
                 <div class="finances"></div>
@@ -87,40 +92,52 @@
             <fieldset class="expField">
                 <div>
                     <label class="inputInfo" for="councilTax">Your council tax per month:</label><br>
-                    <input class="inputInfo"type="text" id="councilTax" name="councilTax"><br>
+                    <input class="inputInfo" type="text" id="councilTax" name="councilTax"><br>
                 </div>
             </fieldset>
             <fieldset class="expField">
-                <label class="inputInfo"for="gasElectricity">Your gas/electricity payment per month:</label><br>
-                <input class="inputInfo"type="text" id="gasElectricity" name="gasElecticity"><br>
+                <label class="inputInfo" for="gasElectricity">Your gas/electricity payment per month:</label><br>
+                <input class="inputInfo" type="text" id="gasElectricity" name="gasElecticity"><br>
             </fieldset>
             <fieldset class="expField">
-                <label class="inputInfo"for="water">Your water payment per month:</label><br>
-                <input class="inputInfo"type="text" id="water" name="water"><br>
-            </fieldset>
-            <fieldset  class="expField">
-                <label class="inputInfo"for="food">How much do you pay for food per month:</label><br>
-                <input class="inputInfo"type="text" id="food" name="food"><br>
+                <label class="inputInfo" for="water">Your water payment per month:</label><br>
+                <input class="inputInfo" type="text" id="water" name="water"><br>
             </fieldset>
             <fieldset class="expField">
-                <label class="inputInfo"for="travel">How much do you pay for travel per month:</label><br>
-                <input class="inputInfo"type="text" id="travel" name="travel"><br>
+                <label class="inputInfo" for="food">How much do you pay for food per month:</label><br>
+                <input class="inputInfo" type="text" id="food" name="food"><br>
             </fieldset>
             <fieldset class="expField">
-                <label for="userName2">Enter your username to include your current income in the calculation:</label><br>
+                <label class="inputInfo" for="travel">How much do you pay for travel per month:</label><br>
+                <input class="inputInfo" type="text" id="travel" name="travel"><br>
+            </fieldset>
+            <fieldset class="expField">
+                <label for="userName2">Enter your username to include your current income in the
+                    calculation:</label><br>
                 <input type="text" id="userName2" name="userName2">
             </fieldset>
             <fieldset class="expField">
-                <button class="expSubmit"onclick="calcBudget();">Calculate</button>
+                <button class="expSubmit" onclick="calcBudget();">Calculate</button>
             </fieldset>
             <fieldset class="expField">
 
-            <p id="result"></p>
-            <p id="totalExp"></p>
-            <p id="includeIncome"></p>
-            <p id="remainBal"></p>
-            <p id="savings"></p>
-            <p id="supportOptions"></p>
+                <p id="result"></p>
+                <p id="totalExp"></p>
+                <p id="includeIncome"></p>
+                <p id="remainBal"></p>
+                <p id="savings"></p>
+                <p id="standingOrder"></p>
+                <p id="savingsAcc"></p>
+                <p id="concern"></p>
+                <p id="overdraft"></p>
+                <p id="loan"></p>
+                <p id="creditCard"></p>
+                <p id="mortgageInfo"></p>
+                <p id="review"></p>
+                <label for="userID3">To request a callback, please enter your userID:</label><br>
+                <input type="text" id="userID3" name="userID3"> <br>
+                <button id="requestcall" onclick="getCallback()">Request Callback</button>
+                <p id="callback"></p>
             </fieldset>
         </div>
 
