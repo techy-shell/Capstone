@@ -18,7 +18,7 @@ left:0px;
 top:140px;
 }
 
-h1{
+#localSupport{
 font-family: sans-serif;
 font-size:35px;
 border-bottom: 1px dashed #f77b73;
@@ -42,8 +42,8 @@ label{
 font-size:18px
 }
 
-nav,.links{
-color: #2a363b;
+.nav,.links{
+color: #2a363b !important;
 }
 
 .sub{
