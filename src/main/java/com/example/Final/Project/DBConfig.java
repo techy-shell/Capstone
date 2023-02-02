@@ -17,7 +17,7 @@ public class DBConfig {
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/Cost_of_living");
         dataSource.setUsername("root");
-        dataSource.setPassword("password!");
+        dataSource.setPassword("FallingLeaves1!");
 
         return dataSource;
     }
