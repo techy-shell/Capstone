@@ -21,8 +21,7 @@ public class UserController {
     }
 
 
-    //Add request mapping for specific contact info for one user ie /User/'username' for callback form (if still doing)
-
+    //Mapping for specific contact info for one user ie /User/'username' for callback form (if still doing)
     @RequestMapping("/User/{UserID}")
     public ResponseEntity<List> retrieveUserInfo(@PathVariable int UserID) {
         List<UserDB> user = userDAO.getUserInfo(UserID);

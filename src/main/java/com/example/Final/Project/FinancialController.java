@@ -17,7 +17,7 @@ public class FinancialController {
     return financialDAO.getFinancials();
 }
 
-//Add request mapping for specific financial info for one user ie /Financial/'username' (to fill in forms - budget & benefits)
+//Mapping for specific financial info for one user ie /Financial/'username' (to fill in forms - budget & benefits)
 @RequestMapping ("/Financial/{UserID}")
 public ResponseEntity<List> retrieveUserFinancials(@PathVariable int UserID) {
     List<FinancialDB> finance = financialDAO.getUserFinancials(UserID);
@@ -27,7 +27,7 @@ public ResponseEntity<List> retrieveUserFinancials(@PathVariable int UserID) {
     else return new ResponseEntity<>(finance,HttpStatus.OK);
 }
 
-//Add put mapping to add financial data into database for one user (other income etc)
+//Mapping to add financial data into database for one user (other income etc)
 
     @RequestMapping ("/update")
     public void updateFinancial (@RequestBody FinancialDB requestFinancial) {

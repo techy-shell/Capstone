@@ -21,7 +21,7 @@ public class localHelpController {
         return localHelpDAO.getLocalHelp();
     }
 
-    //Add request mapping to pull local help info from datatbase using city at reference ie /localhelp/'cityname'
+    //Request mapping to pull local help info from database using city at reference ie /localhelp/'cityname'
     @RequestMapping("/localhelp/{CityID}")
     public ResponseEntity<List> retrieveLocalInfo(@PathVariable String CityID) {
         List<LocalHelpDB> localHelpDBList = localHelpDAO.getLocalInfo(CityID);

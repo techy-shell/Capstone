@@ -15,6 +15,7 @@ public class TotalIncomeController {
 
     private TotalIncomeDAO totalIncomeDAO;
 
+    //Mapping for specific financial info for one user ie /TotalIncome/'userID' (to use in expenditure calc)
     @RequestMapping("/TotalIncome/{userID}")
     public ResponseEntity<List> retrieveTotalFinancials(@PathVariable int userID) {
         List<TotalIncomeDB> income = totalIncomeDAO.getTotalIncome(userID);
