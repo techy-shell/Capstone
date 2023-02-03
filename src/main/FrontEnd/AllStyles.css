@@ -221,3 +221,19 @@ font-family: 'Sofia Sans Condensed', sans-serif;
 height:25px;
 }
 
+footer {
+text-align: center;
+font-family: 'Sofia Sans Condensed', sans-serif;
+background-color: #f77b73;
+border: 5px double #2a363b;
+height: 200px;
+color: #2a363b;
+font-size: 20px;
+padding:10px;
+}
+
+#email {
+text-decoration: none;
+color: #2a363b;
+}
+
