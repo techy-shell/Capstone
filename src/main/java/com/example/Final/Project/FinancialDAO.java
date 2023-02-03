@@ -9,6 +9,8 @@ import java.util.List;
 public class FinancialDAO {
     private JdbcTemplate jdbcTemplate;
 
+    //SQL query to pull all info from Finances table in database
+
     public List<FinancialDB> getFinancials(){
         String sql = "SELECT * from finances";
 
@@ -18,6 +20,7 @@ public class FinancialDAO {
         return  financials;
     }
 
+    //SQL query to pull all info for a specific user from Finances table in database
     public List<FinancialDB> getUserFinancials(int userID){
         String sql = "SELECT * from finances WHERE UserID = " + userID;
 
@@ -27,7 +30,7 @@ public class FinancialDAO {
         return  userFinancials;
     }
 
-    //method to update database
+    //method to update finances table in database
     public void updateSalary (int x, int customerID, int benefit) {
         String sql = "UPDATE Finances set MonthlyPay = " + x + ", benefits = "+benefit+" Where UserID = " + customerID;
         jdbcTemplate.update(sql);

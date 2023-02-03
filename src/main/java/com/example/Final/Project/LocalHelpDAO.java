@@ -11,6 +11,8 @@ public class LocalHelpDAO {
 
     private JdbcTemplate jdbcTemplate;
 
+    //SQL query to pull all info from LocalHelp table in database
+
     public List<LocalHelpDB> getLocalHelp(){
         String sql = "SELECT * from LocalHelp";
 
@@ -19,6 +21,8 @@ public class LocalHelpDAO {
                 new LocalHelpRowMapper());
         return  localHelp;
     }
+
+    //SQL query to pull info for a specific city from LocalHelp table in database
 
     public List<LocalHelpDB> getLocalInfo(String CityID) {
         String sql = "SELECT * FROM LocalHelp WHERE CityID = " + "'" + CityID + "'";

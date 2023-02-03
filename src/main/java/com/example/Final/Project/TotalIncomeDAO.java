@@ -9,6 +9,8 @@ import java.util.List;
 public class TotalIncomeDAO {
     private JdbcTemplate jdbcTemplate;
 
+    //SQL query to pull both incomes from Finances table in database and add them together for use in the expenditure calculator
+
     public List<TotalIncomeDB> getTotalIncome(int userID){
         String sql = "SELECT SUM(MonthlyPay) + SUM(Benefits) as TotalIncome from finances WHERE UserID = " + userID;
 

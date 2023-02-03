@@ -11,6 +11,8 @@ public class UserDAO {
 
     private JdbcTemplate jdbcTemplate;
 
+    //SQL query to pull all info from Users table in database
+
     public List<UserDB> getUsers() {
         String sql = "SELECT * from users";
 
@@ -19,6 +21,8 @@ public class UserDAO {
                 new UserRowMapper());
         return users;
     }
+
+    //SQL query to pull all info for a specific user from Users table in database
 
     public List<UserDB> getUserInfo(int userID) {
         String sql = "SELECT * FROM Users WHERE UserID = " + "'" + userID + "'";
