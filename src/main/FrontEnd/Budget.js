@@ -147,7 +147,18 @@ function selectOpt() {
 
 
 //on submit
-  function validateForms(id,id2){
+
+    function validateForms(id){
+    var numbers = /^[0-9]+$/;
+    var firstName = document.getElementById(id).value;
+
+    if(firstName.match(numbers)){
+    document.console.log("good");
+    } else {
+    alert("Details should be in number format");
+    }
+    }
+  function validateForms2(id,id2){
     var numbers = /^[0-9]+$/;
     var firstName = document.getElementById(id).value;
     var secondValue = document.getElementById(id2).value;

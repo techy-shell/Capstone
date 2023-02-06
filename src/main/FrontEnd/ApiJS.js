@@ -96,7 +96,7 @@ fetch('http://localhost:8080/User/' + userID)
     }
 
     //on submit
-    function validateForms(id,id2){
+    function validateForms(id){
     var numbers = /^[0-9]+$/;
     var firstName = document.getElementById(id).value;
 
