@@ -299,6 +299,14 @@ canvas {
       color:black;
       }
 
+p.colour1 {
+color:white
+}
+
+p.colour2 {
+color:#2a363b
+}
+
 #requestcall {
 background-color: #faa8a3;
 font-family: 'Sofia Sans Condensed', sans-serif;
