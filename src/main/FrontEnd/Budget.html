@@ -50,7 +50,7 @@
             <fieldset class="incField">
                 <label for="userName">Please enter your user ID:</label>
                 <input type="text" id="userName" name="userName"><br><br>
-                <button class="userBtn" onclick="getUsers()">See current financials</button>
+                <button class="userBtn" onclick="getUsers(); validateForms('userName')">See current financials</button>
                 <br><br>
                 <div id="salaryInfo"></div>
                 <div id="benefitsInfo"></div>
@@ -67,7 +67,7 @@
 
             </fieldset>
             <fieldset class="incField">
-                <button class="incSubmit" onclick="saveDetails()">Update</button>
+                <button class="incSubmit" onclick="saveDetails();validateForms2('salary','benefits')">Update</button>
             </fieldset>
             <fieldset class="incField">
                 <p class="benefitInfo">*This includes child benefit, universal credit, child tax credits / working tax
@@ -120,12 +120,8 @@
                 <input type="text" id="userName2" name="userName2">
             </fieldset>
             <fieldset class="expField">
-                <label for="userID2">If you would like to add a second user's income, please enter the second UserID
-                    calculation:</label><br>
-                <input type="text" id="userID2" name="userID2">
-            </fieldset>
-            <fieldset class="expField">
-                <button class="expSubmit" onclick="calcBudget();">Calculate</button><br>
+                <button class="expSubmit" onclick="calcBudget();validateForms7('councilTax','mortgage','gasElectricity',
+                'water','food','travel','userName2')">Calculate</button><br>
             </fieldset>
             <fieldset class="expField">
                 <canvas id="myChart" style="width:100%;max-width:600px"></canvas>

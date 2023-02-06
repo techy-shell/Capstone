@@ -148,6 +148,42 @@ function selectOpt() {
        };
 
 
+//on submit
 
+    function validateForms(id){
+    var numbers = /^[0-9]+$/;
+    var firstName = document.getElementById(id).value;
 
+    if(firstName.match(numbers)){
+    document.console.log("good");
+    } else {
+    alert("Details should be in number format");
+    }
+    }
+  function validateForms2(id,id2){
+    var numbers = /^[0-9]+$/;
+    var firstName = document.getElementById(id).value;
+    var secondValue = document.getElementById(id2).value;
+    if(firstName.match(numbers) && secondValue.match(numbers)){
+    document.console.log("good");
+    } else {
+    alert("Details should be in number format");
+    }
+    }
 
+     function validateForms7(id,id2,id3,id4,id5,id6,id7){
+        var numbers = /^[0-9]+$/;
+        var firstName = document.getElementById(id).value;
+        var secondValue = document.getElementById(id2).value;
+        var thirdValue = document.getElementById(id3).value;
+        var fourthValue = document.getElementById(id4).value;
+        var fifthValue = document.getElementById(id5).value;
+        var sixthValue = document.getElementById(id6).value;
+        var seventhValue = document.getElementById(id7).value;
+        if(firstName.match(numbers) && secondValue.match(numbers) && thirdValue.match(numbers) && fourthValue.match(numbers)
+        && fifthValue.match(numbers) && sixthValue.match(numbers) && seventhValue.match(numbers)){
+        document.console.log("good");
+        } else {
+        alert("Details should be in number format");
+        }
+        }

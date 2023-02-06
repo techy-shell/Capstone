@@ -99,9 +99,10 @@ fetch('http://localhost:8080/User/' + userID)
     function validateForms(id){
     var numbers = /^[0-9]+$/;
     var firstName = document.getElementById(id).value;
+
     if(firstName.match(numbers)){
     document.console.log("good");
     } else {
-    alert("UserID should be in number format");
+    alert("Details should be in number format");
     }
     }
