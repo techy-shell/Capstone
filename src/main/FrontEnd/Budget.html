@@ -120,12 +120,18 @@
                 <input type="text" id="userName2" name="userName2">
             </fieldset>
             <fieldset class="expField">
+                <label for="userID2">If you have a second income you'd like to include, please enter the userID to pull through the income for the second person:
+                    </label><br>
+                <input type="text" placeholder="0" id="userID2" name="userID2">
+            </fieldset>
+            <fieldset class="expField">
                 <button class="expSubmit" onclick="calcBudget();validateForms7('councilTax','mortgage','gasElectricity',
-                'water','food','travel','userName2')">Calculate</button><br>
+                'water','food','travel','userName2','userID2')">Calculate</button><br>
             </fieldset>
             <fieldset class="expField">
                 <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
                 <p id="includeIncome"></p>
+                <p id="includeIncome2"></p>
                 <p id="totalExp"></p>
                 <p id="remainBal"></p>
                 <p id="savings"></p>
