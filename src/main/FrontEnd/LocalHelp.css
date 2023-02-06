@@ -65,9 +65,7 @@ border-radius: 3px;
 border: none;
 box-shadow: 0 9px #999;
 font-size:20px;
-position: relative;
-top:20px;
-left:170px;
+margin-left:25%;
 }
 
 .sub:active {
@@ -117,7 +115,6 @@ color:#f77b73;
 font-size:20px;
 font-family:sans-serif;
 text-align: center;
-position:relative;
 top: 20px;
 }
 
