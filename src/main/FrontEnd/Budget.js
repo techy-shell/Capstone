@@ -147,13 +147,13 @@ function selectOpt() {
 
 
 //on submit
-    function validateForms(id){
+  function validateForms(id,id2){
     var numbers = /^[0-9]+$/;
     var firstName = document.getElementById(id).value;
-    if(firstName.match(numbers)){
+    var secondValue = document.getElementById(id2).value;
+    if(firstName.match(numbers) && secondValue.match(numbers)){
     document.console.log("good");
- j
     } else {
-    alert("UserID should be in number format");
+    alert("Details should be in number format");
     }
     }
