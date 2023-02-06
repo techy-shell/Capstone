@@ -81,3 +81,27 @@ fetch('http://localhost:8080/User/' + userID)
      })
      .catch(err => console.log(err));
      };
+
+     //number checker from jake
+
+    function numbersOnly(idName) {
+    var numbers = /^[0-9]+$/;
+    var firstName = document.getElementById(idName).value;
+    if(firstName.match(numbers)){
+    console.log("good");
+    } else {
+    //alert("Numbers only");
+    document.getElementById(idName).style.backgroundColor = "red";
+    }
+    }
+
+    //on submit
+    function validateForms(id){
+    var numbers = /^[0-9]+$/;
+    var firstName = document.getElementById(id).value;
+    if(firstName.match(numbers)){
+    document.console.log("good");
+    } else {
+    alert("UserID should be in number format");
+    }
+    }
