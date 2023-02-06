@@ -136,7 +136,7 @@ background: #2a363b;
 /* rows for the 2 tables to  create 2 horizontal tables*/
 
 .budgetRow {
-  border: none;
+  border: solid #2a363b;
   background: #2a363b;
   display: flex;
   flex-wrap: wrap;
