@@ -5,7 +5,7 @@ font-size:20px;
 font-family:sans-serif;
 position:relative;
 left:0px;
-top:50px;
+top:0px;
 }
 
 #p2{
@@ -15,27 +15,25 @@ font-size:20px;
 font-family:sans-serif;
 position:relative;
 left:0px;
-top:140px;
+top:20px;
 }
 
 #localSupport{
 font-family: sans-serif;
 font-size:35px;
 border-bottom: 1px dashed #f77b73;
-padding-bottom: 5px
+padding-bottom: 5px;
 }
 
 .main {
 border: 5px solid #faa8a3;
 border-style: double;
 position:relative;
-left:0px;
-top:100px;
 font-family: sans-serif;
 font-size: 15px;
 color:#f77b73;
 text-align: center;
-padding-bottom:50px
+height:1400px;
 }
 
 label{
@@ -48,17 +46,21 @@ color: #2a363b !important;
 
 #city{
 font-size:25px;
+position:relative;
+top:10px;
 }
 
 .sub{
 background-color: #f77b73;
 font-family: 'Sofia Sans Condensed', sans-serif;
-width: 15%;
+width: 50%;
 height:35px;
 border-radius: 3px;
 border: none;
 box-shadow: 0 9px #999;
 font-size:20px;
+position: relative;
+top:20px;
 }
 
 .sub:active {
@@ -93,18 +95,20 @@ right: 20px;
 }
 
 #supportName{
-padding-top:10px;
+font-size:25px;
+text-decoration: underline;
+padding-top:100px;
 position:relative;
 left: 0px;
-top: 40px;
+top: 0px;
 bottom: 200px;
 }
 
 #supportInfo{
-padding-top:10px;
+font-size: 20px;
 position:relative;
 left: 0px;
-top: 40px;
+top: 20px;
 bottom: 200px
 }
 
@@ -113,9 +117,9 @@ border: 5px solid #faa8a3;
 border-style: double;
 position:relative;
 left:0px;
-top:160px;
+top:70px;
 font-family: sans-serif;
-font-size: 15px;
+font-size: 20px;
 color:#f77b73;
 text-align: center;
 }
@@ -223,3 +227,29 @@ display:none;
     display: block;
   }
 
+#mainsection1, #mainsection2 {
+border: none;
+display: flex;
+flex-wrap: wrap;
+}
+#mainsection1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.boxes1, .boxes2 {
+float: left;
+border: 5px double #faa8a3;
+padding: 0px;
+margin: 20px;
+flex: 40%;
+height:300px;
+min-height:20%
+}
+
+@media screen and (max-width: 800px) {
+  .boxes1, .boxes2 {
+    flex:100%;
+  }
+}
