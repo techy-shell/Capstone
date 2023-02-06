@@ -297,6 +297,8 @@ canvas {
       font-family: 'Sofia Sans Condensed', sans-serif;
       text-align:center;
       color:black;
+      position: relative;
+      left: 23%;
       }
 
 p.colour1 {
