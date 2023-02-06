@@ -65,7 +65,7 @@
         <h3 class="trendingtitle">Something to discuss?</h3>
         <section id="callback">
         <label for="userID">To request a callback, please enter your userID:</label><br>
-        <input type="text" id="userID" name="userID" required> <br>
+        <input type="text" id="userID" name="userID" class="numbers" required> <br>
             <label for="topic">Topic(s) you would like to discuss (If more than one, please choose Financial
                 Health Check):</label> <br>
             <select id="topic">
@@ -81,7 +81,7 @@
                     <option value="FHC">Financial Health Check</option>
                 </optgroup>
             </select> <br>
-        <button id="requestcall" onclick="getUserInfo(); selectOpt()">Request Callback</button>
+        <button id="requestcall" onclick="getUserInfo(); selectOpt(); validateForms('userID')">Request Callback</button>
         </section>
         <p id="selectedTopic"></p>
     </div>
