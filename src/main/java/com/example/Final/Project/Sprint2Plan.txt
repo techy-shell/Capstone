@@ -29,6 +29,7 @@ Budget Calculator Page (minute 8-12) - Eleanor
    What support required
    What changed/added on back of feedback
    Demo Income box
+   Demo database income before and after changed
    Demo Expenditure calculator for neg remaining balance then for pos remaining balance
    Explain link to support info in live environment would link to other webpages
    Show callback form
@@ -50,6 +51,7 @@ Java, Javascript, Responsiveness & Testing (minute 16-18) - Jacob
    LocalHelpController - show endpoint that links to DAO
    LocalHelp.js - show javascript for city specific support via API
    Quick demo of all 3 pages being responsive on a different device on each page
+   Testing
 
 Database ERD & Accessibility (minute 17-19) - Laura
    Quick 1 minute overview of ERD - did we add anything since Sprint 1, if not, why not?

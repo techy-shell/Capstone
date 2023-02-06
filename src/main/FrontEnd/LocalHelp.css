@@ -18,6 +18,8 @@ font-family:sans-serif;
 position:relative;
 left:0px;
 top:20px;
+padding-bottom:20px;
+border-bottom: 2px dashed #f77b73;
 }
 
 #localSupport{
@@ -38,21 +40,20 @@ color: #2a363b !important;
 }
 
 #city{
-font-size:25px;
+font-size:20px;
 text-align: center;
-position:relative;
-top:10px;
-left: 250px;
 color:#f77b73;
+font-family: 'Sofia Sans Condensed', sans-serif;
+width:25%;
+margin-left:40%;
 }
 
 #selectCity{
-position: relative;
-top:10px;
-left:130px;
 color:#f77b73;
 font-size:20px;
 font-family:sans-serif;
+width:50%;
+margin-left:20%;
 }
 
 .sub{
@@ -81,31 +82,31 @@ background-color:#faa8a3;
 .cities{
 font-size:20px}
 
-.foodBank{width:370px;
-height:280px;
+.foodBank{
+max-width:50%;
+height:auto;
 border: 4px solid LightCoral;
+margin-left: 25%;
 }
 
-.clothesParcel{width:370px;
-height:280px;
+.clothesParcel{
+max-width:50%;
+height:auto;
 border: 4px solid LightCoral;
-}
-.foodParcel{width:370px;
-height:280px;
-border: 4px solid LightCoral;
+margin-left: 25%;
 }
 
-#photo1{
-position:relative;
-left:135px;
+.foodParcel{
+max-width:50%;
+height:auto;
+border: 4px solid LightCoral;
+margin-left: 25%;
 }
 
 #supportName{
 padding-top: 50px;
+text-align: center;
 text-decoration: underline;
-position:relative;
-left: 250px;
-top: 0px;
 color:#f77b73;
 font-size:20px;
 font-family:sans-serif;
@@ -115,17 +116,14 @@ font-family:sans-serif;
 color:#f77b73;
 font-size:20px;
 font-family:sans-serif;
+text-align: center;
 position:relative;
-left: 10px;
 top: 20px;
 }
 
 #nationalSupport{
-border: 5px solid #faa8a3;
-border-style: double;
 position:relative;
 left:0px;
-top:70px;
 font-family: sans-serif;
 font-size: 20px;
 color:#f77b73;
@@ -173,7 +171,6 @@ color: pink;
 background-color: transparent;
 text-decoration: none;
 }
-
 
 .dropdown {
 display:none;
@@ -252,7 +249,6 @@ border: 5px double #faa8a3;
 padding: 0px;
 margin: 20px;
 flex: 40%;
-height:600px;
 min-height:60%;
 }
 

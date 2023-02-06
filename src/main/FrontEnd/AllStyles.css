@@ -247,3 +247,8 @@ text-decoration: none;
 color: #2a363b;
 }
 
+#email:hover {
+text-decoration: underline;
+font-style: italic;
+}
+
