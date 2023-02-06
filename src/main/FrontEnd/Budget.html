@@ -17,6 +17,7 @@
     <a href="Homepage.html"><img class="logo" src="https://i.ibb.co/6JGPJGs/Shadow-Bank-Logo.png"
                                  alt="shadow bank logo"></a>
 </header>
+
 <body>
 <ul>
     <li class="nav"><a href="Homepage.html" target="_blank" class="links">Homepage</a></li>
@@ -48,7 +49,7 @@
                 <h1 class="calculatorHeading">Income</h1>
             </fieldset>
             <fieldset class="incField">
-                <label for="userName">Please enter your user ID:</label>
+                <label for="userName">Please enter your user ID:</label><br><br>
                 <input type="text" id="userName" name="userName"><br><br>
                 <button class="userBtn" onclick="getUsers(); validateForms('userName')">See current financials</button>
                 <br><br>
@@ -58,13 +59,10 @@
             <fieldset class="incField">
                 <label for="salary">Your monthly pay after tax:</label><br>
                 <input type="text" id="salary" name="salary"><br>
-
-
             </fieldset>
             <fieldset class="incField">
                 <label for="benefits">The benefits you receive every month:</label><br>
                 <input type="text" id="benefits" name="benefits"><br>
-
             </fieldset>
             <fieldset class="incField">
                 <button class="incSubmit" onclick="saveDetails();validateForms2('salary','benefits')">Update</button>
@@ -162,6 +160,7 @@
 
     </div>
     </div>
+
 </fieldset>
 </body>
 <footer>
