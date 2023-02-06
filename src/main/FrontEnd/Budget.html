@@ -7,6 +7,9 @@
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/6JGPJGs/Shadow-Bank-Logo.png">
     <link rel="stylesheet" type="text/css" href="Budget.css">
     <script src="Budget.js"></script>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
 </head>
 <body>
 
@@ -120,9 +123,8 @@
                 <button class="expSubmit" onclick="calcBudget();">Calculate</button><br>
             </fieldset>
             <fieldset class="expField">
-
+                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
                 <p id="includeIncome"></p>
-                <p id="result"></p>
                 <p id="totalExp"></p>
                 <p id="remainBal"></p>
                 <p id="savings"></p>

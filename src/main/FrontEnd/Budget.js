@@ -58,6 +58,33 @@ var travel1 = parseInt(travel);
 
 var total = getCalc(mtg1,ctax1,gas1,water1,food1,travel1);
 
+var xValues = ["Mortgage/Rent", "Council Tax", "Energy", "Water", "Food", "Travel"];
+var yValues = [mtg1, ctax1, gas1, water1, food1, travel1];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Monthly Expenditure"
+    }
+  }
+});
+
 function getCalc(m,c,g,w,f,t){
 return (m+c+g+w+f+t)
 }
@@ -93,8 +120,6 @@ fetch('http://localhost:8080/TotalIncome/' + userID)
     }
   })
 
-  document.getElementById("result").innerHTML = "Mortgage - £" + mtg + ", Council Tax - £" + ctax +
-  ", Gas and Electricity - £" + gas + ", Water - £" + water + ", Food - £" + food + " and Travel - £" + travel;
   document.getElementById("totalExp").innerHTML = "Total Expenditure - £" + total;
 }
 
