@@ -90,11 +90,13 @@ return (m+c+g+w+f+t)
 }
 
 var userID = document.getElementById('userName2').value;
+var userID2 = document.getElementById('userID2').value;
+
 
 fetch('http://localhost:8080/TotalIncome/' + userID)
   .then((response) => response.json())
   .then((data) => {
-  document.getElementById("includeIncome").innerHTML = "Total income - £" + data[0].totalIncome;
+  document.getElementById("includeIncome").innerHTML = "User " + userID + " income - £" + data[0].totalIncome;
      })
 
 fetch('http://localhost:8080/TotalIncome/' + userID)
