@@ -146,6 +146,14 @@ function selectOpt() {
        };
 
 
-
-
-
+//on submit
+    function validateForms(id){
+    var numbers = /^[0-9]+$/;
+    var firstName = document.getElementById(id).value;
+    if(firstName.match(numbers)){
+    document.console.log("good");
+ j
+    } else {
+    alert("UserID should be in number format");
+    }
+    }
