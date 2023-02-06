@@ -290,6 +290,14 @@ label {
 font-family: 'Sofia Sans Condensed', sans-serif;
 }
 
+/*
+canvas styling doesn't work'
+*/
+canvas {
+      font-family: 'Sofia Sans Condensed', sans-serif;
+      text-align:center;
+      color:black;
+      }
 
 #requestcall {
 background-color: #faa8a3;

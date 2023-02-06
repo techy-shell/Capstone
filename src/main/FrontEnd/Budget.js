@@ -90,17 +90,25 @@ return (m+c+g+w+f+t)
 }
 
 var userID = document.getElementById('userName2').value;
+var userID2 = document.getElementById('userID2').value;
+
 
 fetch('http://localhost:8080/TotalIncome/' + userID)
   .then((response) => response.json())
   .then((data) => {
-  document.getElementById("includeIncome").innerHTML = "Total income - £" + data[0].totalIncome;
+  document.getElementById("includeIncome").innerHTML = "User " + userID + " income - £" + data[0].totalIncome;
      })
 
-fetch('http://localhost:8080/TotalIncome/' + userID)
+fetch('http://localhost:8080/TotalIncome/' + userID2)
+  .then((response) => response.json())
+  .then((data) => {
+  document.getElementById("includeIncome2").innerHTML = "User " + userID2 + " income - £" + data[0].totalIncome;
+     })
+
+fetch('http://localhost:8080/DualIncome/' + userID + '/' + userID2)
   .then(res => res.json())
   .then(data => {
-    const remainingBalance = (data[0].totalIncome - total);
+    const remainingBalance = (data[0].dualIncome - total);
     const potSavings = ((remainingBalance/2) * 12);
     if (remainingBalance >= 0){
     document.getElementById("remainBal").innerHTML = "You will have £" + remainingBalance + " remaining at the end of the month";
@@ -169,7 +177,7 @@ function selectOpt() {
     }
     }
 
-     function validateForms7(id,id2,id3,id4,id5,id6,id7){
+     function validateForms7(id,id2,id3,id4,id5,id6,id7,id8){
         var numbers = /^[0-9]+$/;
         var firstName = document.getElementById(id).value;
         var secondValue = document.getElementById(id2).value;
@@ -178,8 +186,9 @@ function selectOpt() {
         var fifthValue = document.getElementById(id5).value;
         var sixthValue = document.getElementById(id6).value;
         var seventhValue = document.getElementById(id7).value;
+        var eighthValue = document.getElementById(id8).value;
         if(firstName.match(numbers) && secondValue.match(numbers) && thirdValue.match(numbers) && fourthValue.match(numbers)
-        && fifthValue.match(numbers) && sixthValue.match(numbers) && seventhValue.match(numbers)){
+        && fifthValue.match(numbers) && sixthValue.match(numbers) && seventhValue.match(numbers) && eighthValue.match(numbers)){
         document.console.log("good");
         } else {
         alert("Details should be in number format");
