@@ -123,14 +123,16 @@ fetch('http://localhost:8080/User/' + userID)
 /*
 Code to add contact method to database
 */
-
+function getRadio(type){
+    document.getElementById("result").value = type;
+    }
     function saveContactDetails() {
     var update = {
     'userID':document.getElementById("userID").value,
     'email':document.getElementById("email1").value,
     'tel':document.getElementById("tel").value,
     'topic':document.getElementById("topic").value,
-    'contactRequest':document.getElementById("contactRequest").value
+    'contactRequest':document.getElementById("result").value
     };
 
     fetch ('http://localhost:8080/contact', {
