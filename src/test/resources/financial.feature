@@ -36,13 +36,13 @@ Feature: Finance Check
     Given User inserts incorrect user number for local help
     When Incorrect totalincome username passed to chrome for local help
     Then chrome should response with 404 error for local help
-##
-#      Scenario: Check total income returns correct figure for dual income
-#    Given User wants to check total income for dual income
-#    When Details passed to chrome for dual income
-#    Then chrome should open with correct total income for specified user for dual income
-#
-#  Scenario: Check when happens when wrong user name provided for dual income
-#    Given User inserts incorrect user number for dual income
-#    When Incorrect totalincome username passed to chrome for dual income
-#    Then chrome should response with 404 error for dual income
+
+      Scenario: Check total income returns correct figure for dual income
+    Given User wants to check total income for dual income
+    When Details passed to chrome for dual income
+    Then chrome should open with correct total income for specified user for dual income
+
+  Scenario: Check when happens when wrong user name provided for dual income
+    Given User inserts incorrect user number for dual income
+    When Incorrect totalincome username passed to chrome for dual income
+    Then chrome should response with 404 error for dual income
