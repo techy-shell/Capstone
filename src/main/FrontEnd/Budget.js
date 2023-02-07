@@ -115,14 +115,14 @@ fetch('http://localhost:8080/DualIncome/' + userID + '/' + userID2)
     document.getElementById("savings").innerHTML = "If you saved 50% of your remaining balance each month, by the end of the year you would have £" + potSavings + " in your savings account.";
     document.getElementById("standingOrder").innerHTML = "If you have a savings account with us already, you can set up a monthly standing order to move funds from your current account into your savings account each month automatically.";
     document.getElementById("savingsAcc").innerHTML = "If you don’t have a bank account already, we offer our Everyday Savings Account which allows you to deposit and withdraw money at any time without any penalties. It offers 15% interest on balances below £1000.";
-    document.getElementById("concern").innerHTML = "If you are concerned about how much is left of your income each month, consider having a review with one of our advisors to see if we can help decrease your monthly expenditure. Please complete the callback form below to book your appointment.";
+    document.getElementById("concern").innerHTML = "If you are concerned about how much is left of your income each month, consider having a review with one of our advisors to see if we can help decrease your monthly expenditure. Please complete the contact form below to book your appointment.";
     } else if (remainingBalance < 0){
     document.getElementById("remainBal").innerHTML = "You will have £" + remainingBalance + " remaining at the end of the month. You may want to consider one of the following lending options to help support you financially: ";
     document.getElementById("loan").innerHTML = "Loan - A loan may be suitable if you think borrowing a fixed amount over a fixed period of time would be the best support for you. Our loan interest rates start at 4% APR and minimum loan amount is £2000.";
     document.getElementById("overdraft").innerHTML = "Arranged overdraft - Our arranged overdraft allows you to go overdrawn up to an agreed limit, so it could help cover an unplanned expense.The interest rate on our arranged overdraft is 35% APR (variable) and a monthly fee of £5.";
     document.getElementById("creditCard").innerHTML = "Credit card - A credit card allows you to buy things up to an agreed limit and pay for them later. You could use it to make larger one off purchases and pay for them later, either in one go or in chunks. Our Standard Rate credit card interest is 18% APR.";
     document.getElementById("mortgageInfo").innerHTML = "Mortgage review - Consider having a review with one of our advisors. We could potentially save you money on your monthly mortgage payment, reduce your mortgage term or discuss the possibility to have a 3 month mortgage payment break.";
-    document.getElementById("review").innerHTML = "You may benefit from having a financial review to go over your current out goings to see if we can help reduce them. To book an appointment please complete the below callback request.";
+    document.getElementById("review").innerHTML = "You may benefit from having a financial review to go over your current out goings to see if we can help reduce them. To book an appointment please complete the below contact request.";
     } else {
     document.getElementById("remainBal").innerHTML = "Error";
     }
