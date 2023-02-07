@@ -157,6 +157,12 @@ color:white;
 font-family: 'Sofia Sans Condensed', sans-serif;
 }
 
+.infographic{
+width:600px;
+height:auto;
+border: 4px solid LightCoral;
+}
+
 a:link {
 color: pink;
 background-color: transparent;
@@ -254,3 +260,4 @@ min-height:60%;
     flex:100%;
   }
 }
+
