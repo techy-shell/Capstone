@@ -57,14 +57,24 @@
                 <div id="benefitsInfo"></div>
             </fieldset>
             <fieldset class="incField">
+                <p>If you don't get paid monthly, please use the below conversion calculator to see what your wage equates to monthly and use the monthly salary box to update our system:</p>
+                <p>How often do you get paid?</p>
+                <select id="pay">
+                    <option value="weekly">Weekly</option>
+                    <option value="biWeekly">Bi-Weekly</option>
+                    <option value="4weekly">Four Weekly</option>
+                    <option value="annual">Annual</option>
+                </select><br><br>
+                <label for="pay">How much is your pay?</label><br>
+                <input type="text" id="pay" name="salary"><br><br>
+                <button class="dropbtn" onclick="getConversion();">Convert to monthly pay</button>
+            </fieldset>
+            <fieldset class="incField">
+                <p>If the current figures we have for your monthly salary and benefits are incorrect, please enter them below and press update:</p>
                 <label for="salary">Your monthly pay after tax:</label><br>
-                <input type="text" id="salary" name="salary"><br>
-            </fieldset>
-            <fieldset class="incField">
+                <input type="text" id="salary" name="salary"><br><br>
                 <label for="benefits">The benefits you receive every month:</label><br>
-                <input type="text" id="benefits" name="benefits"><br>
-            </fieldset>
-            <fieldset class="incField">
+                <input type="text" id="benefits" name="benefits"><br><br>
                 <button class="incSubmit" onclick="saveDetails();validateForms2('salary','benefits')">Update</button>
             </fieldset>
             <fieldset class="incField">
@@ -141,7 +151,7 @@
                 <p class='colour1' id="creditCard"></p>
                 <p class='colour2' id="mortgageInfo"></p>
                 <p class='colour1' id="review"></p>
-                <label for="userID3">To request a callback, please enter your user ID:</label><br><br>
+                <label for="userID3">To request either an email or callback, please enter your user ID:</label><br><br>
                 <input type="text" id="userID3" name="userID3"><br><br>
                 <label for="topic">Topic(s) you would like to discuss (If more than one, please choose Financial
                     Health Check):</label> <br>
@@ -158,7 +168,7 @@
                         <option value="FHC">Financial Health Check</option>
                     </optgroup>
                 </select> <br><br>
-                <button id="requestcall" onclick="getCallback();selectOpt()">Request Callback</button><br>
+                <button id="requestcall" onclick="getCallback();selectOpt()">Request contact from an Advisor</button><br>
                 <p id="selectedTopic"></p>
                 <p id="callback"></p>
             </fieldset>

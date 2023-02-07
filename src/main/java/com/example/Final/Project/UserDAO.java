@@ -33,6 +33,11 @@ public class UserDAO {
         return userInfo;
     }
 
+//either use Tel or Email for contactMethod
+    public void updateContactRequest (int userID, String contactMethod) {
+        String sql = "UPDATE Users set ContactRequest = " + contactMethod + " Where UserID = " + userID;
+        jdbcTemplate.update(sql);
+    }
     @Autowired
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
