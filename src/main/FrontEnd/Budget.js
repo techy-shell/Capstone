@@ -14,6 +14,27 @@ fetch('http://localhost:8080/Financial/' + userID)
      .catch(err => console.log(err));
      };
 
+async function getConvert(){
+var pay = document.getElementById('pay').value;
+var pay1 = parseInt(pay);
+var frequency = document.getElementById('frequency').value;
+var conversion = calcConvert(pay1, frequency);
+function calcConvert(p,f){
+if (f == 'Weekly') {
+return (p * 52) / 12;
+} else if (f == 'Bi-Weekly') {
+return (p * 26) / 12;
+} else if (f == 'Four Weekly') {
+return (p * 13) / 12;
+} else if (f == 'Annual'){
+return p / 12;
+} else {
+document.getElementById("convertedPay").innerHTML = "Error";
+}
+}
+document.getElementById('convertedPay').innerHTML ="£" + conversion;
+}
+
 /*
  Below function pushes updated info for income through to the Finances table in the DB using API
 */
