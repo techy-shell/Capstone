@@ -225,7 +225,32 @@ box-shadow: 0 9px #999;
             .incSubmit:hover {
                      cursor:pointer;
                      background-color:#f77b73;
-                     }
+   }
+
+
+.dropbtn {
+background-color: #faa8a3;
+font-family: 'Sofia Sans Condensed', sans-serif;
+font-size:20px;
+width: 40%;
+height:35px;
+border-radius: 3px;
+border: none;
+box-shadow: 0 9px #999;
+}
+
+                     .dropbtn {
+                     box-shadow: 0 5px #666;
+                                 transform: translateY(4px);
+                                 }
+
+                                 .dropbtn:hover {
+                                          cursor:pointer;
+                                          background-color:#f77b73;
+                                          }
+
+
+
 
 .benefitLink {
 font-family: 'Sofia Sans Condensed', sans-serif;
@@ -246,7 +271,22 @@ text-decoration: underline;
 text-align:left;
 }
 
+.moneyTips{
+max-width:100%;
+height:auto;
+border: none;
+margin-left: 0%;
+display: inline-block;
+}
+
+
 /* expenditure table input */
+.line {
+border: 3px dashed #2a363b;
+    border-style: none none dashed;
+    color: #f77b73;
+    background-color: #f77b73;
+}
 
 
 .expField {
@@ -345,3 +385,6 @@ box-shadow: 0 9px #999;
                      text-decoration: none;
                      color: #2a363b;
                      }
+
+
+

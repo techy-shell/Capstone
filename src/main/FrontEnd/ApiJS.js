@@ -68,7 +68,7 @@ var isopen = false;
 function openForm() {
 if(!isopen) {
   document.getElementById("myForm").style.display = "block";
-  document.getElementById("footer").style.height = "600px";
+  document.getElementById("footer").style.height = "750px";
   isopen = true;
   }
   else{
@@ -116,7 +116,7 @@ fetch('http://localhost:8080/User/' + userID)
     if(firstName.match(numbers)){
     document.console.log("good");
     } else {
-    alert("Details should be in number format");
+    alert("UserID should be in number format");
     }
     }
 
