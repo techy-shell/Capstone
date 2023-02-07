@@ -49,7 +49,7 @@
                 <h1 class="calculatorHeading">Income</h1>
             </fieldset>
             <fieldset class="incField">
-                <label for="userName">Please enter your user ID:</label><br><br>
+                <label for="userName">Please enter your user ID:</label><br>
                 <input type="text" id="userName" name="userName"><br><br>
                 <button class="userBtn" onclick="getUsers(); validateForms('userName')">See current financials</button>
                 <br><br>
@@ -152,8 +152,8 @@
                 <p class='colour1' id="creditCard"></p>
                 <p class='colour2' id="mortgageInfo"></p>
                 <p class='colour1' id="review"></p>
-                <label for="userID3">To request either an email or callback, please enter your user ID:</label><br><br>
-                <input type="text" id="userID3" name="userID3"><br><br>
+                <label for="userID3">To request either an email or callback, please enter your user ID:</label><br>
+                <input type="text" id="userID3" name="userID3"><br>
                 <label for="email1">Email:</label><br>
                 <input type="text" id="email1" name="email" class="numbers" required> <br>
                 <label for="tel">Telephone number:</label><br>
@@ -172,11 +172,12 @@
                     <optgroup label="FHC">
                         <option value="FHC">Financial Health Check</option>
                     </optgroup>
-                </select> <br><br>
+                </select>
+                <p>How would you like to be contacted?</p>
                 <select id="contactRequest">
                     <option value="email me">Email me</option>
                     <option value="call me">Call me</option>
-                </select><br>
+                </select><br><br>
                 <button id="requestcall" onclick="getCallback(); saveContactDetails(); selectOpt()">Request contact from an Advisor</button><br>
                 <p id="selectedTopic"></p>
                 <p id="callback"></p>
