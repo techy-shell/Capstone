@@ -106,3 +106,26 @@ fetch('http://localhost:8080/User/' + userID)
     alert("Details should be in number format");
     }
     }
+
+/*
+Code to add contact method to database
+*/
+
+/*
+    function saveDetails() {
+    var userID = document.getElementById('userID').value;
+    var update = {
+    'ContactMethod':document.getElementById("contactMethod").value,
+    'userName':document.getElementById("userName").value,
+    };
+
+    fetch ('http://localhost:8080/contact', {
+    method: 'POST',
+    headers: {
+    'Content-Type':'application/json',
+    },
+    body: JSON.stringify(update)
+    })
+    .then(response => response.json())
+    .then(response => console.log(JSON.stringify(response)));
+    }*/
