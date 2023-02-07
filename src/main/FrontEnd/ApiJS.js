@@ -76,8 +76,7 @@ fetch('http://localhost:8080/User/' + userID)
   .then((response) => response.json())
   .then((data) => {
     document.getElementById('callback').innerHTML = data[0].firstName + " " + data[0].surname +
-    ", you will receive a callback within the next two working days on 0" + data[0].tel +
-    ". You will receive an email confirmation for your callback at " + data[0].email + ".";
+    ", you will be contacted within the next two working days. You will receive an email confirmation of your request.";
      })
      .catch(err => console.log(err));
      };
@@ -111,12 +110,13 @@ fetch('http://localhost:8080/User/' + userID)
 Code to add contact method to database
 */
 
-/*
     function saveDetails() {
     var userID = document.getElementById('userID').value;
     var update = {
-    'ContactMethod':document.getElementById("contactMethod").value,
-    'userName':document.getElementById("userName").value,
+    'ContactRequest':document.getElementById("contactMethod").value,
+    'userID':document.getElementById("userID").value,
+    'email':document.getElementById("email").value,
+    'tel':document.getElementById("tel").value
     };
 
     fetch ('http://localhost:8080/contact', {
@@ -128,4 +128,4 @@ Code to add contact method to database
     })
     .then(response => response.json())
     .then(response => console.log(JSON.stringify(response)));
-    }*/
+    }

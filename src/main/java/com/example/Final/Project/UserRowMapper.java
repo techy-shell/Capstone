@@ -15,7 +15,7 @@ public class UserRowMapper implements RowMapper<UserDB> {
         userDB.setPostcode(rs.getString("Postcode"));
         userDB.setEmail(rs.getString("Email"));
         userDB.setTel(rs.getString("Tel"));
-        userDB.setContactRequest(rs.getString("ContactMethod"));
+        userDB.setContactRequest(rs.getString("ContactRequest"));
         return userDB;
     }
 }
