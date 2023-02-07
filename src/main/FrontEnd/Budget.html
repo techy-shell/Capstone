@@ -29,7 +29,7 @@
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="Budget.html" target="_blank">Budget Calculator</a>
+            <a href="Homepage.html" target="_blank">Homepage</a>
             <a href="https://www.bbc.co.uk/news/topics/cljev4jz3pjt" target="_blank">Latest News</a>
             <a href="LocalHelp.html" target="_blank">Help Nearby</a>
         </div>
@@ -49,7 +49,7 @@
                 <h1 class="calculatorHeading">Income</h1>
             </fieldset>
             <fieldset class="incField">
-                <label for="userName">Please enter your user ID:</label><br>
+                <label for="userName">Please enter your user ID:</label><br><br>
                 <input type="text" id="userName" name="userName"><br><br>
                 <button class="userBtn" onclick="getUsers(); validateForms('userName')">See current financials</button>
                 <br><br>
@@ -59,16 +59,15 @@
             <fieldset class="incField">
                 <p>If you don't get paid monthly, please use the below conversion calculator to see what your wage equates to monthly and use the monthly salary box to update our system:</p>
                 <p>How often do you get paid?</p>
-                <select id="frequency">
+                <select id="pay">
                     <option value="weekly">Weekly</option>
                     <option value="biWeekly">Bi-Weekly</option>
                     <option value="4weekly">Four Weekly</option>
                     <option value="annual">Annual</option>
-                </select><br>
+                </select><br><br>
                 <label for="pay">How much is your pay?</label><br>
-                <input type="text" id="pay" name="salary"><br>
-                <p id="convertedPay"></p>
-                <button class="dropbtn" onclick="getConvert();">Convert to monthly pay</button>
+                <input type="text" id="pay" name="salary"><br><br>
+                <button class="dropbtn" onclick="getConversion();">Convert to monthly pay</button><br><br>
             </fieldset>
             <fieldset class="incField">
                 <p>If the current figures we have for your monthly salary and benefits are incorrect, please enter them below and press update:</p>
@@ -76,7 +75,7 @@
                 <input type="text" id="salary" name="salary"><br><br>
                 <label for="benefits">The benefits you receive every month:</label><br>
                 <input type="text" id="benefits" name="benefits"><br><br>
-                <button class="incSubmit" onclick="saveDetails();validateForms2('salary','benefits')">Update</button>
+                <button class="incSubmit" onclick="saveDetails();validateForms2('salary','benefits')">Update</button><br><br>
             </fieldset>
             <fieldset class="incField">
                 <p class="benefitInfo">*This includes child benefit, universal credit, child tax credits / working tax
@@ -86,9 +85,17 @@
                 <a class="benefitLink" href="https://www.gov.uk/browse/benefits">click here for further information
                     about your benefits</a>
             </fieldset>
-            <fieldset class="incField">
-                <div class="finances"></div>
+
+
+            <fieldset class="incField"><br>
+
+                <h2 style="text-decoration:underline;">Money Saving Tips for February</h2><br>
+                <img class="moneyTips" src="https://static.wixstatic.com/media/f9cbdb_d2ee115e75024fbc87e0fe067cac517f~mv2.png/v1/fill/w_640,h_640,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/f9cbdb_d2ee115e75024fbc87e0fe067cac517f~mv2.png"
+                         alt="an image showing some tips to help save money"><br><br><br>
+
             </fieldset>
+
+
         </div>
 
         <div class="expenditure">
@@ -152,14 +159,19 @@
                 <p class='colour1' id="creditCard"></p>
                 <p class='colour2' id="mortgageInfo"></p>
                 <p class='colour1' id="review"></p>
-                <label for="userID3">To request either an email or callback, please enter your user ID:</label><br>
-                <input type="text" id="userID3" name="userID3"><br>
+            </fieldset>
+            <fieldset class="expField">
+                <label for="userID3">To request either an email or callback, please enter your user ID:</label><br><br>
+                <input type="text" id="userID3" name="userID3"><br><br>
+                <hr class="line">
                 <label for="email1">Email:</label><br>
-                <input type="text" id="email1" name="email" class="numbers" required> <br>
+                <input type="text" id="email1" name="email" class="numbers" required><br>
+                <hr class="line">
                 <label for="tel">Telephone number:</label><br>
-                <input type="text" id="tel" name="tel" class="numbers" required> <br>
+                <input type="text" id="tel" name="tel" class="numbers" required><br>
+                <hr class="line">
                 <label for="topic">Topic(s) you would like to discuss (If more than one, please choose Financial
-                    Health Check):</label> <br>
+                    Health Check):</label><br><br>
                 <select id="topic">
                     <optgroup label="Savings & Investments">
                         <option value="Short Term Savings">Short term savings</option>
@@ -172,15 +184,15 @@
                     <optgroup label="FHC">
                         <option value="FHC">Financial Health Check</option>
                     </optgroup>
-                </select>
-                <p>How would you like to be contacted?</p>
-                <select id="contactRequest">
-                    <option value="email me">Email me</option>
-                    <option value="call me">Call me</option>
+                </select> <br><br>
+                <select id="contactRequest"><br>
+                    <option value="email me">Email me</option><br><br>
+                    <option value="call me">Call me</option><br><br>
                 </select><br><br>
                 <button id="requestcall" onclick="getCallback(); saveContactDetails(); selectOpt()">Request contact from an Advisor</button><br>
                 <p id="selectedTopic"></p>
                 <p id="callback"></p>
+                <hr class="line"><br>
             </fieldset>
         </div>
 
@@ -192,7 +204,7 @@
 <footer>
     <p>&copy; Team 3</p>
     <ul>
-        <li class = "nav"><a href="Budget.html" target="_blank" class="links">Budget Calculator</a></li>
+        <li class = "nav"><a href="Homepage.html target="_blank" class="links">Homepage</a></li>
         <li class = "nav"><a href="https://www.bbc.co.uk/news/topics/cljev4jz3pjt" target="_blank" class="links">Latest News</a></li>
         <li class = "nav"><a href="LocalHelp.html" target="_blank" class="links">Help Nearby</a></li>
     </ul>
