@@ -41,6 +41,6 @@ public class UserCheck {
     @Then("Chrome should open with correct users details")
     public void checkDetails (){
         String text = webDriver.findElement(By.tagName("Body")).getText();
-        assertEquals("[{\"firstName\":\"Marco\",\"postcode\":\"DE1 0XW\",\"userID\":100001,\"surname\":\"Jordan\",\"email\":\"marcojordan@outlook.com\",\"tel\":\"7123123123\"}]",text);
+        assertEquals("[{\"firstName\":\"Marco\",\"postcode\":\"DE1 0XW\",\"contactRequest\":\"null\",\"userID\":100001,\"surname\":\"Jordan\",\"email\":\"marcojordan@outlook.com\",\"tel\":\"07123123123\",\"topic\":null}]",text);
     }
 }
