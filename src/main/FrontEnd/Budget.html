@@ -153,6 +153,10 @@
                 <p class='colour1' id="review"></p>
                 <label for="userID3">To request either an email or callback, please enter your user ID:</label><br><br>
                 <input type="text" id="userID3" name="userID3"><br><br>
+                <label for="email1">Email:</label><br>
+                <input type="text" id="email1" name="email" class="numbers" required> <br>
+                <label for="tel">Telephone number:</label><br>
+                <input type="text" id="tel" name="tel" class="numbers" required> <br>
                 <label for="topic">Topic(s) you would like to discuss (If more than one, please choose Financial
                     Health Check):</label> <br>
                 <select id="topic">
@@ -168,7 +172,11 @@
                         <option value="FHC">Financial Health Check</option>
                     </optgroup>
                 </select> <br><br>
-                <button id="requestcall" onclick="getCallback();selectOpt()">Request contact from an Advisor</button><br>
+                <select id="contactRequest">
+                    <option value="email me">Email me</option>
+                    <option value="call me">Call me</option>
+                </select><br>
+                <button id="requestcall" onclick="getCallback(); saveContactDetails(); selectOpt()">Request contact from an Advisor</button><br>
                 <p id="selectedTopic"></p>
                 <p id="callback"></p>
             </fieldset>

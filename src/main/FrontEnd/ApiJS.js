@@ -110,7 +110,7 @@ fetch('http://localhost:8080/User/' + userID)
 Code to add contact method to database
 */
 
-    function saveDetails() {
+    function saveContactDetails() {
     var update = {
     'userID':document.getElementById("userID").value,
     'email':document.getElementById("email1").value,
