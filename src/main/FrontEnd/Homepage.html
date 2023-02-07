@@ -92,6 +92,10 @@
                     <option value="FHC">Financial Health Check</option>
                 </optgroup>
             </select> <br>
+            <input type="radio" id="emailrequest" name="contact" value="Email">
+            <label for="emailrequest">Email</label>
+            <input type="radio" id="callbackrequest" name="contact" value="Callback">
+            <label for="callbackrequest">Callback</label> <br>
         <button id="requestcall" onclick="getUserInfo(); selectOpt(); validateForms('userID')">Request Callback</button>
         </section>
         <p id="selectedTopic"></p>
