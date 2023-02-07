@@ -8,7 +8,7 @@ public class UserDB {
     private String Postcode;
     private String Email;
     private String Tel;
-
+    private String ContactRequest;
 
     public int getUserID() {
         return UserID;
@@ -56,6 +56,14 @@ public class UserDB {
 
     public void setTel(String tel) {
         Tel = tel;
+    }
+
+    public String getContactRequest() {
+        return ContactRequest;
+    }
+
+    public void setContactRequest(String contactRequest) {
+        ContactRequest = contactRequest;
     }
 }
 
