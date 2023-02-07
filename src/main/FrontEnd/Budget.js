@@ -20,13 +20,13 @@ var pay1 = parseInt(pay);
 var frequency = document.getElementById('frequency').value;
 var conversion = calcConvert(pay1, frequency);
 function calcConvert(p,f){
-if (f == 'Weekly') {
+if (f = "Weekly") {
 return (p * 52) / 12;
-} else if (f == 'Bi-Weekly') {
+} else if (f = "Bi-Weekly") {
 return (p * 26) / 12;
-} else if (f == 'Four Weekly') {
+} else if (f = "Four Weekly") {
 return (p * 13) / 12;
-} else if (f == 'Annual'){
+} else if (f = "Annual"){
 return p / 12;
 } else {
 document.getElementById("convertedPay").innerHTML = "Error";
