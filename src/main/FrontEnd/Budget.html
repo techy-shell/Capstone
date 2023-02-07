@@ -49,7 +49,7 @@
                 <h1 class="calculatorHeading">Income</h1>
             </fieldset>
             <fieldset class="incField">
-                <label for="userName">Please enter your user ID:</label><br><br>
+                <label for="userName">Please enter your user ID:</label><br>
                 <input type="text" id="userName" name="userName"><br><br>
                 <button class="userBtn" onclick="getUsers(); validateForms('userName')">See current financials</button>
                 <br><br>
@@ -57,14 +57,25 @@
                 <div id="benefitsInfo"></div>
             </fieldset>
             <fieldset class="incField">
+                <p>If you don't get paid monthly, please use the below conversion calculator to see what your wage equates to monthly and use the monthly salary box to update our system:</p>
+                <p>How often do you get paid?</p>
+                <select id="frequency">
+                    <option value="weekly">Weekly</option>
+                    <option value="biWeekly">Bi-Weekly</option>
+                    <option value="4weekly">Four Weekly</option>
+                    <option value="annual">Annual</option>
+                </select><br>
+                <label for="pay">How much is your pay?</label><br>
+                <input type="text" id="pay" name="salary"><br>
+                <p id="convertedPay"></p>
+                <button class="dropbtn" onclick="getConvert();">Convert to monthly pay</button>
+            </fieldset>
+            <fieldset class="incField">
+                <p>If the current figures we have for your monthly salary and benefits are incorrect, please enter them below and press update:</p>
                 <label for="salary">Your monthly pay after tax:</label><br>
-                <input type="text" id="salary" name="salary"><br>
-            </fieldset>
-            <fieldset class="incField">
+                <input type="text" id="salary" name="salary"><br><br>
                 <label for="benefits">The benefits you receive every month:</label><br>
-                <input type="text" id="benefits" name="benefits"><br>
-            </fieldset>
-            <fieldset class="incField">
+                <input type="text" id="benefits" name="benefits"><br><br>
                 <button class="incSubmit" onclick="saveDetails();validateForms2('salary','benefits')">Update</button>
             </fieldset>
             <fieldset class="incField">
@@ -141,8 +152,12 @@
                 <p class='colour1' id="creditCard"></p>
                 <p class='colour2' id="mortgageInfo"></p>
                 <p class='colour1' id="review"></p>
-                <label for="userID3">To request either an email or callback, please enter your user ID:</label><br><br>
-                <input type="text" id="userID3" name="userID3"><br><br>
+                <label for="userID3">To request either an email or callback, please enter your user ID:</label><br>
+                <input type="text" id="userID3" name="userID3"><br>
+                <label for="email1">Email:</label><br>
+                <input type="text" id="email1" name="email" class="numbers" required> <br>
+                <label for="tel">Telephone number:</label><br>
+                <input type="text" id="tel" name="tel" class="numbers" required> <br>
                 <label for="topic">Topic(s) you would like to discuss (If more than one, please choose Financial
                     Health Check):</label> <br>
                 <select id="topic">
@@ -157,8 +172,13 @@
                     <optgroup label="FHC">
                         <option value="FHC">Financial Health Check</option>
                     </optgroup>
-                </select> <br><br>
-                <button id="requestcall" onclick="getCallback();selectOpt()">Request contact from an Advisor</button><br>
+                </select>
+                <p>How would you like to be contacted?</p>
+                <select id="contactRequest">
+                    <option value="email me">Email me</option>
+                    <option value="call me">Call me</option>
+                </select><br><br>
+                <button id="requestcall" onclick="getCallback(); saveContactDetails(); selectOpt()">Request contact from an Advisor</button><br>
                 <p id="selectedTopic"></p>
                 <p id="callback"></p>
             </fieldset>

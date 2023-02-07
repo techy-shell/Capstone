@@ -9,7 +9,7 @@ public class UserDB {
     private String Email;
     private String Tel;
     private String ContactRequest;
-
+    private String Topic;
     public int getUserID() {
         return UserID;
     }
@@ -64,6 +64,14 @@ public class UserDB {
 
     public void setContactRequest(String contactRequest) {
         ContactRequest = contactRequest;
+    }
+
+    public String getTopic() {
+        return Topic;
+    }
+
+    public void setTopic(String topic) {
+        Topic = topic;
     }
 }
 

@@ -18,7 +18,7 @@ totalCount1.innerHTML = count1;
 totalCount2.innerHTML = count2;
 totalCount3.innerHTML = count3;
 
-const handleIncrement1 = () => {
+function handleIncrement1() {
 	if(!isliked1) {
   count1++;
   totalCount1.innerHTML = count1;
@@ -33,7 +33,7 @@ else {
 }
 };
 
-const handleIncrement2 = () => {
+function handleIncrement2() {
 	if(!isliked2) {
       count2++;
       totalCount2.innerHTML = count2;
@@ -48,7 +48,7 @@ const handleIncrement2 = () => {
     }
   };
 
-  const handleIncrement3 = () => {
+  function handleIncrement3() {
 	if(!isliked3) {
       count3++;
       totalCount3.innerHTML = count3;
@@ -62,7 +62,21 @@ const handleIncrement2 = () => {
       document.getElementById("arrow3").style.color = "grey";
     }
   };
-//end
+//end of like buttons
+
+var isopen = false;
+function openForm() {
+if(!isopen) {
+  document.getElementById("myForm").style.display = "block";
+  document.getElementById("footer").style.height = "750px";
+  isopen = true;
+  }
+  else{
+   document.getElementById("myForm").style.display = "none";
+    document.getElementById("footer").style.height = "200px";
+    isopen = false;
+  }}
+// end of contact us
 
 function selectOpt() {
          selEl = document.getElementById('topic');
@@ -76,8 +90,7 @@ fetch('http://localhost:8080/User/' + userID)
   .then((response) => response.json())
   .then((data) => {
     document.getElementById('callback').innerHTML = data[0].firstName + " " + data[0].surname +
-    ", you will receive a callback within the next two working days on 0" + data[0].tel +
-    ". You will receive an email confirmation for your callback at " + data[0].email + ".";
+    ", you will be contacted within the next two working days. You will receive an email confirmation of your request.";
      })
      .catch(err => console.log(err));
      };
@@ -103,7 +116,7 @@ fetch('http://localhost:8080/User/' + userID)
     if(firstName.match(numbers)){
     document.console.log("good");
     } else {
-    alert("Details should be in number format");
+    alert("UserID should be in number format");
     }
     }
 
@@ -111,12 +124,13 @@ fetch('http://localhost:8080/User/' + userID)
 Code to add contact method to database
 */
 
-/*
-    function saveDetails() {
-    var userID = document.getElementById('userID').value;
+    function saveContactDetails() {
     var update = {
-    'ContactMethod':document.getElementById("contactMethod").value,
-    'userName':document.getElementById("userName").value,
+    'userID':document.getElementById("userID").value,
+    'email':document.getElementById("email1").value,
+    'tel':document.getElementById("tel").value,
+    'topic':document.getElementById("topic").value,
+    'contactRequest':document.getElementById("contactRequest").value
     };
 
     fetch ('http://localhost:8080/contact', {
@@ -128,4 +142,4 @@ Code to add contact method to database
     })
     .then(response => response.json())
     .then(response => console.log(JSON.stringify(response)));
-    }*/
+    }

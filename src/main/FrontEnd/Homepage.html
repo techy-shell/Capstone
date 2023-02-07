@@ -75,8 +75,13 @@
     <div class="boxes2">
         <h3 class="trendingtitle">Something to discuss?</h3>
         <section id="callback">
-        <label for="userID">To request an email or callback, please enter your userID:</label><br>
+            <p>To request an email or callback, please complete the below form:</p>
+        <label for="userID">UserID:</label><br>
         <input type="text" id="userID" name="userID" class="numbers" required> <br>
+            <label for="email1">Email:</label><br>
+            <input type="text" id="email1" name="email" class="numbers" required> <br>
+            <label for="tel">Telephone number:</label><br>
+            <input type="text" id="tel" name="tel" class="numbers" required> <br>
             <label for="topic">Topic(s) you would like to discuss (If more than one, please choose Financial
                 Health Check):</label> <br>
             <select id="topic">
@@ -92,7 +97,12 @@
                     <option value="FHC">Financial Health Check</option>
                 </optgroup>
             </select> <br>
-        <button id="requestcall" onclick="getUserInfo(); selectOpt(); validateForms('userID')">Request Callback</button>
+            <p>How would you like to be contacted?</p>
+            <select id="contactRequest">
+                <option value="email me">Email me</option>
+                <option value="call me">Call me</option>
+            </select><br><br>
+        <button id="requestcall" onclick="saveDetails(); selectOpt(); getUserInfo(); validateForms('userID')">Send Request</button>
         </section>
         <p id="selectedTopic"></p>
     </div>
@@ -104,7 +114,7 @@
     </div>
 </fieldset>
 </body>
-<footer>
+<footer id="footer">
 <p>&copy; Team 3</p>
     <ul>
         <li class = "nav"><a href="Budget.html" target="_blank" class="links">Budget Calculator</a></li>
@@ -121,6 +131,20 @@
             </div>
         </div>
     </ul>
-    <p><a href="mailto:team3@shadowbank.com" id="email">Contact Us</a></p>
+    <button class="open-button" onclick="openForm()">Contact Us</button>
+    <div class="form-popup" id="myForm">
+            <h4 style="text-decoration: underline;">Enter your details to send us a secure message</h4>
+        <form class="form-container">
+            <label for="fullname"><b>Full Name:</b></label><br>
+            <input type="text" placeholder="Enter Full Name" name="fullname" id="fullname" required><br>
+            <label for="mobile"><b>Mobile Number:</b></label><br>
+            <input type="text" placeholder="Enter Mobile Number" name="mobile" id="mobile" required><br>
+            <label for="email"><b>Email:</b></label><br>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required><br>
+            <label for="message"><b>Message:</b></label><br>
+            <textarea placeholder="Enter Message" name="message" id="message" required style="height:100px"></textarea>
+            <button type="reset" class="btn">Send</button>
+        </form>
+    </div>
 </footer>
 </html>
