@@ -111,12 +111,12 @@ Code to add contact method to database
 */
 
     function saveDetails() {
-    var userID = document.getElementById('userID').value;
     var update = {
-    'ContactRequest':document.getElementById("contactMethod").value,
     'userID':document.getElementById("userID").value,
-    'email':document.getElementById("email").value,
-    'tel':document.getElementById("tel").value
+    'email':document.getElementById("email1").value,
+    'tel':document.getElementById("tel").value,
+    'topic':document.getElementById("topic").value,
+    'contactRequest':document.getElementById("contactRequest").value
     };
 
     fetch ('http://localhost:8080/contact', {
