@@ -18,7 +18,7 @@ totalCount1.innerHTML = count1;
 totalCount2.innerHTML = count2;
 totalCount3.innerHTML = count3;
 
-const handleIncrement1 = () => {
+function handleIncrement1() {
 	if(!isliked1) {
   count1++;
   totalCount1.innerHTML = count1;
@@ -33,7 +33,7 @@ else {
 }
 };
 
-const handleIncrement2 = () => {
+function handleIncrement2() {
 	if(!isliked2) {
       count2++;
       totalCount2.innerHTML = count2;
@@ -48,7 +48,7 @@ const handleIncrement2 = () => {
     }
   };
 
-  const handleIncrement3 = () => {
+  function handleIncrement3() {
 	if(!isliked3) {
       count3++;
       totalCount3.innerHTML = count3;
@@ -62,7 +62,21 @@ const handleIncrement2 = () => {
       document.getElementById("arrow3").style.color = "grey";
     }
   };
-//end
+//end of like buttons
+
+var isopen = false;
+function openForm() {
+if(!isopen) {
+  document.getElementById("myForm").style.display = "block";
+  document.getElementById("footer").style.height = "600px";
+  isopen = true;
+  }
+  else{
+   document.getElementById("myForm").style.display = "none";
+    document.getElementById("footer").style.height = "200px";
+    isopen = false;
+  }}
+// end of contact us
 
 function selectOpt() {
          selEl = document.getElementById('topic');
