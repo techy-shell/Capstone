@@ -101,7 +101,7 @@
                 <option value="email me">Email me</option>
                 <option value="call me">Call me</option>
             </select><br>
-        <button id="requestcall" onclick="saveDetails(); selectOpt(); getUserInfo(); validateForms('userID')">Request contact</button>
+        <button id="requestcall" onclick="saveDetails(); selectOpt(); getUserInfo(); validateForms('userID')">Send Request</button>
         </section>
         <p id="selectedTopic"></p>
     </div>
@@ -113,7 +113,7 @@
     </div>
 </fieldset>
 </body>
-<footer>
+<footer id="footer">
 <p>&copy; Team 3</p>
     <ul>
         <li class = "nav"><a href="Budget.html" target="_blank" class="links">Budget Calculator</a></li>
@@ -130,6 +130,20 @@
             </div>
         </div>
     </ul>
-    <p><a href="mailto:team3@shadowbank.com" id="email">Contact Us</a></p>
+    <button class="open-button" onclick="openForm()">Contact Us</button>
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <h3>Enter your details to send us a secure message</h3>
+            <label for="email"><b>Full Name</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <label for="email"><b>Mobile Number</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </div>
 </footer>
 </html>
