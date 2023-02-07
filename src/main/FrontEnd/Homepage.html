@@ -78,10 +78,6 @@
             <p>To request an email or callback, please complete the below form:</p>
         <label for="userID">UserID:</label><br>
         <input type="text" id="userID" name="userID" class="numbers" required> <br>
-            <label for="email1">Email:</label><br>
-            <input type="text" id="email1" name="email" class="numbers" required> <br>
-            <label for="tel">Telephone number:</label><br>
-            <input type="text" id="tel" name="tel" class="numbers" required> <br>
             <label for="topic">Topic(s) you would like to discuss (If more than one, please choose Financial
                 Health Check):</label> <br>
             <select id="topic">
@@ -100,9 +96,18 @@
             <input type="radio" name="type" onclick="getRadio(this.value)" value="Email">Email
             <input type="radio" name="type" onclick="getRadio(this.value)" value="Callback">Callback<br>
             <input type="text" id="result" readonly> <br>
-        <button id="requestcall" onclick="saveContactDetails(); selectOpt(); getUserInfo(); validateForms('userID')">Send Request</button>
+            <p>Need to update your details? You can do so after sending your request below.</p>
+        <button id="requestcall" onclick="saveContactDetails(); showUpdater(); selectOpt(); getUserInfo(); validateForms('userID')">Send Request</button>
         </section>
         <p id="selectedTopic"></p>
+        <p id="updaterText"></p>
+        <section id="updateDetails" class="updater">
+            <label for="email1">Email:</label><br>
+            <input type="text" id="email1" name="email" class="numbers" required> <br>
+            <label for="tel">Telephone number:</label><br>
+            <input type="text" id="tel" name="tel" class="numbers" required> <br>
+            <button id="updateContact" onclick="updateDetails(); thanks()">Update Details</button>
+        </section>
     </div>
     <div class="boxes2">
         <h3 class="trendingtitle">Video of the day</h3>
