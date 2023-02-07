@@ -132,17 +132,17 @@
     </ul>
     <button class="open-button" onclick="openForm()">Contact Us</button>
     <div class="form-popup" id="myForm">
+            <h4 style="text-decoration: underline;">Enter your details to send us a secure message</h4>
         <form class="form-container">
-            <h3>Enter your details to send us a secure message</h3>
-            <label for="email"><b>Full Name</b></label>
-            <input type="text" placeholder="Enter Email" name="email" id="email" required>
-            <label for="email"><b>Mobile Number</b></label>
-            <input type="text" placeholder="Enter Email" name="email" id="email" required>
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" id="email" required>
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-            <button type="submit" class="btn">Send</button>
+            <label for="fullname"><b>Full Name:</b></label><br>
+            <input type="text" placeholder="Enter Full Name" name="fullname" id="fullname" required><br>
+            <label for="mobile"><b>Mobile Number:</b></label><br>
+            <input type="text" placeholder="Enter Mobile Number" name="mobile" id="mobile" required><br>
+            <label for="email"><b>Email:</b></label><br>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required><br>
+            <label for="message"><b>Message:</b></label><br>
+            <textarea placeholder="Enter Message" name="message" id="message" required style="height:100px"></textarea>
+            <button type="reset" class="btn">Send</button>
         </form>
     </div>
 </footer>
