@@ -34,8 +34,12 @@ public class UserDAO {
     }
 
 //either use Tel or Email for contactMethod
-    public void updateContactRequest (int userID, String contactRequest, String tel, String email, String topic) {
-        String sql = "UPDATE Users set ContactRequest = '" + contactRequest + "', tel = '" + tel + "', email = '" + email + "', Topic = '" + topic + "' Where UserID = " + userID;
+    public void updateContactRequest (int userID, String contactRequest, String topic) {
+        String sql = "UPDATE Users set ContactRequest = '" + contactRequest + "', Topic = '" + topic + "' Where UserID = " + userID;
+        jdbcTemplate.update(sql);
+    }
+    public void updateContactDetails (int userID, String tel, String email) {
+        String sql = "UPDATE Users set tel = '" + tel + "', email = '" + email + "' Where UserID = " + userID;
         jdbcTemplate.update(sql);
     }
     @Autowired
