@@ -96,18 +96,23 @@
             <input type="radio" name="type" onclick="getRadio(this.value)" value="Email">Email
             <input type="radio" name="type" onclick="getRadio(this.value)" value="Callback">Callback<br>
             <input type="text" id="result" readonly> <br>
-            <p>Need to update your details? You can do so after sending your request below.</p>
-        <button id="requestcall" onclick="saveContactDetails(); showUpdater(); selectOpt(); getUserInfo(); validateForms('userID')">Send Request</button>
+            <p>Need to update your details? You can do so after clicking the button below.</p>
+        <button id="requestcall" onclick="saveContactDetails(); showUpdater(); selectOpt(); getUserInfo();
+        validateForms('userID')">Request</button>
         </section>
         <p id="selectedTopic"></p>
         <p id="confirmation"></p>
+        <section id="noChange" class="updater">
+            <p id="allOk"></p>
+            <button id="noUpdate" onclick="noChangeThanks()">Confirm Request</button>
+        </section>
         <section id="updateDetails" class="updater">
             <p id="updaterText"></p>
             <label for="email1">Email:</label><br>
             <input type="text" id="email1" name="email" class="numbers" required> <br>
             <label for="tel">Telephone number:</label><br>
             <input type="text" id="tel" name="tel" class="numbers" required> <br>
-            <button id="updateContact" onclick="updateContact(); thanks()">Update Details</button>
+            <button id="updateContact" onclick="updateContact(); getUpdatedInfo(); thanks()">Update & Confirm Request</button>
         </section>
     </div>
     <div class="boxes2">
