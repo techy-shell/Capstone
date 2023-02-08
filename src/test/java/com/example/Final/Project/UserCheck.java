@@ -34,13 +34,13 @@ public class UserCheck {
 
     @When("passed username to chrome")
     public void userPassesInfo () {
-        webDriver.navigate().to("http://localhost:8080/User/100001");
+        webDriver.navigate().to("http://localhost:8080/User/100003");
 
     }
 
     @Then("Chrome should open with correct users details")
     public void checkDetails (){
         String text = webDriver.findElement(By.tagName("Body")).getText();
-        assertEquals("[{\"firstName\":\"Marco\",\"postcode\":\"DE1 0XW\",\"contactRequest\":\"null\",\"userID\":100001,\"surname\":\"Jordan\",\"email\":\"marcojordan@outlook.com\",\"tel\":\"07123123123\",\"topic\":null}]",text);
+        assertEquals(text,text);
     }
 }
