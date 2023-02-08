@@ -122,7 +122,7 @@
                     </label><br>
                 <input type="text" placeholder="0" id="userID2" name="userID2"><br><br>
                 <button class="expSubmit" onclick="calcBudget();validateForms7('councilTax','mortgage','gasElectricity',
-                'water','food','travel','userName2','userID2')">Calculate</button><br>
+                'water','food','travel','userName2')">Calculate</button><br>
             </fieldset>
             <fieldset class="expField">
                 <p id="remainBal">Your remaining balance and some ways to improve your finances will appear here once you have complete the above form.</p>
@@ -181,13 +181,37 @@
 
 </fieldset>
 </body>
-<footer>
+<footer id="footer">
     <p>&copy; Team 3</p>
     <ul>
-        <li class = "nav"><a href="Homepage.html target="_blank" class="links">Homepage</a></li>
+        <li class = "nav"><a href="Homepage.html" target="_blank" class="links">Homepage</a></li>
         <li class = "nav"><a href="https://www.bbc.co.uk/news/topics/cljev4jz3pjt" target="_blank" class="links">Latest News</a></li>
         <li class = "nav"><a href="LocalHelp.html" target="_blank" class="links">Help Nearby</a></li>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="Homepage.html" target="_blank">Homepage</a>
+                <a href="https://www.bbc.co.uk/news/topics/cljev4jz3pjt" target="_blank">Latest News</a>
+                <a href="LocalHelp.html" target="_blank">Help Nearby</a>
+            </div>
+        </div>
     </ul>
-    <p><a href="mailto:team3@shadowbank.com" id="email">Contact Us</a></p>
+    <button class="open-button" onclick="openForm()">Contact Us</button>
+    <div class="form-popup" id="myForm">
+        <h4 style="text-decoration: underline;">Enter your details to send us a secure message</h4>
+        <form class="form-container">
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" placeholder="Enter Full Name" name="fullname" id="fullname" required><br>
+            <label for="mobile">Mobile Number:</label><br>
+            <input type="text" placeholder="Enter Mobile Number" name="mobile" id="mobile" required><br>
+            <label for="email">Email:</label><br>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required><br>
+            <label for="message">Message:</label><br>
+            <textarea placeholder="Enter Message" name="message" id="message" required style="height:100px"></textarea>
+            <button type="reset" class="btn">Send</button>
+        </form>
+    </div>
 </footer>
 </html>

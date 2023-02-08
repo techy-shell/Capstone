@@ -228,7 +228,7 @@ function selectOpt() {
         var seventhValue = document.getElementById(id7).value;
         var eighthValue = document.getElementById(id8).value;
         if(firstName.match(numbers) && secondValue.match(numbers) && thirdValue.match(numbers) && fourthValue.match(numbers)
-        && fifthValue.match(numbers) && sixthValue.match(numbers) && seventhValue.match(numbers) && eighthValue.match(numbers)){
+        && fifthValue.match(numbers) && sixthValue.match(numbers) && seventhValue.match(numbers)){
         document.console.log("good");
         } else {
         alert("Details should be in number format");
