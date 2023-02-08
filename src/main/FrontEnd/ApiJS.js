@@ -90,7 +90,7 @@ fetch('http://localhost:8080/User/' + userID)
   .then((response) => response.json())
   .then((data) => {
     document.getElementById('confirmation').innerHTML = data[0].firstName + " " + data[0].surname +
-    ", you will be contacted within the next two working days. You will receive an email confirmation of your request.";
+    ", your current mobile number is " + data[0].tel + " and your current email address is " + data[0].email;
     document.getElementById("callback").classList.toggle("hide");
      })
      .catch(err => console.log(err));
@@ -163,9 +163,25 @@ function getRadio(type){
 
     function showUpdater() {
     document.getElementById("updateDetails").classList.toggle("show");
+    document.getElementById("noChange").classList.toggle("show");
     document.getElementById('updaterText').innerHTML = "Please enter your mobile AND email below to update:";
+    document.getElementById('allOk').innerHTML = "Details above correct? Click below to confirm your request.";
     }
 
 function thanks() {
+document.getElementById('confirmation').innerHTML = "Details updated.";
 document.getElementById('updateDetails').innerHTML = "Thank you for updating your details.";
+document.getElementById('noChange').innerHTML = "Request Confirmed.";
 }
+
+function noChangeThanks() {
+document.getElementById('noChange').innerHTML = "Request Confirmed.";
+document.getElementById('updateDetails').innerHTML = "You will be contacted within 2 working days.";
+}
+
+//function updateTheInfo() {
+//var theEmail = document.getElementById('email1').value
+//var thePhone = document.getElementById('tel').value
+//document.getElementById('confirmation').innerHTML = "Your updated email is:  " + email + "
+//and updated number is: " + phone;
+//}
