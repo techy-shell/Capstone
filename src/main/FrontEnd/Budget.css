@@ -148,6 +148,8 @@ budgetRow::after {
   clear: both;
 }
 
+/* responsive formatting for 2 columns */
+
 .incomeInput, .expenditure {
 float: left;
 border: none;
@@ -163,12 +165,39 @@ min-height: 50%;
 flex:100%;}
 }
 
+/* styling for income fields */
+
 .incField {
 border-style: dashed;
 border-color: #2a363b;
 font-family: 'Sofia Sans Condensed', sans-serif;
 font-size:20px;
 color: #2a363b;
+}
+
+h3 {
+font-family: 'Sofia Sans Condensed', sans-serif;
+color: #2a363b;
+
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 240px;
+  background-color: #2a363b;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 
 .calculatorHeading {
@@ -184,7 +213,29 @@ font-family: 'Sofia Sans Condensed', sans-serif;
 color: rgb(35,45,44);
 text-align: left;
 }
+/* styling of buttons */
 
+.info {
+background-color: #faa8a3;
+font-family: 'Sofia Sans Condensed', sans-serif;
+font-size:20px;
+width: 30px;
+height: 30px;
+border-radius: 100%;
+border: none;
+
+.info:active {
+            transform: translateY(4px);
+            }
+
+            .info:hover {
+                     cursor:pointer;
+                     background-color:#f77b73;
+                     }
+
+
+
+}
 .userBtn {
 background-color: #faa8a3;
 font-family: 'Sofia Sans Condensed', sans-serif;

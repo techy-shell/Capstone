@@ -32,7 +32,12 @@ public class UserController {
 
     @RequestMapping ("/contact")
     public void updateUsers (@RequestBody UserDB requestUserContact) {
-        userDAO.updateContactRequest(requestUserContact.getUserID(), requestUserContact.getContactRequest(), requestUserContact.getTel(), requestUserContact.getEmail(), requestUserContact.getTopic());
+        userDAO.updateContactRequest(requestUserContact.getUserID(), requestUserContact.getContactRequest(), requestUserContact.getTopic());
+    }
+
+    @RequestMapping ("/contactDetails")
+    public void updateDetails (@RequestBody UserDB requestUserContact) {
+        userDAO.updateContactDetails(requestUserContact.getUserID(), requestUserContact.getTel(), requestUserContact.getEmail());
     }
 
     @Autowired

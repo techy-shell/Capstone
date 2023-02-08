@@ -130,8 +130,6 @@ function getRadio(type){
     function saveContactDetails() {
     var update = {
     'userID':document.getElementById("userID").value,
-    'email':document.getElementById("email1").value,
-    'tel':document.getElementById("tel").value,
     'topic':document.getElementById("topic").value,
     'contactRequest':document.getElementById("result").value
     };
@@ -145,6 +143,23 @@ function getRadio(type){
     .then(response => response.json())
     .then(response => console.log(JSON.stringify(response)));
     }
+
+    function updateContact() {
+        var update = {
+        'userID':document.getElementById("userID").value,
+        'email':document.getElementById("email1").value,
+        'tel':document.getElementById("tel").value
+        };
+        fetch ('http://localhost:8080/contactDetails', {
+        method: 'POST',
+        headers: {
+        'Content-Type':'application/json',
+        },
+        body: JSON.stringify(update)
+        })
+        .then(response => response.json())
+        .then(response => console.log(JSON.stringify(response)));
+        }
 
     function showUpdater() {
     document.getElementById("updateDetails").classList.toggle("show");
