@@ -183,3 +183,16 @@ var theEmail = document.getElementById('email1').value;
 var thePhone = document.getElementById('tel').value;
 document.getElementById('confirmation').innerHTML = "Your updated email is:  " + theEmail + " and updated number is: " + thePhone;
 }
+//
+//function validateNotNull(){
+//    var numbers = /^[0-9]+$/;
+//    var tel = document.getElementById("tel").value;
+//    var contact = document.getElementById("email1").value;
+//    if
+//    (contact !== "" && tel !== "")
+//    {
+//    document.console.log("good");
+//    } else {
+//    alert("Please enter all details");
+//    }
+//    }
