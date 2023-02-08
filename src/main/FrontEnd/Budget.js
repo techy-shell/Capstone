@@ -236,12 +236,12 @@ function selectOpt() {
         }
 
 
- function validateNotNull(){
+function validateNotNull(){
     var numbers = /^[0-9]+$/;
     var tel = document.getElementById('tel').value;
     var contact = document.getElementById('email1').value;
     if
-    (contact.match("'"))
+    (contact !== "" && tel !== "")
     {
     document.console.log("good");
     } else {
