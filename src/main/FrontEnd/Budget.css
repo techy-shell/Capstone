@@ -148,6 +148,8 @@ budgetRow::after {
   clear: both;
 }
 
+/* responsive formatting for 2 columns */
+
 .incomeInput, .expenditure {
 float: left;
 border: none;
@@ -163,12 +165,39 @@ min-height: 50%;
 flex:100%;}
 }
 
+/* styling for income fields */
+
 .incField {
 border-style: dashed;
 border-color: #2a363b;
 font-family: 'Sofia Sans Condensed', sans-serif;
 font-size:20px;
 color: #2a363b;
+}
+
+h3 {
+font-family: 'Sofia Sans Condensed', sans-serif;
+color: #2a363b;
+
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 240px;
+  background-color: #2a363b;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 
 .calculatorHeading {
@@ -184,7 +213,29 @@ font-family: 'Sofia Sans Condensed', sans-serif;
 color: rgb(35,45,44);
 text-align: left;
 }
+/* styling of buttons */
 
+.info {
+background-color: #faa8a3;
+font-family: 'Sofia Sans Condensed', sans-serif;
+font-size:20px;
+width: 30px;
+height: 30px;
+border-radius: 100%;
+border: none;
+
+.info:active {
+            transform: translateY(4px);
+            }
+
+            .info:hover {
+                     cursor:pointer;
+                     background-color:#f77b73;
+                     }
+
+
+
+}
 .userBtn {
 background-color: #faa8a3;
 font-family: 'Sofia Sans Condensed', sans-serif;
@@ -346,6 +397,9 @@ p.colour2 {
 color:#2a363b
 }
 
+
+
+
 #requestcall {
 background-color: #faa8a3;
 font-family: 'Sofia Sans Condensed', sans-serif;
@@ -367,21 +421,81 @@ box-shadow: 0 9px #999;
                      background-color:#f77b73;
                      }
 
-                     footer {
-                     text-align: center;
-                     font-family: 'Sofia Sans Condensed', sans-serif;
-                     background-color: #f77b73;
-                     border: 5px double #2a363b;
-                     height: 200px;
-                     color: #2a363b;
-                     font-size: 20px;
-                     padding:10px;
-                     }
+#footer {
+text-align: center;
+font-family: 'Sofia Sans Condensed', sans-serif;
+background-color: #f77b73;
+border: 5px double #2a363b;
+height: 200px;
+color: #2a363b;
+font-size: 20px;
+padding:10px;
+}
 
-                     #email {
-                     text-decoration: none;
-                     color: #2a363b;
-                     }
+.open-button {
+font-family: 'Sofia Sans Condensed', sans-serif;
+color: #2a363b;
+width: 20%;
+border: none;
+font-size: 20px;
+background-color: transparent;
+margin:5px;
+}
 
+.open-button:hover {
+text-decoration: underline;
+font-style: italic;
+cursor:pointer;
+}
 
+.form-popup {
+  display: none;
+  z-index: 9;
+  border-top: 2px dashed black;
+}
 
+.form-container {
+  max-width: 100%;
+  padding: 10px;
+text-align:center;
+}
+
+.form-container input[type=text], textarea {
+  width: 50%;
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  border: none;
+  font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+.form-container .btn {
+  background-color: #2c8e34;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.updater {
+display:none;
+font-family: 'Sofia Sans Condensed', sans-serif;
+color: #faa8a3;
+text-align: center;
+}
+
+.show {
+display:block;
+}
+
+.hide {
+position: absolute !important;
+   top: -999px !important;
+   left: -999px !important;
+}
