@@ -241,7 +241,7 @@ function selectOpt() {
     var tel = document.getElementById('tel').value;
     var contact = document.getElementById('email1').value;
     if
-    (contact.match("'"))
+    (contact !== "" && tel !== "")
     {
     document.console.log("good");
     } else {
