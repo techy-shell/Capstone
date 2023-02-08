@@ -49,6 +49,10 @@
                 <h1 class="calculatorHeading">Income</h1>
             </fieldset>
             <fieldset class="incField">
+                <div class="tooltip"><h3>Enter your User ID below to check the income stored is up to date
+                    <button class="info" >?</button>
+                    <span class="tooltiptext">Your User ID is in the top right hand corner of your bank statement.</span>
+                </h3></div>
                 <label for="userName">Please enter your user ID:</label><br><br>
                 <input type="text" id="userName" name="userName"><br><br>
                 <button class="userBtn" onclick="getUsers(); validateForms('userName')">See current financials</button>
@@ -57,6 +61,7 @@
                 <div id="benefitsInfo"></div>
             </fieldset>
             <fieldset class="incField">
+                <h3>If you don't get paid monthly see below</h3>
                 <p>If you don't get paid monthly, please use the below conversion calculator to see what your wage equates to monthly and use the monthly salary box to update our system:</p>
                 <p>How often do you get paid?</p>
                 <select id="frequency">
@@ -71,6 +76,7 @@
                 <button class="dropbtn" onclick="getConvert();validateForms('pay')">Convert to monthly pay</button><br><br>
             </fieldset>
             <fieldset class="incField">
+                <h3>Update your income</h3>
                 <p>If the current figures we have for your monthly salary and benefits are incorrect, please enter them below and press update:</p>
                 <label for="salary">Your monthly pay after tax:</label><br>
                 <input type="text" id="salary" name="salary"><br><br>
@@ -103,29 +109,31 @@
                 <h1 class="calculatorHeading">Expenditure</h1>
             </fieldset>
             <fieldset class="expField">
+                <h3>Enter your household bills and user ID below</h3>
                     <label class="inputInfo" for="mortgage"> Mortgage / Rent amount per month:</label><br>
-                    <input class="inputInfo" type="text" id="mortgage" name="mortgage"><br>
+                    <input class="inputInfo" type="text" id="mortgage" name="mortgage"><br><br>
                     <label class="inputInfo" for="councilTax">Council tax per month:</label><br>
-                    <input class="inputInfo" type="text" id="councilTax" name="councilTax"><br>
+                    <input class="inputInfo" type="text" id="councilTax" name="councilTax"><br><br>
                 <label class="inputInfo" for="gasElectricity">Gas / Electricity per month:</label><br>
-                <input class="inputInfo" type="text" id="gasElectricity" name="gasElecticity"><br>
+                <input class="inputInfo" type="text" id="gasElectricity" name="gasElecticity"><br><br>
                 <label class="inputInfo" for="water">Water per month:</label><br>
-                <input class="inputInfo" type="text" id="water" name="water"><br>
+                <input class="inputInfo" type="text" id="water" name="water"><br><br>
                 <label class="inputInfo" for="food">Food per month:</label><br>
-                <input class="inputInfo" type="text" id="food" name="food"><br>
+                <input class="inputInfo" type="text" id="food" name="food"><br><br>
                 <label class="inputInfo" for="travel">Travel per month:</label><br>
-                <input class="inputInfo" type="text" id="travel" name="travel"><br>
-                <label for="userName2">Enter your username to include your current income in the
+                <input class="inputInfo" type="text" id="travel" name="travel"><br><br>
+                <label for="userName2">Enter your user ID to include your current income in the
                     calculation:</label><br>
-                <input type="text" id="userName2" name="userName2"><br>
-                <label for="userID2">If you have a second income you'd like to include, please enter the userID to pull through the income for the second person:
+                <input type="text" id="userName2" name="userName2"><br><br>
+                <label for="userID2">If you have a second income you'd like to include, please enter the user ID to pull through the income for the second person:
                     </label><br>
                 <input type="text" placeholder="0" id="userID2" name="userID2"><br><br>
                 <button class="expSubmit" onclick="calcBudget();validateForms7('councilTax','mortgage','gasElectricity',
                 'water','food','travel','userName2')">Calculate</button><br>
             </fieldset>
             <fieldset class="expField">
-                <p id="remainBal">Your remaining balance and some ways to improve your finances will appear here once you have complete the above form.</p>
+                <p id="remainBal">Your remaining balance and some ways to improve your finances will appear here once you have complete the above form.
+                </p>
                 <p id="includeIncome"></p>
                 <p id="includeIncome2"></p>
                 <p id="totalExp"></p>
@@ -141,14 +149,15 @@
                 <p class='colour1' id="review"></p>
             </fieldset>
             <fieldset class="expField">
+                <h3>Need help?&nbsp Request we contact you below</h3>
                 <label for="userID3">To request either an email or callback, please enter your user ID:</label><br>
-                <input type="text" id="userID3" name="userID3"><br>
+                <input type="text" id="userID3" name="userID3"><br><br>
 
                 <label for="email1">Email:</label><br>
-                <input type="text" id="email1" name="email" class="numbers" required><br>
+                <input type="text" id="email1" name="email" class="numbers" required><br><br>
 
                 <label for="tel">Telephone number:</label><br>
-                <input type="text" id="tel" name="tel" class="numbers" required><br>
+                <input type="text" id="tel" name="tel" class="numbers" required><br><br>
 
                 <label for="topic">Topic(s) you would like to discuss (If more than one, please choose Financial
                     Health Check):</label><br><br>
