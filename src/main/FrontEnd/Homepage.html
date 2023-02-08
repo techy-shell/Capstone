@@ -78,10 +78,6 @@
             <p>To request an email or callback, please complete the below form:</p>
         <label for="userID">UserID:</label><br>
         <input type="text" id="userID" name="userID" class="numbers" required> <br>
-            <label for="email1">Email:</label><br>
-            <input type="text" id="email1" name="email" class="numbers" required> <br>
-            <label for="tel">Telephone number:</label><br>
-            <input type="text" id="tel" name="tel" class="numbers" required> <br>
             <label for="topic">Topic(s) you would like to discuss (If more than one, please choose Financial
                 Health Check):</label> <br>
             <select id="topic">
@@ -97,20 +93,28 @@
                     <option value="FHC">Financial Health Check</option>
                 </optgroup>
             </select> <br>
-            <p>How would you like to be contacted?</p>
-            <select id="contactRequest">
-                <option value="email me">Email me</option>
-                <option value="call me">Call me</option>
-            </select><br><br>
-        <button id="requestcall" onclick="saveDetails(); selectOpt(); getUserInfo(); validateForms('userID')">Send Request</button>
+            <input type="radio" name="type" onclick="getRadio(this.value)" value="Email">Email
+            <input type="radio" name="type" onclick="getRadio(this.value)" value="Callback">Callback<br>
+            <input type="text" id="result" readonly> <br>
+            <p>Need to update your details? You can do so after sending your request below.</p>
+        <button id="requestcall" onclick="saveContactDetails(); showUpdater(); selectOpt(); getUserInfo(); validateForms('userID')">Send Request</button>
         </section>
         <p id="selectedTopic"></p>
+        <p id="confirmation"></p>
+        <section id="updateDetails" class="updater">
+            <p id="updaterText"></p>
+            <label for="email1">Email:</label><br>
+            <input type="text" id="email1" name="email" class="numbers" required> <br>
+            <label for="tel">Telephone number:</label><br>
+            <input type="text" id="tel" name="tel" class="numbers" required> <br>
+            <button id="updateContact" onclick="saveContactDetails(); thanks()">Update Details</button>
+        </section>
     </div>
     <div class="boxes2">
         <h3 class="trendingtitle">Video of the day</h3>
-        <iframe width="80%" height="200" src="https://www.youtube.com/embed/oyUWNfjZL0Y"
+        <iframe width="90%" height="300" src="https://www.youtube.com/embed/oyUWNfjZL0Y"
                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-                encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="padding-left:20%;"></iframe>
+                encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="padding-left:10%; margin-top:5%; margin-bottom:5%"></iframe>
     </div>
 </fieldset>
 </body>
@@ -135,13 +139,13 @@
     <div class="form-popup" id="myForm">
             <h4 style="text-decoration: underline;">Enter your details to send us a secure message</h4>
         <form class="form-container">
-            <label for="fullname"><b>Full Name:</b></label><br>
+            <label for="fullname">Full Name:</label><br>
             <input type="text" placeholder="Enter Full Name" name="fullname" id="fullname" required><br>
-            <label for="mobile"><b>Mobile Number:</b></label><br>
+            <label for="mobile">Mobile Number:</label><br>
             <input type="text" placeholder="Enter Mobile Number" name="mobile" id="mobile" required><br>
-            <label for="email"><b>Email:</b></label><br>
+            <label for="email">Email:</label><br>
             <input type="text" placeholder="Enter Email" name="email" id="email" required><br>
-            <label for="message"><b>Message:</b></label><br>
+            <label for="message">Message:</label><br>
             <textarea placeholder="Enter Message" name="message" id="message" required style="height:100px"></textarea>
             <button type="reset" class="btn">Send</button>
         </form>

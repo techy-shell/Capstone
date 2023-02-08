@@ -89,8 +89,9 @@ function selectOpt() {
 fetch('http://localhost:8080/User/' + userID)
   .then((response) => response.json())
   .then((data) => {
-    document.getElementById('callback').innerHTML = data[0].firstName + " " + data[0].surname +
+    document.getElementById('confirmation').innerHTML = data[0].firstName + " " + data[0].surname +
     ", you will be contacted within the next two working days. You will receive an email confirmation of your request.";
+    document.getElementById("callback").classList.toggle("hide");
      })
      .catch(err => console.log(err));
      };
@@ -123,16 +124,17 @@ fetch('http://localhost:8080/User/' + userID)
 /*
 Code to add contact method to database
 */
-
+function getRadio(type){
+    document.getElementById("result").value = type;
+    }
     function saveContactDetails() {
     var update = {
     'userID':document.getElementById("userID").value,
     'email':document.getElementById("email1").value,
     'tel':document.getElementById("tel").value,
     'topic':document.getElementById("topic").value,
-    'contactRequest':document.getElementById("contactRequest").value
+    'contactRequest':document.getElementById("result").value
     };
-
     fetch ('http://localhost:8080/contact', {
     method: 'POST',
     headers: {
@@ -143,3 +145,12 @@ Code to add contact method to database
     .then(response => response.json())
     .then(response => console.log(JSON.stringify(response)));
     }
+
+    function showUpdater() {
+    document.getElementById("updateDetails").classList.toggle("show");
+    document.getElementById('updaterText').innerHTML = "Please enter your mobile AND email below to update:";
+    }
+
+function thanks() {
+document.getElementById('updateDetails').innerHTML = "Thank you for updating your details.";
+}
