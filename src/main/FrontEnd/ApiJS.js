@@ -183,6 +183,14 @@ var theEmail = document.getElementById('email1').value;
 var thePhone = document.getElementById('tel').value;
 document.getElementById('confirmation').innerHTML = "Your updated email is:  " + theEmail + " and updated number is: " + thePhone;
 }
+
+function changeImage() {
+    if (document.getElementById("imgClickAndChange").src == "https://cdn.iconscout.com/icon/free/png-256/keyboard-down-arrow-1780093-1518654.png"){
+        document.getElementById("imgClickAndChange").src = "https://cdn.iconscout.com/icon/free/png-512/keyboard-up-arrow-1780090-1518651.png?f=avif&w=512";
+    } else {
+        document.getElementById("imgClickAndChange").src = "https://cdn.iconscout.com/icon/free/png-256/keyboard-down-arrow-1780093-1518654.png";
+    }
+}
 //
 //function validateNotNull(){
 //    var numbers = /^[0-9]+$/;

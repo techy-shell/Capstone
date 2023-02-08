@@ -50,9 +50,9 @@
             </fieldset>
             <fieldset class="incField">
                 <div class="tooltip"><h3>Enter your User ID below to check the income stored is up to date
-                    <button class="info" >?</button>
-                    <span class="tooltiptext">Your User ID is in the top right hand corner of your bank statement.</span>
-                </h3></div>
+                    <button class="info">?</button></h3>
+                    <span class="tooltiptext">Your User ID is 6 digits<br>You will see it on the top right hand corner of your bank statement.<br></span>
+              </div>
                 <label for="userName">Please enter your user ID:</label><br><br>
                 <input type="text" id="userName" name="userName"><br><br>
                 <button class="userBtn" onclick="getUsers(); validateForms('userName')">See current financials</button>
@@ -98,10 +98,7 @@
                 <h2 style="text-decoration:underline;">Money Saving Tips for February</h2><br>
                 <img class="moneyTips" src="https://static.wixstatic.com/media/f9cbdb_d2ee115e75024fbc87e0fe067cac517f~mv2.png/v1/fill/w_640,h_640,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/f9cbdb_d2ee115e75024fbc87e0fe067cac517f~mv2.png"
                          alt="an image showing some tips to help save money"><br><br><br>
-
             </fieldset>
-
-
         </div>
 
         <div class="expenditure">
@@ -113,15 +110,15 @@
                     <label class="inputInfo" for="mortgage"> Mortgage / Rent amount per month:</label><br>
                     <input class="inputInfo" type="text" id="mortgage" name="mortgage"><br><br>
                     <label class="inputInfo" for="councilTax">Council tax per month:</label><br>
-                    <input class="inputInfo" type="text" id="councilTax" name="councilTax"><br><br>
+                    <input class="inputInfo" type="text"  id="councilTax" name="councilTax"><br><br>
                 <label class="inputInfo" for="gasElectricity">Gas / Electricity per month:</label><br>
-                <input class="inputInfo" type="text" id="gasElectricity" name="gasElecticity"><br><br>
+                <input class="inputInfo" type="text"  id="gasElectricity" name="gasElecticity"><br><br>
                 <label class="inputInfo" for="water">Water per month:</label><br>
-                <input class="inputInfo" type="text" id="water" name="water"><br><br>
+                <input class="inputInfo" type="text"  id="water" name="water"><br><br>
                 <label class="inputInfo" for="food">Food per month:</label><br>
-                <input class="inputInfo" type="text" id="food" name="food"><br><br>
+                <input class="inputInfo" type="text"  id="food" name="food"><br><br>
                 <label class="inputInfo" for="travel">Travel per month:</label><br>
-                <input class="inputInfo" type="text" id="travel" name="travel"><br><br>
+                <input class="inputInfo" type="text"  id="travel" name="travel"><br><br>
                 <label for="userName2">Enter your user ID to include your current income in the
                     calculation:</label><br>
                 <input type="text" id="userName2" name="userName2"><br><br>
@@ -150,38 +147,46 @@
             </fieldset>
             <fieldset class="expField">
                 <h3>Need help?&nbsp Request we contact you below</h3>
-                <label for="userID3">To request either an email or callback, please enter your user ID:</label><br>
-                <input type="text" id="userID3" name="userID3"><br><br>
-
-                <label for="email1">Email:</label><br>
-                <input type="text" id="email1" name="email" class="numbers" required><br><br>
-
-                <label for="tel">Telephone number:</label><br>
-                <input type="text" id="tel" name="tel" class="numbers" required><br><br>
-
-                <label for="topic">Topic(s) you would like to discuss (If more than one, please choose Financial
-                    Health Check):</label><br><br>
-                <select id="topic">
-                    <optgroup label="Savings & Investments">
-                        <option value="Short Term Savings">Short term savings</option>
-                        <option value="Investments">Investments</option>
-                    </optgroup>
-                    <optgroup label="Lending">
-                        <option value="Short Term Lending">Short term lending</option>
-                        <option value="Mortgages">Longer term lending</option>
-                    </optgroup>
-                    <optgroup label="FHC">
-                        <option value="FHC">Financial Health Check</option>
-                    </optgroup>
-                </select> <br><br>
-                <p>Please choose how you would like us to contact you:</p>
-                <select id="contactRequest"><br>
-                    <option value="email me">Email me</option><br><br>
-                    <option value="call me">Call me</option><br><br>
-                </select><br><br>
-                <button id="requestcall" onclick="getCallback(); saveContactDetails(); selectOpt(); validateNotNull()">Request contact from an Advisor</button><br>
+                <section id="callback">
+                    <p>To request an email or callback, please complete the below form:</p>
+                    <label for="userID">UserID:</label><br>
+                    <input type="text" id="userID" name="userID" class="numbers" required> <br>
+                    <label for="topic">Topic(s) you would like to enquire about (If more than one, please choose Financial
+                        Health Check):</label> <br>
+                    <select id="topic">
+                        <optgroup label="Savings & Investments">
+                            <option value="Short Term Savings">Short term savings</option>
+                            <option value="Investments">Investments</option>
+                        </optgroup>
+                        <optgroup label="Lending">
+                            <option value="Short Term Lending">Short term lending</option>
+                            <option value="Mortgages">Mortgages</option>
+                        </optgroup>
+                        <optgroup label="FHC">
+                            <option value="FHC">Financial Health Check</option>
+                        </optgroup>
+                    </select> <br>
+                    <input type="radio" name="type" onclick="getRadio(this.value)" value="Email">Email
+                    <input type="radio" name="type" onclick="getRadio(this.value)" value="Callback">Callback<br>
+                    <input type="text" id="result" readonly> <br>
+                    <p>Need to update your details? You can do so after clicking the button below.</p>
+                    <button id="requestcall" onclick="saveContactDetails(); showUpdater(); selectOpt(); getUserInfo();
+        validateForms('userID')">Request</button>
+                </section>
                 <p id="selectedTopic"></p>
-                <p id="callback"></p>
+                <p id="confirmation"></p>
+                <section id="noChange" class="updater">
+                    <p id="allOk"></p>
+                    <button id="noUpdate" onclick="noChangeThanks()">Confirm Request</button>
+                </section>
+                <section id="updateDetails" class="updater">
+                    <p id="updaterText"></p>
+                    <label for="email1">Email:</label><br>
+                    <input type="text" id="email1" name="email" class="numbers" required> <br>
+                    <label for="tel">Telephone number:</label><br>
+                    <input type="text" id="tel" name="tel" class="numbers" required> <br>
+                    <button id="updateContact" onclick="updateContact(); updateTheInfo(); thanks()">Update & Confirm Request</button>
+                </section>
             </fieldset>
         </div>
 
@@ -207,7 +212,7 @@
             </div>
         </div>
     </ul>
-    <button class="open-button" onclick="openForm()">Contact Us</button>
+    <button class="open-button" onclick="openForm(); changeImage()">Contact Us<img alt="arrow" src="https://cdn.iconscout.com/icon/free/png-256/keyboard-down-arrow-1780093-1518654.png" style="height: 25px; width: 30px" id="imgClickAndChange"/></button>
     <div class="form-popup" id="myForm">
         <h4 style="text-decoration: underline;">Enter your details to send us a secure message</h4>
         <form class="form-container">
