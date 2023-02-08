@@ -103,50 +103,30 @@
                 <h1 class="calculatorHeading">Expenditure</h1>
             </fieldset>
             <fieldset class="expField">
-                <div>
                     <label class="inputInfo" for="mortgage"> Mortgage / Rent amount per month:</label><br>
                     <input class="inputInfo" type="text" id="mortgage" name="mortgage"><br>
-                </div>
-            </fieldset>
-            <fieldset class="expField">
-                <div>
                     <label class="inputInfo" for="councilTax">Council tax per month:</label><br>
                     <input class="inputInfo" type="text" id="councilTax" name="councilTax"><br>
-                </div>
-            </fieldset>
-            <fieldset class="expField">
                 <label class="inputInfo" for="gasElectricity">Gas / Electricity per month:</label><br>
                 <input class="inputInfo" type="text" id="gasElectricity" name="gasElecticity"><br>
-            </fieldset>
-            <fieldset class="expField">
                 <label class="inputInfo" for="water">Water per month:</label><br>
                 <input class="inputInfo" type="text" id="water" name="water"><br>
-            </fieldset>
-            <fieldset class="expField">
                 <label class="inputInfo" for="food">Food per month:</label><br>
                 <input class="inputInfo" type="text" id="food" name="food"><br>
-            </fieldset>
-            <fieldset class="expField">
                 <label class="inputInfo" for="travel">Travel per month:</label><br>
                 <input class="inputInfo" type="text" id="travel" name="travel"><br>
-            </fieldset>
-            <fieldset class="expField">
                 <label for="userName2">Enter your username to include your current income in the
                     calculation:</label><br>
-                <input type="text" id="userName2" name="userName2">
-            </fieldset>
-            <fieldset class="expField">
+                <input type="text" id="userName2" name="userName2"><br>
                 <label for="userID2">If you have a second income you'd like to include, please enter the userID to pull through the income for the second person:
                     </label><br>
-                <input type="text" placeholder="0" id="userID2" name="userID2">
-            </fieldset>
-            <fieldset class="expField">
+                <input type="text" placeholder="0" id="userID2" name="userID2"><br><br>
                 <button class="expSubmit" onclick="calcBudget();validateForms7('councilTax','mortgage','gasElectricity',
                 'water','food','travel','userName2','userID2')">Calculate</button><br>
             </fieldset>
             <fieldset class="expField">
                 <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-                <p id="includeIncome"></p>
+                <p id="includeIncome">Your remaining balance and some ways to improve your finances will appear here once you have complete the above form.</p>
                 <p id="includeIncome2"></p>
                 <p id="totalExp"></p>
                 <p id="remainBal"></p>
@@ -161,15 +141,15 @@
                 <p class='colour1' id="review"></p>
             </fieldset>
             <fieldset class="expField">
-                <label for="userID3">To request either an email or callback, please enter your user ID:</label><br><br>
-                <input type="text" id="userID3" name="userID3"><br><br>
-                <hr class="line">
+                <label for="userID3">To request either an email or callback, please enter your user ID:</label><br>
+                <input type="text" id="userID3" name="userID3"><br>
+
                 <label for="email1">Email:</label><br>
                 <input type="text" id="email1" name="email" class="numbers" required><br>
-                <hr class="line">
+
                 <label for="tel">Telephone number:</label><br>
                 <input type="text" id="tel" name="tel" class="numbers" required><br>
-                <hr class="line">
+
                 <label for="topic">Topic(s) you would like to discuss (If more than one, please choose Financial
                     Health Check):</label><br><br>
                 <select id="topic">
@@ -185,6 +165,7 @@
                         <option value="FHC">Financial Health Check</option>
                     </optgroup>
                 </select> <br><br>
+                <p>Please choose how you would like us to contact you:</p>
                 <select id="contactRequest"><br>
                     <option value="email me">Email me</option><br><br>
                     <option value="call me">Call me</option><br><br>
@@ -192,7 +173,6 @@
                 <button id="requestcall" onclick="getCallback(); saveContactDetails(); selectOpt()">Request contact from an Advisor</button><br>
                 <p id="selectedTopic"></p>
                 <p id="callback"></p>
-                <hr class="line"><br>
             </fieldset>
         </div>
 
