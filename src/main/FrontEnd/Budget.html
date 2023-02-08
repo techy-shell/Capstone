@@ -147,38 +147,46 @@
             </fieldset>
             <fieldset class="expField">
                 <h3>Need help?&nbsp Request we contact you below</h3>
-                <label for="userID3">To request either an email or callback, please enter your user ID:</label><br>
-                <input type="text" id="userID3" name="userID3"><br><br>
-
-                <label for="email1">Email:</label><br>
-                <input type="text" id="email1" name="email" class="numbers" required><br><br>
-
-                <label for="tel">Telephone number:</label><br>
-                <input type="text" id="tel" name="tel" class="numbers" required><br><br>
-
-                <label for="topic">Topic(s) you would like to discuss (If more than one, please choose Financial
-                    Health Check):</label><br><br>
-                <select id="topic">
-                    <optgroup label="Savings & Investments">
-                        <option value="Short Term Savings">Short term savings</option>
-                        <option value="Investments">Investments</option>
-                    </optgroup>
-                    <optgroup label="Lending">
-                        <option value="Short Term Lending">Short term lending</option>
-                        <option value="Mortgages">Longer term lending</option>
-                    </optgroup>
-                    <optgroup label="FHC">
-                        <option value="FHC">Financial Health Check</option>
-                    </optgroup>
-                </select> <br><br>
-                <p>Please choose how you would like us to contact you:</p>
-                <select id="contactRequest"><br>
-                    <option value="email me">Email me</option><br><br>
-                    <option value="call me">Call me</option><br><br>
-                </select><br><br>
-                <button id="requestcall" onclick="getCallback(); saveContactDetails(); selectOpt(); validateNotNull()">Request contact from an Advisor</button><br>
+                <section id="callback">
+                    <p>To request an email or callback, please complete the below form:</p>
+                    <label for="userID">UserID:</label><br>
+                    <input type="text" id="userID" name="userID" class="numbers" required> <br>
+                    <label for="topic">Topic(s) you would like to enquire about (If more than one, please choose Financial
+                        Health Check):</label> <br>
+                    <select id="topic">
+                        <optgroup label="Savings & Investments">
+                            <option value="Short Term Savings">Short term savings</option>
+                            <option value="Investments">Investments</option>
+                        </optgroup>
+                        <optgroup label="Lending">
+                            <option value="Short Term Lending">Short term lending</option>
+                            <option value="Mortgages">Mortgages</option>
+                        </optgroup>
+                        <optgroup label="FHC">
+                            <option value="FHC">Financial Health Check</option>
+                        </optgroup>
+                    </select> <br>
+                    <input type="radio" name="type" onclick="getRadio(this.value)" value="Email">Email
+                    <input type="radio" name="type" onclick="getRadio(this.value)" value="Callback">Callback<br>
+                    <input type="text" id="result" readonly> <br>
+                    <p>Need to update your details? You can do so after clicking the button below.</p>
+                    <button id="requestcall" onclick="saveContactDetails(); showUpdater(); selectOpt(); getUserInfo();
+        validateForms('userID')">Request</button>
+                </section>
                 <p id="selectedTopic"></p>
-                <p id="callback"></p>
+                <p id="confirmation"></p>
+                <section id="noChange" class="updater">
+                    <p id="allOk"></p>
+                    <button id="noUpdate" onclick="noChangeThanks()">Confirm Request</button>
+                </section>
+                <section id="updateDetails" class="updater">
+                    <p id="updaterText"></p>
+                    <label for="email1">Email:</label><br>
+                    <input type="text" id="email1" name="email" class="numbers" required> <br>
+                    <label for="tel">Telephone number:</label><br>
+                    <input type="text" id="tel" name="tel" class="numbers" required> <br>
+                    <button id="updateContact" onclick="updateContact(); updateTheInfo(); thanks()">Update & Confirm Request</button>
+                </section>
             </fieldset>
         </div>
 

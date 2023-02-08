@@ -184,26 +184,27 @@ function selectOpt() {
          document.getElementById('selectedTopic').innerHTML = "Your chosen topic: " + op;
          }
 
-   async function getCallback() {
-   var userID = document.getElementById('userID3').value;
-  fetch('http://localhost:8080/User/' + userID)
-    .then((response) => response.json())
-    .then((data) => {
-      document.getElementById('callback').innerHTML = data[0].firstName + " " + data[0].surname +
-      ", you will be contacted within the next two working days. You will receive an email confirmation of your request.";
-       })
-       .catch(err => console.log(err));
-       };
+ async function getUserInfo() {
+ var userID = document.getElementById('userID').value;
+fetch('http://localhost:8080/User/' + userID)
+  .then((response) => response.json())
+  .then((data) => {
+    document.getElementById('confirmation').innerHTML = data[0].firstName + " " + data[0].surname +
+    ", your current mobile number is " + data[0].tel + " and your current email address is " + data[0].email;
+    document.getElementById("callback").classList.toggle("hide");
+     })
+     .catch(err => console.log(err));
+     };
 
+function getRadio(type){
+    document.getElementById("result").value = type;
+    }
     function saveContactDetails() {
     var update = {
-    'userID':document.getElementById("userID3").value,
-    'email':document.getElementById("email1").value,
-    'tel':document.getElementById("tel").value,
+    'userID':document.getElementById("userID").value,
     'topic':document.getElementById("topic").value,
-    'contactRequest':document.getElementById("contactRequest").value
+    'contactRequest':document.getElementById("result").value
     };
-
     fetch ('http://localhost:8080/contact', {
     method: 'POST',
     headers: {
@@ -214,6 +215,46 @@ function selectOpt() {
     .then(response => response.json())
     .then(response => console.log(JSON.stringify(response)));
     }
+
+    function updateContact() {
+        var update = {
+        'userID':document.getElementById("userID").value,
+        'email':document.getElementById("email1").value,
+        'tel':document.getElementById("tel").value
+        };
+        fetch ('http://localhost:8080/contactDetails', {
+        method: 'POST',
+        headers: {
+        'Content-Type':'application/json',
+        },
+        body: JSON.stringify(update)
+        })
+        .then(response => response.json())
+        .then(response => console.log(JSON.stringify(response)));
+        }
+
+    function showUpdater() {
+    document.getElementById("updateDetails").classList.toggle("show");
+    document.getElementById("noChange").classList.toggle("show");
+    document.getElementById('updaterText').innerHTML = "Need to update your details? Please enter BOTH your mobile AND email below to update:";
+    document.getElementById('allOk').innerHTML = "Details above correct? Click below to confirm your request.";
+    }
+
+function thanks() {
+document.getElementById('updateDetails').innerHTML = "Thank you for updating your details.";
+document.getElementById('noChange').innerHTML = "Request Confirmed.";
+}
+
+function noChangeThanks() {
+document.getElementById('noChange').innerHTML = "Request Confirmed.";
+document.getElementById('updateDetails').innerHTML = "You will be contacted within 2 working days.";
+}
+
+function updateTheInfo() {
+var theEmail = document.getElementById('email1').value;
+var thePhone = document.getElementById('tel').value;
+document.getElementById('confirmation').innerHTML = "Your updated email is:  " + theEmail + " and updated number is: " + thePhone;
+}
 
 
 //on submit

@@ -400,7 +400,7 @@ color:#2a363b
 
 
 
-#requestcall {
+#requestcall, #updateContact, #noUpdate {
 background-color: #faa8a3;
 font-family: 'Sofia Sans Condensed', sans-serif;
 font-size:20px;
@@ -411,15 +411,42 @@ border: none;
 box-shadow: 0 9px #999;
 }
 
-#requestcall:active {
+#requestcall:active, #updateContact:active, #noUpdate:active {
           box-shadow: 0 5px #666;
             transform: translateY(4px);
             }
 
-            #requestcall:hover {
-                     cursor:pointer;
-                     background-color:#f77b73;
-                     }
+#requestcall:hover, #updateContact:hover, #noUpdate:hover {
+cursor:pointer;
+background-color:#f77b73;
+}
+
+.numbers {
+margin: 5px;
+}
+
+#topic, #result{
+margin:10px;
+font-family: 'Sofia Sans Condensed', sans-serif;
+height:25px;
+width:30%;
+text-align:center;
+}
+
+#callback, #selectedTopic, #updaterText, #confirmation, #allOk {
+color: #2a363b;
+font-family: 'Sofia Sans Condensed', sans-serif;
+text-align: center;
+margin:20px;
+}
+
+#userID {
+margin-bottom:10px;
+font-family: 'Sofia Sans Condensed', sans-serif;
+height:25px;
+width:30%;
+text-align:center;
+}
 
 #footer {
 text-align: center;
