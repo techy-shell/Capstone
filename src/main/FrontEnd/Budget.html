@@ -50,9 +50,9 @@
             </fieldset>
             <fieldset class="incField">
                 <div class="tooltip"><h3>Enter your User ID below to check the income stored is up to date
-                    <button class="info" >?</button>
-                    <span class="tooltiptext">Your User ID is in the top right hand corner of your bank statement.</span>
-                </h3></div>
+                    <button class="info">?</button></h3>
+                    <span class="tooltiptext">Your User ID is 6 digits<br>You will see it on the top right hand corner of your bank statement.<br></span>
+              </div>
                 <label for="userName">Please enter your user ID:</label><br><br>
                 <input type="text" id="userName" name="userName"><br><br>
                 <button class="userBtn" onclick="getUsers(); validateForms('userName')">See current financials</button>
@@ -98,10 +98,7 @@
                 <h2 style="text-decoration:underline;">Money Saving Tips for February</h2><br>
                 <img class="moneyTips" src="https://static.wixstatic.com/media/f9cbdb_d2ee115e75024fbc87e0fe067cac517f~mv2.png/v1/fill/w_640,h_640,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/f9cbdb_d2ee115e75024fbc87e0fe067cac517f~mv2.png"
                          alt="an image showing some tips to help save money"><br><br><br>
-
             </fieldset>
-
-
         </div>
 
         <div class="expenditure">
@@ -113,15 +110,15 @@
                     <label class="inputInfo" for="mortgage"> Mortgage / Rent amount per month:</label><br>
                     <input class="inputInfo" type="text" id="mortgage" name="mortgage"><br><br>
                     <label class="inputInfo" for="councilTax">Council tax per month:</label><br>
-                    <input class="inputInfo" type="text" id="councilTax" name="councilTax"><br><br>
+                    <input class="inputInfo" type="text"  id="councilTax" name="councilTax"><br><br>
                 <label class="inputInfo" for="gasElectricity">Gas / Electricity per month:</label><br>
-                <input class="inputInfo" type="text" id="gasElectricity" name="gasElecticity"><br><br>
+                <input class="inputInfo" type="text"  id="gasElectricity" name="gasElecticity"><br><br>
                 <label class="inputInfo" for="water">Water per month:</label><br>
-                <input class="inputInfo" type="text" id="water" name="water"><br><br>
+                <input class="inputInfo" type="text"  id="water" name="water"><br><br>
                 <label class="inputInfo" for="food">Food per month:</label><br>
-                <input class="inputInfo" type="text" id="food" name="food"><br><br>
+                <input class="inputInfo" type="text"  id="food" name="food"><br><br>
                 <label class="inputInfo" for="travel">Travel per month:</label><br>
-                <input class="inputInfo" type="text" id="travel" name="travel"><br><br>
+                <input class="inputInfo" type="text"  id="travel" name="travel"><br><br>
                 <label for="userName2">Enter your user ID to include your current income in the
                     calculation:</label><br>
                 <input type="text" id="userName2" name="userName2"><br><br>
@@ -207,7 +204,7 @@
             </div>
         </div>
     </ul>
-    <button class="open-button" onclick="openForm()">Contact Us</button>
+    <button class="open-button" onclick="openForm(); changeImage()">Contact Us<img alt="arrow" src="https://cdn.iconscout.com/icon/free/png-256/keyboard-down-arrow-1780093-1518654.png" style="height: 25px; width: 30px" id="imgClickAndChange"/></button>
     <div class="form-popup" id="myForm">
         <h4 style="text-decoration: underline;">Enter your details to send us a secure message</h4>
         <form class="form-container">
