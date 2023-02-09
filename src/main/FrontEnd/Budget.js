@@ -178,24 +178,6 @@ fetch('http://localhost:8080/DualIncome/' + userID + '/' + userID2)
  Below function is for a callback option for the user to request a callback
 */
 
-/*function selectOpt() {
-         selEl = document.getElementById('topic');
-         op = selEl.value;
-         document.getElementById('selectedTopic').innerHTML = "Your chosen topic: " + op;
-         }*/
-
-/* async function getUserInfo() {
- var userID = document.getElementById('userID').value;
-fetch('http://localhost:8080/User/' + userID)
-  .then((response) => response.json())
-  .then((data) => {
-    document.getElementById('confirmation').innerHTML = data[0].firstName + " " + data[0].surname +
-    ", your current mobile number is " + data[0].tel + " and your current email address is " + data[0].email;
-    document.getElementById("callback").classList.toggle("hide");
-     })
-     .catch(err => console.log(err));
-     };*/
-
 function getRadio(type){
     document.getElementById("result").value = type;
     }
@@ -274,40 +256,11 @@ function success() {
         }
         }
 
-/*    function showUpdater() {
-    document.getElementById("updateDetails").classList.toggle("show");
-    document.getElementById("noChange").classList.toggle("show");
-    document.getElementById('updaterText').innerHTML = "Need to update your details? Please enter BOTH your mobile AND email below to update:";
-    document.getElementById('allOk').innerHTML = "Details above correct? Click below to confirm your request.";
-    }*/
-
-/*
-function thanks() {
-document.getElementById('updateDetails').innerHTML = "Thank you for updating your details.";
-document.getElementById('noChange').innerHTML = "Request Confirmed.";
-}
-*/
 
 function noChangeThanks() {
 document.getElementById('noChange').innerHTML = "Request Confirmed.";
 document.getElementById('updateDetails').innerHTML = "You will be contacted within 2 working days.";
 }
-
-/*
-function updateTheInfo() {
-var theEmail = document.getElementById('email1').value;
-var thePhone = document.getElementById('tel').value;
-  var contact = document.getElementById("email1");
-    var tel = document.getElementById('tel');
-    if
-    (contact == "" && tel == "")
-    {
-    document.getElementById('confirmation').innerHTML = "Your updated email is:  " + theEmail + " and updated number is: " + thePhone;
-    } else {
-    alert("Please enter all details");
-    }
-    }
-*/
 
 
 //on submit
@@ -350,20 +303,6 @@ var thePhone = document.getElementById('tel').value;
         alert("Details should be in number format");
         }
         }
-
-
-/*function validateNotNull(){
-    var contact = document.getElementById("updateDetails.email1");
-    var tel = document.getElementById('tel');
-    if
-    (contact == "" && tel == "")
-    {
-    alert("Phone number and email updated");
-    } else {
-    alert("Please enter all details");
-    }
-    }*/
-
 
 var isopen = false;
 function openForm() {
