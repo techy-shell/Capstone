@@ -84,17 +84,6 @@ function selectOpt() {
          document.getElementById('selectedTopic').innerHTML = "Your chosen topic: " + op;
          }
 
- async function getUserInfo() {
- var userID = document.getElementById('userID').value;
-fetch('http://localhost:8080/User/' + userID)
-  .then((response) => response.json())
-  .then((data) => {
-    document.getElementById('confirmation').innerHTML = data[0].firstName + " " + data[0].surname +
-    ", your current mobile number is " + data[0].tel + " and your current email address is " + data[0].email;
-    document.getElementById("callback").classList.toggle("hide");
-     })
-     .catch(err => console.log(err));
-     };
 
      //number checker from jake
 
@@ -129,7 +118,6 @@ Code to add contact method to database
 function getRadio(type){
     document.getElementById("result").value = type;
     }
-
 
 function saveContactDetails() {
     var theUser = document.getElementById("userID").value;
@@ -170,8 +158,6 @@ function saveContactDetails() {
             }
     }
 
-
-
   function updateContact() {
     var theEmail = document.getElementById('email1').value;
     var thePhone = document.getElementById('tel').value;
@@ -197,32 +183,11 @@ function saveContactDetails() {
         }
         }
 
-/*    function showUpdater() {
-    document.getElementById("updateDetails").classList.toggle("show");
-    document.getElementById("noChange").classList.toggle("show");
-    document.getElementById('updaterText').innerHTML = "Need to update your details? Please enter BOTH your mobile AND email below to update:";
-    document.getElementById('allOk').innerHTML = "Details above correct? Click below to confirm your request.";
-    }*/
-
-/*
-function thanks() {
-document.getElementById('updateDetails').innerHTML = "Thank you for updating your details.";
-document.getElementById('noChange').innerHTML = "Request Confirmed.";
-}
-*/
-
 function noChangeThanks() {
 document.getElementById('noChange').innerHTML = "Request Confirmed.";
 document.getElementById('updateDetails').innerHTML = "You will be contacted within 2 working days.";
 }
 
-/*
-function updateTheInfo() {
-var theEmail = document.getElementById('email1').value;
-var thePhone = document.getElementById('tel').value;
-document.getElementById('confirmation').innerHTML = "Your updated email is:  " + theEmail + " and updated number is: " + thePhone;
-}
-*/
 
 function changeImage() {
     if (document.getElementById("imgClickAndChange").src == "https://cdn.iconscout.com/icon/free/png-256/keyboard-down-arrow-1780093-1518654.png"){
