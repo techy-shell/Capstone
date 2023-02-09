@@ -38,6 +38,8 @@ Budget Calculator Page (minute 8-12) - Eleanor
 Java & Javascript for Budget Calculator page (minute 12-14) - Rachelle
    FinancesDAO - show SQL queries & PUT SQL function
    FinancesController - show endpoints that links to DAO
+   dual income dao and controller
+   total income dao and controller
    Budget.js - show javascript for Income & Calculator
 
 Local Support Page (minute 14-16) - Laura
