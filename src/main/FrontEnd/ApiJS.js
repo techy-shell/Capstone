@@ -116,8 +116,10 @@ fetch('http://localhost:8080/User/' + userID)
 
     if(firstName.match(numbers)){
     document.console.log("good");
+    return true;
     } else {
     alert("UserID should be in number format");
+    return false;
     }
     }
 
@@ -191,16 +193,12 @@ function changeImage() {
         document.getElementById("imgClickAndChange").src = "https://cdn.iconscout.com/icon/free/png-256/keyboard-down-arrow-1780093-1518654.png";
     }
 }
-//
-//function validateNotNull(){
-//    var numbers = /^[0-9]+$/;
-//    var tel = document.getElementById("tel").value;
-//    var contact = document.getElementById("email1").value;
-//    if
-//    (contact !== "" && tel !== "")
-//    {
-//    document.console.log("good");
-//    } else {
-//    alert("Please enter all details");
-//    }
-//    }
+
+
+function success() {
+	 if(document.getElementById("userID").value==="") {
+            document.getElementById('requestcall').disabled = true;
+        } else {
+            document.getElementById('requestcall').disabled = false;
+        }
+    }
