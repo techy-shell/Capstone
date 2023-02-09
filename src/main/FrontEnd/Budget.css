@@ -68,22 +68,21 @@ display:none;
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 12px 16px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
-    font-size:20px;
+    font-size:25px;
   }
 
  .dropdown:hover .dropbtn {
-    background-color: #2a363b;;
+    background-color: #2a363b;
   }
 
   .dropdown-content {
     display: none;
     position: relative;
-    width: 100%
-    background-color: #f9f9f9;
+    width: 100%;
     min-width: 160px;
     box-shadow: 10px 8px 16px 2px rgba(0,0,0,0.9);
     z-index: 1;
@@ -108,6 +107,7 @@ display:none;
     display: block;
   }
 }
+
 /*  header for the budget section of the page */
 
 .budgetHeading {
@@ -291,15 +291,14 @@ box-shadow: 0 9px #999;
 }
 
                      .dropbtn {
-                     box-shadow: 0 5px #666;
+                      box-shadow: 0 5px #666;
                                  transform: translateY(4px);
                                  }
 
-                                 .dropbtn:hover {
+                                 .dropbtn::hover {
                                           cursor:pointer;
                                           background-color:#f77b73;
-                                          }
-
+}
 
 
 
@@ -403,6 +402,7 @@ color:#2a363b
 #requestcall, #updateContact, #noUpdate {
 background-color: #faa8a3;
 font-family: 'Sofia Sans Condensed', sans-serif;
+color: #2a363b;
 font-size:20px;
 width: 40%;
 height:50px;
@@ -526,3 +526,4 @@ position: absolute !important;
    top: -999px !important;
    left: -999px !important;
 }
+
