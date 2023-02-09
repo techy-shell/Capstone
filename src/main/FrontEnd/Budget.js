@@ -219,16 +219,14 @@ function getRadio(type){
     .then(response => console.log(JSON.stringify(response)));
        } else {
             alert("Please enter all details");
-            }
-    }
+            }}
 
 function success() {
 	 if(document.getElementById("userID").value==="") {
             document.getElementById('requestcall').disabled = true;
         } else {
             document.getElementById('requestcall').disabled = false;
-        }
-    }
+        }}
 
 
     function updateContact() {

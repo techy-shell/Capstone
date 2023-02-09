@@ -27,14 +27,11 @@ public class UserController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         else return new ResponseEntity<>(user, HttpStatus.OK);
-
     }
-
     @RequestMapping ("/contact")
     public void updateUsers (@RequestBody UserDB requestUserContact) {
         userDAO.updateContactRequest(requestUserContact.getUserID(), requestUserContact.getContactRequest(), requestUserContact.getTopic());
     }
-
     @RequestMapping ("/contactDetails")
     public void updateDetails (@RequestBody UserDB requestUserContact) {
         userDAO.updateContactDetails(requestUserContact.getUserID(), requestUserContact.getTel(), requestUserContact.getEmail());

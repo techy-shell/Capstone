@@ -28,11 +28,8 @@ public ResponseEntity<List> retrieveUserFinancials(@PathVariable int UserID) {
 }
 
 //Mapping to add financial data into database for one user (other income etc)
-
     @RequestMapping ("/update")
     public void updateFinancial (@RequestBody FinancialDB requestFinancial) {
-//        System.out.println(requestFinancial.getSalary());
-//        System.out.println(requestFinancial.getUserName());
     financialDAO.updateSalary(requestFinancial.getSalary(), requestFinancial.getUserName(),requestFinancial.getBenefit());
 }
 
