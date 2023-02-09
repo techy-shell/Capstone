@@ -129,7 +129,28 @@ Code to add contact method to database
 function getRadio(type){
     document.getElementById("result").value = type;
     }
-    function saveContactDetails() {
+
+
+function saveContactDetails() {
+    var theUser = document.getElementById("userID").value;
+    var theTopic = document.getElementById("topic").value;
+    var theRequest = document.getElementById("result").value;
+    var userID = document.getElementById('userID').value;
+    var selEl = document.getElementById('topic');
+    var op = selEl.value;
+    if (theUser.length !== 0 && theTopic.length !== 0 && theRequest.length !== 0) {
+    fetch('http://localhost:8080/User/' + userID)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById('confirmation').innerHTML = data[0].firstName + " " + data[0].surname +
+        ", your current mobile number is " + data[0].tel + " and your current email address is " + data[0].email;
+        document.getElementById("callback").classList.toggle("hide");
+            document.getElementById("updateDetails").classList.toggle("show");
+            document.getElementById("noChange").classList.toggle("show");
+            document.getElementById('updaterText').innerHTML = "Need to update your details? Please enter BOTH your mobile AND email below to update:";
+            document.getElementById('allOk').innerHTML = "Details above correct? Click below to confirm your request.";
+
+         })
     var update = {
     'userID':document.getElementById("userID").value,
     'topic':document.getElementById("topic").value,
@@ -144,47 +165,64 @@ function getRadio(type){
     })
     .then(response => response.json())
     .then(response => console.log(JSON.stringify(response)));
+       } else {
+            alert("Please enter all details");
+            }
     }
 
-    function updateContact() {
-        var update = {
-        'userID':document.getElementById("userID").value,
-        'email':document.getElementById("email1").value,
-        'tel':document.getElementById("tel").value
-        };
-        fetch ('http://localhost:8080/contactDetails', {
-        method: 'POST',
-        headers: {
-        'Content-Type':'application/json',
-        },
-        body: JSON.stringify(update)
-        })
-        .then(response => response.json())
-        .then(response => console.log(JSON.stringify(response)));
+
+
+  function updateContact() {
+    var theEmail = document.getElementById('email1').value;
+    var thePhone = document.getElementById('tel').value;
+        if
+        (theEmail.length !== 0 && thePhone.length !== 0)
+        {       var update = {
+                'userID':document.getElementById("userID").value,
+                'email':document.getElementById("email1").value,
+                'tel':document.getElementById("tel").value
+                };
+                fetch ('http://localhost:8080/contactDetails', {
+                method: 'POST',
+                headers: {
+                'Content-Type':'application/json',
+                },
+                body: JSON.stringify(update)
+                })
+                .then(response => response.json())
+                .then(response => console.log(JSON.stringify(response)));
+        document.getElementById('confirmation').innerHTML = "Your updated email is:  " + theEmail + " and updated number is: " + thePhone;
+        } else {
+        alert("Please enter all details");
+        }
         }
 
-    function showUpdater() {
+/*    function showUpdater() {
     document.getElementById("updateDetails").classList.toggle("show");
     document.getElementById("noChange").classList.toggle("show");
     document.getElementById('updaterText').innerHTML = "Need to update your details? Please enter BOTH your mobile AND email below to update:";
     document.getElementById('allOk').innerHTML = "Details above correct? Click below to confirm your request.";
-    }
+    }*/
 
+/*
 function thanks() {
 document.getElementById('updateDetails').innerHTML = "Thank you for updating your details.";
 document.getElementById('noChange').innerHTML = "Request Confirmed.";
 }
+*/
 
 function noChangeThanks() {
 document.getElementById('noChange').innerHTML = "Request Confirmed.";
 document.getElementById('updateDetails').innerHTML = "You will be contacted within 2 working days.";
 }
 
+/*
 function updateTheInfo() {
 var theEmail = document.getElementById('email1').value;
 var thePhone = document.getElementById('tel').value;
 document.getElementById('confirmation').innerHTML = "Your updated email is:  " + theEmail + " and updated number is: " + thePhone;
 }
+*/
 
 function changeImage() {
     if (document.getElementById("imgClickAndChange").src == "https://cdn.iconscout.com/icon/free/png-256/keyboard-down-arrow-1780093-1518654.png"){

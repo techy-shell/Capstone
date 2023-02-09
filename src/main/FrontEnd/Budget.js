@@ -178,13 +178,13 @@ fetch('http://localhost:8080/DualIncome/' + userID + '/' + userID2)
  Below function is for a callback option for the user to request a callback
 */
 
-function selectOpt() {
+/*function selectOpt() {
          selEl = document.getElementById('topic');
          op = selEl.value;
          document.getElementById('selectedTopic').innerHTML = "Your chosen topic: " + op;
-         }
+         }*/
 
- async function getUserInfo() {
+/* async function getUserInfo() {
  var userID = document.getElementById('userID').value;
 fetch('http://localhost:8080/User/' + userID)
   .then((response) => response.json())
@@ -194,12 +194,33 @@ fetch('http://localhost:8080/User/' + userID)
     document.getElementById("callback").classList.toggle("hide");
      })
      .catch(err => console.log(err));
-     };
+     };*/
 
 function getRadio(type){
     document.getElementById("result").value = type;
     }
+
+
     function saveContactDetails() {
+    var theUser = document.getElementById("userID").value;
+    var theTopic = document.getElementById("topic").value;
+    var theRequest = document.getElementById("result").value;
+    var userID = document.getElementById('userID').value;
+    var selEl = document.getElementById('topic');
+    var op = selEl.value;
+    if (theUser.length !== 0 && theTopic.length !== 0 && theRequest.length !== 0) {
+    fetch('http://localhost:8080/User/' + userID)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById('confirmation').innerHTML = data[0].firstName + " " + data[0].surname +
+        ", your current mobile number is " + data[0].tel + " and your current email address is " + data[0].email;
+        document.getElementById("callback").classList.toggle("hide");
+            document.getElementById("updateDetails").classList.toggle("show");
+            document.getElementById("noChange").classList.toggle("show");
+            document.getElementById('updaterText').innerHTML = "Need to update your details? Please enter BOTH your mobile AND email below to update:";
+            document.getElementById('allOk').innerHTML = "Details above correct? Click below to confirm your request.";
+
+         })
     var update = {
     'userID':document.getElementById("userID").value,
     'topic':document.getElementById("topic").value,
@@ -214,7 +235,19 @@ function getRadio(type){
     })
     .then(response => response.json())
     .then(response => console.log(JSON.stringify(response)));
+       } else {
+            alert("Please enter all details");
+            }
     }
+
+function success() {
+	 if(document.getElementById("userID").value==="") {
+            document.getElementById('requestcall').disabled = true;
+        } else {
+            document.getElementById('requestcall').disabled = false;
+        }
+    }
+
 
     function updateContact() {
     var theEmail = document.getElementById('email1').value;
@@ -241,12 +274,12 @@ function getRadio(type){
         }
         }
 
-    function showUpdater() {
+/*    function showUpdater() {
     document.getElementById("updateDetails").classList.toggle("show");
     document.getElementById("noChange").classList.toggle("show");
     document.getElementById('updaterText').innerHTML = "Need to update your details? Please enter BOTH your mobile AND email below to update:";
     document.getElementById('allOk').innerHTML = "Details above correct? Click below to confirm your request.";
-    }
+    }*/
 
 /*
 function thanks() {

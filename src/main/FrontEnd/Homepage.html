@@ -97,8 +97,7 @@
             <input type="radio" name="type" onclick="getRadio(this.value)" value="Callback">Callback<br>
             <input type="text" id="result" readonly> <br>
             <p>Need to update your details? You can do so after clicking the button below.</p>
-        <button id="requestcall" onclick="saveContactDetails(); showUpdater(); selectOpt(); getUserInfo();
-         validateForms('userID')"disabled>Request</button>
+        <button id="requestcall" onclick="saveContactDetails(); validateForms('userID')"disabled>Request</button>
         </section>
         <p id="selectedTopic"></p>
         <p id="confirmation"></p>
@@ -112,7 +111,7 @@
             <input type="text" id="email1" name="email" class="numbers" required> <br>
             <label for="tel">Telephone number:</label><br>
             <input type="text" id="tel" name="tel" class="numbers" required> <br>
-            <button id="updateContact" onclick="updateContact(); updateTheInfo(); thanks()">Update & Confirm Request</button>
+            <button id="updateContact" onclick="updateContact();">Update</button>
         </section>
     </div>
     <div class="boxes2">
