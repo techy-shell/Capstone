@@ -217,20 +217,28 @@ function getRadio(type){
     }
 
     function updateContact() {
-        var update = {
-        'userID':document.getElementById("userID").value,
-        'email':document.getElementById("email1").value,
-        'tel':document.getElementById("tel").value
-        };
-        fetch ('http://localhost:8080/contactDetails', {
-        method: 'POST',
-        headers: {
-        'Content-Type':'application/json',
-        },
-        body: JSON.stringify(update)
-        })
-        .then(response => response.json())
-        .then(response => console.log(JSON.stringify(response)));
+    var theEmail = document.getElementById('email1').value;
+    var thePhone = document.getElementById('tel').value;
+        if
+        (theEmail.length !== 0 && thePhone.length !== 0)
+        {       var update = {
+                'userID':document.getElementById("userID").value,
+                'email':document.getElementById("email1").value,
+                'tel':document.getElementById("tel").value
+                };
+                fetch ('http://localhost:8080/contactDetails', {
+                method: 'POST',
+                headers: {
+                'Content-Type':'application/json',
+                },
+                body: JSON.stringify(update)
+                })
+                .then(response => response.json())
+                .then(response => console.log(JSON.stringify(response)));
+        document.getElementById('confirmation').innerHTML = "Your updated email is:  " + theEmail + " and updated number is: " + thePhone;
+        } else {
+        alert("Please enter all details");
+        }
         }
 
     function showUpdater() {
@@ -240,21 +248,33 @@ function getRadio(type){
     document.getElementById('allOk').innerHTML = "Details above correct? Click below to confirm your request.";
     }
 
+/*
 function thanks() {
 document.getElementById('updateDetails').innerHTML = "Thank you for updating your details.";
 document.getElementById('noChange').innerHTML = "Request Confirmed.";
 }
+*/
 
 function noChangeThanks() {
 document.getElementById('noChange').innerHTML = "Request Confirmed.";
 document.getElementById('updateDetails').innerHTML = "You will be contacted within 2 working days.";
 }
 
+/*
 function updateTheInfo() {
 var theEmail = document.getElementById('email1').value;
 var thePhone = document.getElementById('tel').value;
-document.getElementById('confirmation').innerHTML = "Your updated email is:  " + theEmail + " and updated number is: " + thePhone;
-}
+  var contact = document.getElementById("email1");
+    var tel = document.getElementById('tel');
+    if
+    (contact == "" && tel == "")
+    {
+    document.getElementById('confirmation').innerHTML = "Your updated email is:  " + theEmail + " and updated number is: " + thePhone;
+    } else {
+    alert("Please enter all details");
+    }
+    }
+*/
 
 
 //on submit
@@ -299,18 +319,17 @@ document.getElementById('confirmation').innerHTML = "Your updated email is:  " +
         }
 
 
-function validateNotNull(){
-    var numbers = /^[0-9]+$/;
-    var tel = document.getElementById('tel').value;
-    var contact = document.getElementById('email1').value;
+/*function validateNotNull(){
+    var contact = document.getElementById("updateDetails.email1");
+    var tel = document.getElementById('tel');
     if
-    (contact !== "" && tel !== "")
+    (contact == "" && tel == "")
     {
-    document.console.log("good");
+    alert("Phone number and email updated");
     } else {
     alert("Please enter all details");
     }
-    }
+    }*/
 
 
 var isopen = false;
