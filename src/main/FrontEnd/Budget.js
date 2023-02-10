@@ -19,6 +19,7 @@ var pay = document.getElementById('pay').value;
 var pay1 = parseInt(pay);
 var frequency = document.getElementById('frequency').value;
 var conversion = calcConvert(pay1, frequency);
+var conversion1 = parseFloat(conversion.toFixed(2));
 function calcConvert(p,f){
 if (f == "weekly") {
 return (p * 52) / 12;
@@ -32,7 +33,7 @@ return p / 12;
 return document.getElementById("convertedPay").innerHTML = "Error";
 }
 }
-document.getElementById('convertedPay').innerHTML ="£" + conversion;
+document.getElementById('convertedPay').innerHTML ="£" + conversion1;
 }
 
 /*
