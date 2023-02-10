@@ -56,6 +56,7 @@ body: JSON.stringify(update)
 })
 .then(response => response.json())
 .then(response => console.log(JSON.stringify(response)));
+document.getElementById("updatedPay").innerHTML = "Income details updated";
 }
 
 /*
