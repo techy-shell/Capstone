@@ -1,0 +1,57 @@
+---
+- name: "upgrade packages"
+  become: true
+  yum:
+    name: "*"
+    state: latest
+
+- name: "install node dependencies"
+  become: true
+  yum:
+    name: ["nodejs", "npm"]
+    state: present
+    update_cache: true
+
+- name: "install n"
+  become: yes
+  npm:
+    name: n
+    global: yes
+    production: yes
+
+- name: "install nodejs 13.8.0"
+  become: yes
+  shell: n 13.8.0
+
+- name: "install pm2"
+  become: yes
+  npm:
+    name: pm2
+    global: yes
+    production: yes
+    state: present
+
+- name: "Create directory for web"
+  file:
+    path: /home/ubuntu/web
+    state: directory
+
+- name: "copy artifact"
+  become: true
+  copy:
+    src: ~/project/artifact.tar.gz
+    dest: /home/ubuntu/web/artifact.tar.gz
+
+- name: "Extract artifact files"
+  become: true
+  shell: |
+    cd /home/ubuntu/web
+    tar -xvf artifact.tar.gz    
+
+- name: "start"
+  shell: |
+    cd /home/ubuntu/web
+    npm install
+    npm audit fix --audit-level=critical
+    pm2 stop default
+    pm2 start npm --name "web" -- start

@@ -3,7 +3,7 @@
 # This tags and uploads an image to Docker Hub
 
 # Step 1:
-dockerpath=techyshell/project4:v1.0.0
+dockerpath=techyshell/capstone
 echo "Docker ID and Image: $dockerpath"
 
 # Step 2

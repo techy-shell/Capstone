@@ -5,7 +5,8 @@
 
 * I am using a project that I created previously as a practice project using Java, HTML, CSS and Javascript. 
 * The web app has been designed as a helpful guide to Cost Of Living from a bank. It has 3 webpages - homepage with local news & callback form, budget page with budget calculators and a local help page which also calls ona  database for info on local charities.
-* I will be using CircleCI and building my Docker image locally efore deploying to AWS. 
+* I will be using CircleCI and building my Docker image locally before deploying to AWS. 
+* App runs locally on port 8081
 
 ### Project Tasks
 In this project you will apply the skills and knowledge which were developed throughout the Cloud DevOps Nanodegree program. These include:
