@@ -1,5 +1,9 @@
 version: 2.1
 
+orbs:
+  aws-eks: circleci/aws-eks@1.1.0
+  kubernetes: circleci/kubernetes@0.12.0
+
 jobs:
   linting:
     docker:
@@ -29,16 +33,45 @@ jobs:
             . devops/bin/activate
             make lint
 
-#  build-image:
+  build-image:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - checkout
+      - run:
+          name: Build Docker image
+          command: |
+            docker build -t capstone .
+            docker run capstone
+            docker image ls 
+            docker push capstone
+            dockerpath=techyshell/capstone
+            echo "Docker ID and Image: $dockerpath"
+            docker login
+            docker push capstone
+  
+  
+  
 
-#  deploy-image:
+  deploy-image:
+    docker:
+      - image: amazon/aws-cli
+    steps:
+      - checkout
+      - run:
+          name: Deploy Docker image
+          command: |
+            aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 182785921749.dkr.ecr.us-east-1.amazonaws.com
+            docker tag capstone:latest 182785921749.dkr.ecr.us-east-1.amazonaws.com/capstone:latest
+            eksctl create cluster --name myCluster --nodes=4
+
 
 workflows:
   revisions:
     jobs:
       - linting
-#      - build-image:
-#          requires: [linting]
+      - build-image:
+          requires: [linting]
 #      - deploy-image:
 #          requires: [build-image]
 

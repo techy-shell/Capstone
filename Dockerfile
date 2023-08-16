@@ -2,7 +2,7 @@ FROM python:3.7.3-stretch
 
 WORKDIR /capstone
 
-COPY . app.py /capstone/
+COPY . /capstone
 
 
 RUN #hadolint ignore=DL3013 &&\
@@ -11,6 +11,6 @@ RUN #hadolint ignore=DL3013 &&\
 
 EXPOSE 80
 
-CMD ["python", "app.py"]
+CMD ["python"]
 
 
