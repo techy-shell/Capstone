@@ -39,19 +39,25 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Check Docker installed
+          command:
+            docker --version
+      - run:
           name: Build Docker image
           command: |
             docker build -t capstone .
-            docker run capstone
-            docker image ls 
-            docker push capstone
+            docker run -d -p 5000:5000 capstone
+            docker ps
+            docker images
+      - run:
+          name: Push Docker image
+          command: |
             dockerpath=techyshell/capstone
             echo "Docker ID and Image: $dockerpath"
+            docker tag capstone techyshell/capstone:v1.0.0
+            docker images 
             docker login
-            docker push capstone
-  
-  
-  
+            docker push techyshell/capstone:v1.0.0
 
   deploy-image:
     docker:
@@ -59,11 +65,25 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Build EKS cluster
+          command: |
+
+      - run:
           name: Deploy Docker image
           command: |
             aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 182785921749.dkr.ecr.us-east-1.amazonaws.com
             docker tag capstone:latest 182785921749.dkr.ecr.us-east-1.amazonaws.com/capstone:latest
-            eksctl create cluster --name myCluster --nodes=4
+            eksctl create cluster --name myCapstoneProject --nodes=4
+
+  delete-cluster:
+    docker:
+      - image: amazon/aws-cli
+    steps:
+      - checkout
+      - run:
+          name: Delete EKS cluster
+          command: |
+            eksctl delete cluster --region=us-east-1 --name=myCapstoneProject
 
 
 workflows:
@@ -74,4 +94,5 @@ workflows:
           requires: [linting]
 #      - deploy-image:
 #          requires: [build-image]
+#      - delete-cluster
 
