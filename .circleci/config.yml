@@ -18,8 +18,8 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            python3 -m venv devops
-            . devops/bin/activate
+            python3 -m venv capstone
+            source ~/. capstone/bin/activate
             make install
             wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
             chmod +x /bin/hadolint
@@ -45,19 +45,11 @@ jobs:
       - run:
           name: Build Docker image
           command: |
-            docker build -t capstone .
-            docker run -d -p 5000:5000 capstone
-            docker ps
-            docker images
+            ./run_docker.sh
       - run:
           name: Push Docker image
           command: |
-            dockerpath=techyshell/capstone
-            echo "Docker ID and Image: $dockerpath"
-            docker tag capstone techyshell/capstone:v1.0.0
-            docker images 
-            docker login
-            docker push techyshell/capstone:v1.0.0
+            ./push_docker.sh
 
   deploy-image:
     docker:
@@ -87,7 +79,7 @@ jobs:
 
 
 workflows:
-  revisions:
+  build:
     jobs:
       - linting
       - build-image:

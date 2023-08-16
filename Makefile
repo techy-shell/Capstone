@@ -1,21 +1,15 @@
 setup:
-
-	source ~/.devops/bin/activate
-	python3 -m venv ~/.devops
+	python3 -m venv ~/.capstone
+	source ~/.capstone/bin/activate
 
 env:
 	which python3
 	python3 --version
-	which pytest
 	which pylint
 
 install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
-
-test:
-	python -m pytest -vv --cov=myrepolib tests/*.py
-	python -m pytest --nbval notebook.ipynb
 
 lint:
 	hadolint Dockerfile
